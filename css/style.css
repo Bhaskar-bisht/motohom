@@ -1,0 +1,557 @@
+/** @format */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Toggle button color fix */
+.navbar-toggler {
+    border: none;
+    background-color: #f8f9fa; /* Light background for toggle */
+}
+
+.navbar-collapse.show {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Carousel styling */
+#introCarousel,
+.carousel-inner,
+.carousel-item,
+.carousel-item.active {
+    height: 100vh;
+}
+
+.carousel-item:nth-child(1) {
+    background-image: url("https://images.hdqwalls.com/download/camper-van-synthwave-8k-tn-3840x2160.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.carousel-item:nth-child(2) {
+    background-image: url("https://images.hdqwalls.com/download/picnic-van-beach-minimalism-4k-tp-3840x2160.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+/* Height for devices larger than 576px */
+@media (min-width: 992px) {
+    #introCarousel {
+        margin-top: -58.59px;
+    }
+}
+
+.mask h1 {
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.mask p,
+i {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.navbar .nav-link {
+    color: #000 !important;
+}
+
+.top-header {
+    background-color: black;
+    color: white;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.top-bar a {
+    color: white;
+    margin-right: 20px;
+}
+
+.hero-select {
+    background-color: #efeded;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.model-btn {
+    padding: 10px;
+    width: 100%;
+    border-radius: 0px;
+    background-color: #30a8d5;
+    color: white;
+    border: none;
+}
+
+.model-btn:hover {
+    background-color: #2990b5;
+}
+
+.view-all-boat-btn {
+    border-radius: 0px;
+    background-color: transparent;
+    border: 2px solid black;
+    padding: 15px 60px 15px 60px;
+    /* color: white; */
+}
+
+.section-advantages {
+    margin-top: 80px;
+}
+
+/* **************** */
+
+.b-main-filter {
+    position: relative;
+    padding: 35px 60px 0;
+    background-size: cover;
+}
+
+.b-main-filter__wrap {
+    position: relative;
+    bottom: -85px;
+}
+
+.b-main-filter__logo {
+    margin-bottom: 12px;
+}
+
+.b-main-filter__decor {
+    display: inline-block;
+    width: 40px;
+    height: 1px;
+    margin-bottom: 20px;
+    opacity: 0.5;
+    background-color: #fff;
+    box-shadow: 25px 5px 0 0 #fff, -25px 5px 0 0 #fff;
+}
+
+.b-main-filter__cat {
+    margin-top: 25px;
+    margin-bottom: 65px;
+}
+
+.b-main-filter__cat-item {
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0 20px 10px;
+    font: 11px/1 Montserrat;
+    color: rgba(255, 255, 255, 0.4);
+    border: 2px solid transparent;
+    border-radius: 2px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.b-main-filter__cat-item .ic {
+    display: block;
+    margin-right: 0;
+    font-size: 70px;
+    line-height: 0.8;
+    opacity: 0.4;
+    color: #ccc;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.b-main-filter__cat-item.active .ic,
+.b-main-filter__cat-item:hover .ic {
+    opacity: 1;
+    color: #fff;
+}
+
+.b-main-filter .b-main-filter__item {
+    padding-left: 3px;
+}
+
+.b-main-filter__label {
+    margin-bottom: 15px;
+    padding-left: 0;
+    font: 600 14px Montserrat;
+    color: #253241;
+    text-align: left;
+}
+
+.b-main-filter__selector .ui-select {
+    height: 59px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+}
+
+.b-main-filter__checkbox-item {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.b-main-filter .form-group {
+    margin-bottom: 15px;
+}
+
+.b-main-filter .ui-title {
+    position: relative;
+}
+
+.b-main-filter .ui-title-logo {
+    margin-top: -55px;
+    margin-bottom: 0;
+}
+
+.b-main-filter .ui-select {
+    background-color: #f2f6f7;
+}
+
+.b-main-filter-nav {
+    margin-bottom: 0;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.b-main-filter-nav__item {
+    font-family: Montserrat;
+    background-color: #293c4e;
+}
+
+.b-main-filter-nav__link {
+    position: relative;
+}
+
+.b-main-filter-nav__link:after {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border-width: 7px 0 0 7px;
+    border-style: solid;
+    border-color: transparent;
+    content: "";
+}
+
+.b-main-filter-nav .b-main-filter-nav__link {
+    margin-right: 0;
+    padding: 17px 50px;
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.8);
+    border: none;
+}
+
+.b-main-filter-nav .b-main-filter-nav__link:after {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border: solid 7px transparent;
+    content: "";
+}
+
+.b-main-filter-nav .b-main-filter-nav__link.active,
+.b-main-filter-nav .b-main-filter-nav__link:hover {
+    color: #253241;
+    background-color: #fff;
+}
+
+.b-main-filter-nav .b-main-filter-nav__link .ic {
+    margin-right: 12px;
+    font-size: 16px;
+}
+
+.b-main-filter-content {
+    padding: 55px 50px 70px;
+    background-color: #fff;
+    box-shadow: 0 5px 35px 5px rgba(0, 0, 0, 0.12);
+    margin-top: -170px;
+    position: relative;
+    z-index: 88;
+    margin-bottom: 100px;
+}
+
+.b-main-slider {
+    font-family: Montserrat;
+    color: #fff;
+}
+
+.b-main-slider__slide-1 {
+    padding-top: 340px;
+}
+
+.b-main-slider__slogan {
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 4px;
+    padding-bottom: 15px;
+}
+
+.b-main-slider__slogan_2 {
+    padding-top: 290px;
+    letter-spacing: 10.88px;
+    text-transform: uppercase;
+}
+
+.b-main-slider__title-wrap {
+    display: inline-block;
+    margin-left: 0px;
+    text-align: left;
+}
+
+.b-main-slider__title {
+    font-size: 68px;
+    font-weight: 700;
+    line-height: 66px;
+    letter-spacing: -2.75px;
+    padding-bottom: 35px;
+}
+
+.b-main-slider__title_2 {
+    text-transform: none;
+}
+
+.b-main-slider__subtitle {
+    margin-top: -235px;
+    font-size: 170px;
+    font-weight: 700;
+    text-align: right;
+    letter-spacing: -4.25px;
+    text-transform: uppercase;
+}
+
+.b-main-slider__wrap-figure {
+    position: relative;
+    z-index: 1;
+}
+
+.b-main-slider__figure-1 {
+    margin-top: -200px;
+    margin-left: 25px;
+}
+
+.b-main-slider__label {
+    position: relative;
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 35px;
+    font-size: 24px;
+    letter-spacing: -0.6px;
+    color: #fff !important;
+    padding-bottom: 0;
+    cursor: pointer;
+}
+
+.b-main-slider__label:after {
+    display: block;
+    height: 1px;
+    margin-top: 0px;
+    content: "";
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.b-advantages {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.b-advantages__title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.advantages-icon {
+    font-size: 30px;
+}
+
+.decore01 {
+    background: url("https://pro-theme.com/html/nevica/assets/img/decore01.png") no-repeat;
+    height: 18px;
+    width: 66px;
+    background-position: 0px 7px;
+}
+
+/* *******banner section */
+
+.section-goods__inner {
+    background-image: url("https://img.freepik.com/free-vector/tourists-are-equipped-with-equipment-carry-bicycles-their-cars-go-scenic-ride-tourist-attractions-flat-vector-illustration-design_1150-56737.jpg?t=st=1734173221~exp=1734176821~hmac=16b30a3d581455939c99a20a953bd680a46d15d1c496e75afd6b6c61d45a8b2e&w=1380");
+    background-size: cover;
+    background-position: bottom;
+    margin-top: 60px;
+}
+
+.section-goods__list {
+    margin-top: -65px;
+    padding-bottom: 100px;
+}
+
+.view-all-boats {
+    /* background-color: red;
+    width: fit-content;
+    margin: auto; */
+    margin: auto;
+    margin-top: 50px;
+    /* padding: 10px 30px 10px 30px; */
+}
+
+.b-goods__title {
+    display: block;
+    min-height: 42px;
+    padding-top: 2px;
+    font: 700 18px / 1.2 Montserrat;
+    color: #222;
+}
+
+/* .banner_box {
+    border: 2px solid red;
+} */
+
+.no-gutters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.type-main-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.type-box {
+    text-decoration: none;
+    color: #252525;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.price {
+    display: inline-block;
+    font-weight: 800;
+    color: #30a8d5;
+}
+
+.type-left-box {
+    text-align: end;
+    /* background-color: red; */
+}
+
+.card-perday {
+    font-size: 12px;
+    color: #666666;
+    font-weight: 500;
+    display: inline-block;
+    width: 100%;
+}
+
+.deal-section {
+    background-color: #30a8d5;
+}
+
+.deal-right-sectioin {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.progress-section {
+    background-image: url("https://pro-theme.com/html/nevica/assets/img/bgmap.png");
+    /* background-image: url("https://pro-theme.com/html/nevica/assets/img/bgmap.png") no-repeat; */
+}
+
+.progress-section-cards {
+    margin-top: 100px;
+}
+
+.progress-section-card1 {
+    background-color: #8f38e8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+    border-radius: 5px;
+    margin-top: -40px;
+}
+
+.progress-icon-1 {
+    font-size: 50px;
+}
+
+.progress-section-card2 {
+    background-color: #cfbc70;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+    border-radius: 5px;
+}
+.progress-section-card3 {
+    background-color: #0ecdc2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+    border-radius: 5px;
+    margin-top: -40px;
+}
+.progress-section-card4 {
+    background-color: #dd5454;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+    border-radius: 5px;
+}
+
+/* ********************card slider */
+
+.tour-banner {
+    background-image: url("https://images.pexels.com/photos/28639031/pexels-photo-28639031/free-photo-of-nighttime-camping-scene-with-campfire-and-van.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    margin-top: 50px;
+}
+
+.tour-right-box {
+    width: 100px;
+    height: 100px;
+    background-color: #30a8d5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tour-right-box .play-icon {
+    font-size: 40px;
+    color: white;
+}
+
+.gallery-section {
+    margin-top: 80px;
+}
+
+/* ********************card slider */
+
+.what-people-say {
+    background-image: url("https://images.pexels.com/photos/17865602/pexels-photo-17865602/free-photo-of-camper-at-night.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 80px;
+}
