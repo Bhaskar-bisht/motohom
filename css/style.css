@@ -482,6 +482,7 @@ i {
 
 .progress-section-card1 {
     background-color: #8f38e8;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -497,6 +498,7 @@ i {
 
 .progress-section-card2 {
     background-color: #cfbc70;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -506,6 +508,8 @@ i {
 }
 .progress-section-card3 {
     background-color: #0ecdc2;
+    margin-top: 10px;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -516,6 +520,7 @@ i {
 }
 .progress-section-card4 {
     background-color: #dd5454;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
