@@ -15,35 +15,41 @@ a {
     background-color: #f8f9fa; /* Light background for toggle */
 }
 
-.navbar-collapse.show {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
 /* Carousel styling */
-#introCarousel,
+header #introCarousel,
 .carousel-inner,
 .carousel-item,
 .carousel-item.active {
     height: 100vh;
 }
 
-.carousel-item:nth-child(1) {
+header .carousel-item:nth-child(1) {
     background-image: url("https://images.hdqwalls.com/download/camper-van-synthwave-8k-tn-3840x2160.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
 
-.carousel-item:nth-child(2) {
+header .carousel-item:nth-child(2) {
     background-image: url("https://images.hdqwalls.com/download/picnic-van-beach-minimalism-4k-tp-3840x2160.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
 
+.custom-margin {
+    margin-left: 50px;
+}
+
+@media (min-width: 768px) {
+    .custom-margin {
+        margin-left: 100px;
+    }
+}
+
 /* Height for devices larger than 576px */
 @media (min-width: 992px) {
-    #introCarousel {
+    header #introCarousel {
         margin-top: -58.59px;
     }
 }
@@ -555,3 +561,30 @@ i {
     background-size: cover;
     margin-top: 80px;
 }
+
+.whatpeoplesay_card {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 40px 20px 40px 20px;
+    margin: 10px;
+    /* text-align: center; */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.whatpeoplesay_card h5 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.whatpeoplesay_card p {
+    font-style: italic;
+}
+
+/* news-section*****************************/
+
+.news-section {
+    margin-top: 170px;
+    /* background-color: #30a8d5; */
+}
+
+/* news-section*****************************/
