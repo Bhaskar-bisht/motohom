@@ -37,13 +37,13 @@ header .carousel-item:nth-child(2) {
     background-position: center center;
 }
 
-.custom-margin {
-    margin-left: 50px;
+header .custom-margin {
+    margin-left: 100px;
 }
 
-@media (min-width: 768px) {
-    .custom-margin {
-        margin-left: 100px;
+@media (max-width: 500px) {
+    header .custom-margin {
+        margin-left: 20px;
     }
 }
 
