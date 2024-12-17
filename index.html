@@ -540,8 +540,6 @@
                                             alt="photo"
                                             style="border-radius: 10px;"
                                     /></a>
-                                  
-
                                    <div style="display: flex; justify-content: space-between;" class="py-2 px-2">
     <div>
         <a href="#" class="type-box">6 Seater Luxury Rental Caravan</a>
@@ -549,7 +547,7 @@
     <div>
         <p style="text-align: center;" class="price">₹ 21,000 <br><span class="card-perday" >Per Day</span></p>
     </div>
-</div>
+                                    </div>
                                    <hr>
                                    <div class="row px-2">
                                                 <div class=" d-flex align-items-center">
@@ -1032,8 +1030,8 @@ What All Is Included In Campervan?
             <section class="what-people-say">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-12">
-                            <div class="d-flex justify-content-center align-items-center py-5 mb-3" style="flex-direction: column;">
+                        <div class="col-lg-12 py-5">
+                            <div class="d-flex justify-content-center align-items-center px-5 py-2 mb-3" style="flex-direction: column; background-color: #222222b5; width: fit-content; margin: auto;">
                                 <h2 class=" text-white">What People Says...</h2>
                                 <img src="https://pro-theme.com/html/nevica/assets/img/decore03.png" class="img-fluid mt-3" alt="img">
                             </div>
@@ -1358,7 +1356,10 @@ motohom.enquiry@gmail.com
 
 
 
-        <script>
+
+    </body>
+
+            <script>
             const sideNav = document.getElementById("sideNav");
 document.addEventListener("DOMContentLoaded", () => {
     const toggleButton = document.getElementById("toggleButton");
@@ -1393,84 +1394,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // this js for email
 
-// emailjs.init("k4Eu-JsqQ6HDEH8W5"); // Your actual EmailJS API Key
-
-// // Popup Handling
-// const bookNowBtns = document.querySelectorAll(".bookNowBtn");
-// const popupForm = document.getElementById("popupForm");
-// const popupOverlay = document.getElementById("popupOverlay");
-// const closeBtn = document.getElementById("closeBtn");
-
-// // Show Popup for All Buttons
-// bookNowBtns.forEach((btn) => {
-//     btn.addEventListener("click", () => {
-//         togglePopup(true);
-//         sideNav.style.width = "0";
-//     });
-// });
-
-// // Close Popup
-// closeBtn.addEventListener("click", () => {
-//     togglePopup(false);
-// });
-
-// popupOverlay.addEventListener("click", () => {
-//     togglePopup(false);
-// });
-
-// // Function to Toggle Popup Visibility
-// function togglePopup(isVisible) {
-//     if (isVisible) {
-//         popupForm.classList.add("active");
-//         popupOverlay.classList.add("active");
-//     } else {
-//         popupForm.classList.remove("active");
-//         popupOverlay.classList.remove("active");
-//     }
-// }
-
-// // Form Submission Handling
-// const bookingForm = document.getElementById("bookingForm");
-
-// bookingForm.addEventListener("submit", (e) => {
-//     e.preventDefault();
-
-//     // Gather Form Data
-//     const formData = new FormData(bookingForm);
-
-//     // Debug: Log the form data to check if it's being correctly gathered
-//     formData.forEach((value, key) => {
-//         console.log(`${key}: ${value}`);
-//     });
-
-//     // Prepare email data
-//     const emailData = {
-//         from_name: `${formData.get("firstName")} ${formData.get("lastName")}`, // Combine first and last name
-//         from_email: formData.get("email"),
-//         phone: formData.get("phone"),
-//         city: formData.get("city"),
-//     };
-
-//     console.log("Sending the following data:", emailData);
-
-//     // Send Email using EmailJS
-//     emailjs.send("service_0znwxpp", "template_k0mehri", emailData)
-//         .then((response) => {
-//             console.log("Email sent successfully:", response);
-//             alert("Your booking details have been sent successfully!");
-//             resetForm();
-//             togglePopup(false);
-//         })
-//         .catch((error) => {
-//             console.error("Error sending email:", error);
-//             alert("Failed to send booking details. Please try again.");
-//         });
-// });
-
-// // Function to Reset Form
-// function resetForm() {
-//     bookingForm.reset();
-// }
 
 emailjs.init("k4Eu-JsqQ6HDEH8W5"); // Your actual EmailJS API Key
 
@@ -1564,5 +1487,4 @@ function resetForm(form) {
 
 
         </script>
-    </body>
 </html>

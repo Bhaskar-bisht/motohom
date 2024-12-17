@@ -671,9 +671,11 @@ i {
 /* ********************card slider */
 
 .what-people-say {
-    background-image: url("https://images.pexels.com/photos/17865602/pexels-photo-17865602/free-photo-of-camper-at-night.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    /* background-image: url("https://images.pexels.com/photos/17865602/pexels-photo-17865602/free-photo-of-camper-at-night.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); */
+    background-image: url("https://images.pexels.com/photos/11143627/pexels-photo-11143627.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: bottom;
     margin-top: 80px;
 }
 
