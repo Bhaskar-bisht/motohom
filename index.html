@@ -17,6 +17,8 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
                 <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script> -->
+                 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
 
 
 
@@ -61,84 +63,7 @@
 
 
             <!-- Navbar -->
-            <!-- <nav
-                class="navbar navbar-expand-lg navbar-light bg-light sticky-top transparent-navbar px-5 py-3"
-                style="z-index: 2000;"
-            >
-                <div class="container-fluid">
-                    <a class="navbar-brand nav-link" target="_blank" href="https://mdbootstrap.com/docs/standard/">
-                        <img
-                            src="https://motohom.co.in/img/logo/moto_logo.png"
-                            class="img-fluid"
-                            alt="Logo"
-                            style="height: 30px"
-                        />
-                    </a>
-
-                    <button
-                        class="navbar-toggler"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarExample01"
-                        aria-controls="navbarExample01"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
-                        <i class="bi bi-list text-black"></i>
-                    </button>
-
-                    <div class="collapse navbar-collapse navbar-section mt-4  " id="navbarExample01">
-                        <ul class="navbar-nav ml-auto mb-2 mb-lg-0 mr-4">
-                            <li class="nav-item active">
-                                <a class="nav-link text-black" aria-current="page" href="#">Home</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link"
-                                    href="#"
-                                    rel="nofollow"
-                                    target="_blank"
-                                >
-                                    About
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link"
-                                    href="#"
-                                    rel="nofollow"
-                                    target="_blank"
-                                >
-                                    Testimonial
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link"
-                                    href="#"
-                                    rel="nofollow"
-                                    target="_blank"
-                                >
-                                    Feature
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link"
-                                    href="#"
-                                    rel="nofollow"
-                                    target="_blank"
-                                >
-                                    Contact Us
-                                </a>
-                            </li>
-                        </ul>
-
-                        <button class="btn btn-outline-dark model-btn" style="width: fit-content;" type="button">Book now</button>
-                    </div>
-                </div>
-            </nav> -->
+            
 
 
 
@@ -196,14 +121,14 @@
                             <li class="nav-item">
                                 <a
                                     class="nav-link"
-                                    href="#form-section"
+                                    href="#"
                                 >
                                     Contact Us
                                 </a>
                             </li>
                         </ul>
 
-                        <a href="#form-section" class="btn btn-outline-dark model-btn " style="width: fit-content; color: white;">Book now</a>
+                        <a href="#" class="btn btn-outline-dark model-btn  bookNowBtn " style="width: fit-content; color: white;">Book now</a>
                     </div>
         </div>
     </nav>
@@ -218,6 +143,9 @@
             <li class="nav-item"><a class="nav-link" href="#testimonial">Testimonial</a></li>
             <li class="nav-item"><a class="nav-link" href="#feature">Feature</a></li>
             <li class="nav-item"><a class="nav-link" href="#form-section">Contact Us</a></li>
+            <li class="nav-item ml-2 mt-2"><a href="#" class="btn btn-outline-dark model-btn  bookNowBtn" style="width: fit-content; color: white;">Book now</a></li>
+            
+
         </ul>
     </div>
             <!-- Navbar -->
@@ -281,6 +209,54 @@
             </div>
             <!-- Carousel wrapper -->
         </header>
+
+
+        <!-- popup form code -->
+
+<div class="popup-overlay" id="popupOverlay"></div>
+<div class="popup" id="popupForm">
+    <h4 class="my-2" style="text-align: center;">Book Your CamperVan</h4>
+    <form id="bookingForm" class="contact-form row">
+        <div class="form-field col-lg-6">
+            <input id="firstName" class="input-text js-input" type="text" name="firstName" required>
+            <label class="label" for="firstName">First Name</label>
+        </div>
+        <div class="form-field col-lg-6">
+            <input id="lastName" class="input-text js-input" type="text" name="lastName" required>
+            <label class="label" for="lastName">Last Name</label>
+        </div>
+        <div class="form-field col-lg-6">
+            <input id="email" class="input-text js-input" type="email" name="email" required>
+            <label class="label" for="email">E-mail</label>
+        </div>
+        <div class="form-field col-lg-6">
+            <input id="phone" class="input-text js-input" type="text" name="phone" required>
+            <label class="label" for="phone">Contact Number</label>
+        </div>
+        <div class="form-field col-lg-12">
+            <select id="city" class="input-text js-input" name="city" required>
+                <option style="background-color: white;"></option>
+                <option value="delhi">Delhi</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="haderabad">Haderabad</option>
+                <option value="vadodara">Vadodara</option>
+                <option value="surat">Surat</option>
+                <option value="ahmedabad">Ahmedabad</option>
+                <option value="bangalore">Bangalore</option>
+            </select>
+            <label class="label" for="city">Location</label>
+        </div>
+        <div class="form-field col-lg-12">
+            <button class="b-main-filter__btn btn model-btn px-5" type="submit" style="width: fit-content;">Book</button>
+            <button type="button" class="btn btn-outline-dark btn-lg fs-6" id="closeBtn">Close</button>
+        </div>
+    </form>
+</div>
+
+
+        <!--popup form code -->
+
+        
 
 
 
@@ -908,30 +884,25 @@
                           <!-- form -->
 
 
-                          <form class="contact-form row">
+                          <!-- <form class="contact-form row" id="bookingForm">
       <div class="form-field col-lg-6">
-         <input id="name" class="input-text js-input" type="text" required>
+         <input id="name" class="input-text js-input" type="firstname" required>
          <label class="label" for="name">First Name</label>
       </div>
       <div class="form-field col-lg-6">
-         <input id="name" class="input-text js-input" type="text" required>
+         <input id="name" class="input-text js-input" type="lastname" required>
          <label class="label" for="name">Last Name</label>
       </div>
       <div class="form-field col-lg-6 ">
          <input id="email" class="input-text js-input" type="email" required>
          <label class="label" for="email">E-mail</label>
       </div>
-      <!-- <div class="form-field col-lg-6 ">
-         <input id="company" class="input-text js-input" type="text" required>
-         <label class="label" for="company">Company Name</label>
-      </div> -->
        <div class="form-field col-lg-6 ">
-         <input id="phone" class="input-text js-input" type="text" required>
+         <input id="phone" class="input-text js-input" type="phone" required>
          <label class="label" for="phone">Contact Number</label>
       </div>
       <div class="form-field col-lg-12">
-         <!-- <input id="message" class="input-text js-input" type="text" required> -->
-          <select id="city" class="input-text js-input" >
+          <select id="city" name="city" class="input-text js-input" >
             <option style="background-color: white;"></option>
             <option value="delhi">Delhi</option>
             <option value="mumbai">Mumbai</option>
@@ -946,8 +917,43 @@
       <div class="form-field col-lg-12">
          <button class="b-main-filter__btn btn model-btn px-5 " style="width: fit-content;" fdprocessedid="5moz8g">Book</button>
       </div>
-   </form>
+   </form> -->
 
+
+   <form class="contact-form row" id="indexBookingForm">
+    <div class="form-field col-lg-6">
+        <input id="firstname" class="input-text js-input" type="text" name="firstName" required>
+        <label class="label" for="firstname">First Name</label>
+    </div>
+    <div class="form-field col-lg-6">
+        <input id="lastname" class="input-text js-input" type="text" name="lastName" required>
+        <label class="label" for="lastname">Last Name</label>
+    </div>
+    <div class="form-field col-lg-6">
+        <input id="email" class="input-text js-input" type="email" name="email" required>
+        <label class="label" for="email">E-mail</label>
+    </div>
+    <div class="form-field col-lg-6">
+        <input id="phone" class="input-text js-input" type="text" name="phone" required>
+        <label class="label" for="phone">Contact Number</label>
+    </div>
+    <div class="form-field col-lg-12">
+        <select id="city" name="city" class="input-text js-input" required>
+            <option value="">Select City</option>
+            <option value="delhi">Delhi</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="haderabad">Haderabad</option>
+            <option value="vadodara">Vadodara</option>
+            <option value="surat">Surat</option>
+            <option value="ahmedabad">Ahmedabad</option>
+            <option value="bangalore">Bangalore</option>
+        </select>
+        <label class="label" for="city">Location</label>
+    </div>
+    <div class="form-field col-lg-12">
+        <button class="b-main-filter__btn btn model-btn px-5" style="width: fit-content;" type="submit">Book</button>
+    </div>
+</form>
 
                           <!-- form -->
                         
@@ -1350,10 +1356,10 @@ motohom.enquiry@gmail.com
 
 
         <script>
+            const sideNav = document.getElementById("sideNav");
 document.addEventListener("DOMContentLoaded", () => {
     const toggleButton = document.getElementById("toggleButton");
     const closeNav = document.getElementById("closeNav");
-    const sideNav = document.getElementById("sideNav");
 
     // Open side nav
     toggleButton.addEventListener("click", () => {
@@ -1378,6 +1384,182 @@ document.addEventListener("DOMContentLoaded", () => {
                     navbar.classList.remove("scrolled");
                 }
             });
+
+
+
+
+            // this js for email
+
+// emailjs.init("k4Eu-JsqQ6HDEH8W5"); // Your actual EmailJS API Key
+
+// // Popup Handling
+// const bookNowBtns = document.querySelectorAll(".bookNowBtn");
+// const popupForm = document.getElementById("popupForm");
+// const popupOverlay = document.getElementById("popupOverlay");
+// const closeBtn = document.getElementById("closeBtn");
+
+// // Show Popup for All Buttons
+// bookNowBtns.forEach((btn) => {
+//     btn.addEventListener("click", () => {
+//         togglePopup(true);
+//         sideNav.style.width = "0";
+//     });
+// });
+
+// // Close Popup
+// closeBtn.addEventListener("click", () => {
+//     togglePopup(false);
+// });
+
+// popupOverlay.addEventListener("click", () => {
+//     togglePopup(false);
+// });
+
+// // Function to Toggle Popup Visibility
+// function togglePopup(isVisible) {
+//     if (isVisible) {
+//         popupForm.classList.add("active");
+//         popupOverlay.classList.add("active");
+//     } else {
+//         popupForm.classList.remove("active");
+//         popupOverlay.classList.remove("active");
+//     }
+// }
+
+// // Form Submission Handling
+// const bookingForm = document.getElementById("bookingForm");
+
+// bookingForm.addEventListener("submit", (e) => {
+//     e.preventDefault();
+
+//     // Gather Form Data
+//     const formData = new FormData(bookingForm);
+
+//     // Debug: Log the form data to check if it's being correctly gathered
+//     formData.forEach((value, key) => {
+//         console.log(`${key}: ${value}`);
+//     });
+
+//     // Prepare email data
+//     const emailData = {
+//         from_name: `${formData.get("firstName")} ${formData.get("lastName")}`, // Combine first and last name
+//         from_email: formData.get("email"),
+//         phone: formData.get("phone"),
+//         city: formData.get("city"),
+//     };
+
+//     console.log("Sending the following data:", emailData);
+
+//     // Send Email using EmailJS
+//     emailjs.send("service_0znwxpp", "template_k0mehri", emailData)
+//         .then((response) => {
+//             console.log("Email sent successfully:", response);
+//             alert("Your booking details have been sent successfully!");
+//             resetForm();
+//             togglePopup(false);
+//         })
+//         .catch((error) => {
+//             console.error("Error sending email:", error);
+//             alert("Failed to send booking details. Please try again.");
+//         });
+// });
+
+// // Function to Reset Form
+// function resetForm() {
+//     bookingForm.reset();
+// }
+
+emailjs.init("k4Eu-JsqQ6HDEH8W5"); // Your actual EmailJS API Key
+
+// Popup Handling
+const bookNowBtns = document.querySelectorAll(".bookNowBtn");
+const popupForm = document.getElementById("popupForm");
+const popupOverlay = document.getElementById("popupOverlay");
+const closeBtn = document.getElementById("closeBtn");
+
+// Show Popup for All Buttons
+bookNowBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        togglePopup(true);
+        sideNav.style.width = "0";
+    });
+});
+
+// Close Popup
+closeBtn.addEventListener("click", () => {
+    togglePopup(false);
+});
+
+popupOverlay.addEventListener("click", () => {
+    togglePopup(false);
+});
+
+// Function to Toggle Popup Visibility
+function togglePopup(isVisible) {
+    if (isVisible) {
+        popupForm.classList.add("active");
+        popupOverlay.classList.add("active");
+    } else {
+        popupForm.classList.remove("active");
+        popupOverlay.classList.remove("active");
+    }
+}
+
+// Form Submission Handling for Popup Form
+const popupBookingForm = document.getElementById("bookingForm");
+
+popupBookingForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    sendFormData(popupBookingForm); // Call the common function to handle form submission
+});
+
+// Form Submission Handling for Index Page Form
+const indexBookingForm = document.getElementById("indexBookingForm");
+
+indexBookingForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    sendFormData(indexBookingForm); // Call the common function to handle form submission
+});
+
+// Common Function to Send Form Data to EmailJS
+function sendFormData(form) {
+    const formData = new FormData(form);
+
+    // Debug: Log the form data to check if it's being correctly gathered
+    formData.forEach((value, key) => {
+        console.log(`Form Data - ${key}: ${value}`);
+    });
+
+    // Prepare email data
+    const emailData = {
+        from_name: `${formData.get("firstName")} ${formData.get("lastName")}`, // Combine first and last name
+        from_email: formData.get("email"),
+        phone: formData.get("phone"),
+        city: formData.get("city"),
+    };
+
+    console.log("Sending the following data:", emailData);
+
+    // Send Email using EmailJS
+    emailjs.send("service_0znwxpp", "template_k0mehri", emailData)
+        .then((response) => {
+            console.log("Email sent successfully:", response);
+            alert("Your booking details have been sent successfully!");
+            resetForm(form);
+            togglePopup(false);
+        })
+        .catch((error) => {
+            console.error("Error sending email:", error);
+            alert("Failed to send booking details. Please try again.");
+        });
+}
+
+// Function to Reset Form
+function resetForm(form) {
+    form.reset();
+}
+
+
         </script>
     </body>
 </html>
