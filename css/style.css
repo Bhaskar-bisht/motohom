@@ -129,10 +129,6 @@ header .custom-margin {
         margin-top: -100px;
     }
 
-    .mask h1 {
-        font-size: 20px;
-    }
-
     .popup {
         width: 350px;
     }
@@ -160,7 +156,7 @@ i {
     font-weight: 600;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
     .mask h1 {
         /* color: red; */
         font-size: 40px;
@@ -184,7 +180,7 @@ i {
 
 .top-bar a {
     color: white;
-    margin-right: 20px;
+    /* margin-right: 20px; */
 }
 
 .hero-select {
