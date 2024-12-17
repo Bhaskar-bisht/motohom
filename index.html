@@ -213,7 +213,7 @@
 
         <!-- popup form code -->
 
-<div class="popup-overlay" id="popupOverlay"></div>
+<!-- <div class="popup-overlay" id="popupOverlay"></div>
 <div class="popup" id="popupForm">
     <h4 class="my-2" style="text-align: center;">Book Your CamperVan</h4>
     <form id="bookingForm" class="contact-form row">
@@ -245,6 +245,76 @@
                 <option value="bangalore">Bangalore</option>
             </select>
             <label class="label" for="city">Location</label>
+        </div>
+        <div class="form-field col-lg-12">
+            <button class="b-main-filter__btn btn model-btn px-5" type="submit" style="width: fit-content;">Book</button>
+            <button type="button" class="btn btn-outline-dark btn-lg fs-6" id="closeBtn">Close</button>
+        </div>
+    </form>
+</div> -->
+
+
+<div class="popup-overlay" id="popupOverlay"></div>
+<div class="popup" id="popupForm">
+    <h4 class="my-2" style="text-align: center;">Book Your CamperVan</h4>
+    <form id="bookingForm" class="contact-form row">
+        <div class="form-field col-lg-6">
+            <input id="firstName" class="input-text js-input" placeholder="first name" type="text" name="firstName" required>
+            <label class="label" for="firstName">First Name :</label>
+        </div>
+        <div class="form-field col-lg-6">
+            <input id="lastName" class="input-text js-input" placeholder="last name" type="text" name="lastName" required>
+            <label class="label" for="lastName">Last Name :</label>
+        </div>
+        <div class="form-field col-lg-6">
+            <input id="email" class="input-text js-input" placeholder="email" type="email" name="email" required>
+            <label class="label" for="email">E-mail :</label>
+        </div>
+        <div class="form-field col-lg-6">
+            <input id="phone" class="input-text js-input" placeholder="contact" type="text" name="phone" required>
+            <label class="label" for="phone">Contact Number :</label>
+        </div>
+        <div class="form-field col-lg-12">
+            <select id="city" class="input-text js-input" name="city" required>
+                <option style="background-color: white;">Select Location</option>
+                <option value="delhi">Delhi</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="haderabad">Haderabad</option>
+                <option value="vadodara">Vadodara</option>
+                <option value="surat">Surat</option>
+                <option value="ahmedabad">Ahmedabad</option>
+                <option value="bangalore">Bangalore</option>
+            </select>
+            <label class="label" for="city">Location :</label>
+        </div>
+        <div class="form-field col-lg-6">
+            <input id="startDate" class="input-text js-input" type="date" name="startDate" required>
+            <label class="label" for="startDate">Start Date :</label>
+        </div>
+        <div class="form-field col-lg-6">
+            <input id="endDate" class="input-text js-input" type="date" name="endDate" required>
+            <label class="label" for="endDate">End Date :</label>
+        </div>
+        <div class="form-field col-lg-6">
+            <select id="caravanType" class="input-text js-input" name="caravanType" required>
+                <option value="">Select Caravan Type</option>
+                    <option value="T_Class_Van">T Class Caravan</option>
+                    <option value="U_Class_Van">U Class Caravan</option>
+                    <option value="M_Class_Van">M Class Caravan</option>
+                    <option value="V_Class_Van">V Class Caravan</option>
+            </select>
+            <label class="label" for="caravanType">Caravan Type :</label>
+        </div>
+        <div class="form-field col-lg-6">
+            <select id="totalPeople" class="input-text js-input" name="totalPeople" required>
+                <option value="">Select Total People</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+            <label class="label" for="totalPeople">Total People :</label>
         </div>
         <div class="form-field col-lg-12">
             <button class="b-main-filter__btn btn model-btn px-5" type="submit" style="width: fit-content;">Book</button>
@@ -921,7 +991,7 @@
    </form> -->
 
 
-   <form class="contact-form row" id="indexBookingForm">
+   <!-- <form class="contact-form row" id="indexBookingForm">
     <div class="form-field col-lg-6">
         <input id="firstname" class="input-text js-input" type="text" name="firstName" required>
         <label class="label" for="firstname">First Name</label>
@@ -954,15 +1024,80 @@
     <div class="form-field col-lg-12">
         <button class="b-main-filter__btn btn model-btn px-5" style="width: fit-content;" type="submit">Book</button>
     </div>
-</form>
+</form> -->
 
+
+    <form id="indexBookingForm" class="contact-form row">
+        <div class="form-field col-lg-6">
+            <input id="firstName" class="input-text js-input" placeholder="first name" type="text" name="firstName" required>
+            <label class="label" for="firstName">First Name :</label>
+        </div>
+        <div class="form-field col-lg-6">
+            <input id="lastName" class="input-text js-input" placeholder="last name" type="text" name="lastName" required>
+            <label class="label" for="lastName">Last Name :</label>
+        </div>
+        <div class="form-field col-lg-6">
+            <input id="email" class="input-text js-input" placeholder="email" type="email" name="email" required>
+            <label class="label" for="email">E-mail :</label>
+        </div>
+        <div class="form-field col-lg-6">
+            <input id="phone" class="input-text js-input" placeholder="contact" type="text" name="phone" required>
+            <label class="label" for="phone">Contact Number :</label>
+        </div>
+       
+        <div class="form-field col-lg-6">
+            <input id="startDate" class="input-text js-input" type="date" name="startDate" required>
+            <label class="label" for="startDate">Start Date :</label>
+        </div>
+        <div class="form-field col-lg-6">
+            <input id="endDate" class="input-text js-input" type="date" name="endDate" required>
+            <label class="label" for="endDate">End Date :</label>
+        </div>
+        <div class="form-field col-lg-6">
+            <select id="caravanType" class="input-text js-input" name="caravanType" required>
+                <option value="">Select Caravan Type</option>
+                    <option value="T_Class_Van">T Class Caravan</option>
+                    <option value="U_Class_Van">U Class Caravan</option>
+                    <option value="M_Class_Van">M Class Caravan</option>
+                    <option value="V_Class_Van">V Class Caravan</option>
+            </select>
+            <label class="label" for="caravanType">Caravan Type :</label>
+        </div>
+        <div class="form-field col-lg-6">
+            <select id="totalPeople" class="input-text js-input" name="totalPeople" required>
+                <option value="">Select Total People</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+            <label class="label" for="totalPeople">Total People :</label>
+        </div>
+         <div class="form-field col-lg-12">
+            <select id="city" class="input-text js-input" name="city" required>
+                <option style="background-color: white;">Select Location</option>
+                <option value="delhi">Delhi</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="haderabad">Haderabad</option>
+                <option value="vadodara">Vadodara</option>
+                <option value="surat">Surat</option>
+                <option value="ahmedabad">Ahmedabad</option>
+                <option value="bangalore">Bangalore</option>
+            </select>
+            <label class="label" for="city">Location :</label>
+        </div>
+        <div class="form-field col-lg-12">
+            <button class="b-main-filter__btn btn model-btn px-5" type="submit" style="width: fit-content;">Book</button>
+        </div>
+    </form>
                           <!-- form -->
                         
                         </div>
                                                 </div>
                                         </div>
                                         <div class="col-lg-6">
-                                                <div class="form-header mt-3">
+                                                <div class="form-header mt-5">
                                                         <h2 style="font-size: 42px; font-weight: 700;">Caravan Rental FAQs</h2>
                                                         <p>Find quick answers about booking, amenities, and more. Reach out to us for any additional information!</p>
                                                         <img src="https://pro-theme.com/html/nevica/assets/img/decore03.png" class="img-fluid" alt="img">
@@ -1448,6 +1583,38 @@ indexBookingForm.addEventListener("submit", (e) => {
 });
 
 // Common Function to Send Form Data to EmailJS
+// function sendFormData(form) {
+//     const formData = new FormData(form);
+
+//     // Debug: Log the form data to check if it's being correctly gathered
+//     formData.forEach((value, key) => {
+//         console.log(`Form Data - ${key}: ${value}`);
+//     });
+
+//     // Prepare email data
+//     const emailData = {
+//         from_name: `${formData.get("firstName")} ${formData.get("lastName")}`, // Combine first and last name
+//         from_email: formData.get("email"),
+//         phone: formData.get("phone"),
+//         city: formData.get("city"),
+//     };
+
+//     console.log("Sending the following data:", emailData);
+
+//     // Send Email using EmailJS
+//     emailjs.send("service_0znwxpp", "template_k0mehri", emailData)
+//         .then((response) => {
+//             console.log("Email sent successfully:", response);
+//             alert("Your booking details have been sent successfully!");
+//             resetForm(form);
+//             togglePopup(false);
+//         })
+//         .catch((error) => {
+//             console.error("Error sending email:", error);
+//             alert("Failed to send booking details. Please try again.");
+//         });
+// }
+
 function sendFormData(form) {
     const formData = new FormData(form);
 
@@ -1462,9 +1629,27 @@ function sendFormData(form) {
         from_email: formData.get("email"),
         phone: formData.get("phone"),
         city: formData.get("city"),
+        start_date: formData.get("startDate"),
+        end_date: formData.get("endDate"),
+        caravan_type: formData.get("caravanType"),
+        total_people: formData.get("totalPeople")
+
+        // 
+    //     first_name: formData.get("firstName"),  // Match EmailJS template field
+    // last_name: formData.get("lastName"),   // Match EmailJS template field
+    // from_email: formData.get("email"),
+    // phone: formData.get("phone"),
+    // city: formData.get("city"),
+    // start_date: formData.get("startDate"),
+    // end_date: formData.get("endDate"),
+    // caravan_type: formData.get("caravanType"),
+    // total_people: formData.get("totalPeople")
     };
 
     console.log("Sending the following data:", emailData);
+
+    console.log("name is ", emailData.from_name);
+    
 
     // Send Email using EmailJS
     emailjs.send("service_0znwxpp", "template_k0mehri", emailData)
@@ -1479,6 +1664,7 @@ function sendFormData(form) {
             alert("Failed to send booking details. Please try again.");
         });
 }
+
 
 // Function to Reset Form
 function resetForm(form) {
