@@ -43,7 +43,7 @@ a {
     padding: 10px 15px;
     text-decoration: none;
     font-size: 18px;
-    color: #000;
+    color: #663c12;
     display: block;
     transition: 0.3s;
 }
@@ -266,10 +266,11 @@ i {
 
 /* Make card text responsive */
 .card-body .card-title {
-    font-size: 1.25rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
     color: #17b3ee;
     font-weight: 600;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.1px;
 }
 
 .card-body .card-text {
