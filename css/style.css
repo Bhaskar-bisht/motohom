@@ -490,6 +490,7 @@ i {
 }
 
 .progress-section {
+    /* margin-top: 20px; */
     background-image: url("https://pro-theme.com/html/nevica/assets/img/bgmap.png");
     /* background-image: url("https://pro-theme.com/html/nevica/assets/img/bgmap.png") no-repeat; */
 }
