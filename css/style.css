@@ -11,6 +11,15 @@ a {
 }
 
 /* Toggle button color fix */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the navbar is above other content */
+}
+
 .navbar-toggler {
     border: none;
     background-color: #f8f9fa; /* Light background for toggle */
@@ -342,7 +351,7 @@ i {
     margin-top: -170px;
     position: relative;
     z-index: 88;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 
 .b-advantages {
