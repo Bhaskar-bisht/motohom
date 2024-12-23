@@ -179,17 +179,6 @@ i {
     font-weight: 200;
 }
 
-@media (max-width: 700px) {
-    .mask h1 {
-        /* color: red; */
-        font-size: 40px;
-    }
-
-    .tour-banner-heading {
-        font-size: 40px !important;
-    }
-}
-
 .navbar .nav-link {
     color: #000 !important;
 }
@@ -800,3 +789,24 @@ i {
 }
 
 /* news-section*****************************/
+
+/* responsive */
+
+@media (max-width: 700px) {
+    .mask h1 {
+        /* color: red; */
+        font-size: 40px;
+    }
+
+    .tour-banner-heading {
+        font-size: 40px !important;
+    }
+
+    .deal-right-sectioin .info-section .info_box {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .deal-right-sectioin .info-section .info_box span {
+        text-align: center;
+    }
+}
