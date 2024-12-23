@@ -27,7 +27,7 @@
     <body>
         <!--Main Navigation-->
         <header>
-            <div class=" top-header py-3 px-5">
+            <div class=" top-header py-3" style="padding: 0px 65px;">
             <div class="container-fluid">
                 <div class="row ">    
                 <!-- Left side (Phone & Email) -->
@@ -75,9 +75,9 @@
                 <i class="bi bi-list text-black"></i>
             </button>
             <div class="collapse navbar-collapse navbar-section  " id="navbarExample01">
-                        <ul class="navbar-nav ml-auto mb-2 mb-lg-0 mr-4">
+                        <ul class="navbar-nav ml-auto mb-2 gap-3 mb-lg-0 mr-4">
                             <li class="nav-item active">
-                                <a class="nav-link text-black" aria-current="page" href="#">Home</a>
+                                <a class="nav-link" aria-current="page" href="#">Home</a>
                             </li>
 
                             <li class="nav-item">
@@ -216,96 +216,43 @@
         <h4 class="fw-bold">Book Your CamperVan</h4>
         <p>Fill out the form below to book your CamperVan.</p>
     </div>
-    <form id="bookingForm" class="row g-2 border rounded-3 shadow-sm  px-3 py-3 mt-2" action="from_submit.php" method="POST">
-         <!-- Location and Caravan Type -->
+    <form id="bookingForm" class="row g-2 border rounded-3 shadow-sm px-3 py-3 mt-2" action="from_submit.php" method="POST">
+    <!-- Name -->
+    <div class="col-md-12">
+        <label for="name" class="form-label">Name</label>
+        <input id="name" class="form-control" type="text" name="name" required>
+    </div>
 
-         <!-- Personal Details -->
-        <div class="col-md-6">
-            <label for="firstName" class="form-label">First Name</label>
-            <input id="firstName" class="form-control" type="text" name="firstName" required>
-        </div>
-        <div class="col-md-6">
-            <label for="lastName" class="form-label">Last Name</label>
-            <input id="lastName" class="form-control" type="text" name="lastName" required>
-        </div>
-        <div class="col-md-6">
-            <label for="email" class="form-label">E-mail</label>
-            <input id="email" class="form-control" type="email" name="email" required>
-        </div>
-        <div class="col-md-6">
-            <label for="phone" class="form-label">Contact Number</label>
-            <input id="phone" class="form-control" type="text" name="phone" required>
-        </div>
+    <!-- Email -->
+    <div class="col-md-12">
+        <label for="email" class="form-label">E-mail</label>
+        <input id="email" class="form-control" type="email" name="email" required>
+    </div>
 
-         <!-- Start Location and Destination -->
-        <div class="col-md-6">
-            <label for="startLocation" class="form-label">Start Location</label>
-            <input id="startLocation" class="form-control" type="text" name="startLocation" required>
-        </div>
-        <div class="col-md-6">
-            <label for="destination" class="form-label">Destination</label>
-            <input id="destination" class="form-control" type="text" name="destination" required>
-        </div>
+    <!-- Phone -->
+    <div class="col-md-12">
+        <label for="phone" class="form-label">Contact Number</label>
+        <input id="phone" class="form-control" type="text" name="phone" required>
+    </div>
 
-                <!-- Location -->
-        <div class="col-md-6">
-            <label for="city" class="form-label">Location</label>
-            <select id="city" class="form-select" name="city" required>
-                <option value="">Select Location</option>
-                <option value="delhi">Delhi</option>
-                <option value="mumbai">Mumbai</option>
-                <option value="hyderabad">Hyderabad</option>
-                <option value="vadodara">Vadodara</option>
-                <option value="pune">Pune</option>
-                <option value="surat">Surat</option>
-                <option value="ahmedabad">Ahmedabad</option>
-                <option value="bangalore">Bangalore</option>
-            </select>
-        </div>
-        <div class="col-md-6">
-            <label for="caravanType" class="form-label">Caravan Type</label>
-            <select id="caravanType" class="form-select" name="caravanType" required>
-                <option value="">Select Caravan Type</option>
-                <option value="T_Class_Van">T Class Caravan</option>
-                <option value="U_Class_Van">U Class Caravan</option>
-                <option value="M_Class_Van">M Class Caravan</option>
-                <option value="V_Class_Van">V Class Caravan</option>
-            </select>
-        </div>
+    <!-- Caravan Type -->
+    <div class="col-md-12">
+        <label for="caravanType" class="form-label">Caravan Type</label>
+        <select id="caravanType" class="form-select" name="caravanType" required>
+            <option value="">Select Caravan Type</option>
+            <option value="T_Class_Van">T Class Caravan</option>
+            <option value="U_Class_Van">U Class Caravan</option>
+            <option value="M_Class_Van">M Class Caravan</option>
+            <option value="V_Class_Van">V Class Caravan</option>
+        </select>
+    </div>
 
-
-        <!-- Total People and Date of Birth -->
-        <div class="col-md-6">
-            <label for="totalPeople" class="form-label">Total People</label>
-            <input id="totalPeople" class="form-control" type="number" name="totalPeople" required placeholder="Enter no. of people">
-        </div>
-        <div class="col-md-6">
-            <label for="dob" class="form-label">Date of Birth</label>
-            <input id="dob" class="form-control" type="date" name="dob" required>
-        </div>
-
-        <div class="col-md-6">
-    <label for="startDate" class="form-label">Start Date</label>
-    <input id="startDate" class="form-control" type="date" name="startDate" required>
-</div>
-<div class="col-md-6">
-    <label for="endDate" class="form-label">End Date</label>
-    <input id="endDate" class="form-control" type="date" name="endDate" required>
-</div>
-
-
-        <!-- Additional Information -->
-        <div class="col-12">
-            <label for="additional_Information" class="form-label">Additional Information</label>
-            <textarea id="additional_Information" class="form-control" name="additional_Information" rows="4" placeholder="Any additional requirements or notes..."></textarea>
-        </div>
-
-        <!-- Buttons -->
-        <div class="col-12 text-center d-flex gap-2">
-            <button class="btn btn-dark w-50  rounded-0" type="submit">Book</button>
-            <button type="button" class="btn btn-outline-secondary w-50 rounded-0" id="closeBtn">Close</button>
-        </div>
-    </form>
+    <!-- Buttons -->
+    <div class="col-12 text-center d-flex mt-4 gap-2">
+        <button class="btn btn-dark w-50 rounded-0" type="submit">Book</button>
+        <button type="button" class="btn btn-outline-secondary w-50 rounded-0" id="closeBtn">Close</button>
+    </div>
+</form>
 </div>
 
 
@@ -324,23 +271,23 @@
         <div class="row align-items-end">
             <div class="b-main-filter__main col-lg-10">
                 <div class="row" id="step1Fields">
-                    <!-- Start Date -->
-                    <div class="b-main-filter__item col-md-4">
-                        <label for="startDate1" class="form-label mt-3">Start Date</label>
-                        <input type="date" class="form-control" id="startDate1" placeholder="Select Start Date">
-                        <span id="startDateError1" class="text-danger" style="display: none;">Please select a start date.</span>
+                    <!-- TYPE Date -->
+                    <div class="b-main-filter__item col-lg-6">
+                        <label for="caravanType2" class="form-label mt-3">Caravan Type</label>
+                        <select class="form-select" id="caravanType2">
+                            <option value="">Select Caravan Type</option>
+                            <option value="T_Class_Van">T Class Caravan</option>
+                            <option value="U_Class_Van">U Class Caravan</option>
+                            <option value="M_Class_Van">M Class Caravan</option>
+                            <option value="V_Class_Van">V Class Caravan</option>
+                        </select>
+                        <span id="caravanTypeError2" class="text-danger" style="display: none;">Please select a caravan type.</span>
                     </div>
-                    <!-- End Date -->
-                    <div class="b-main-filter__item col-md-4">
-                        <label for="endDate1" class="form-label mt-3">End Date</label>
-                        <input type="date" class="form-control" id="endDate1" placeholder="Select End Date">
-                        <span id="endDateError1" class="text-danger" style="display: none;">Please select an end date.</span>
-                    </div>
-                    <!-- Total People -->
-                    <div class="b-main-filter__item col-md-4">
-                        <label for="totalPeople1" class="form-label mt-3">Total People</label>
-                        <input type="number" class="form-control" id="totalPeople1" placeholder="Enter number of people">
-                        <span id="totalPeopleError1" class="text-danger" style="display: none;">Please enter the total number of people.</span>
+                    <!-- email -->
+                    <div class="b-main-filter__item col-lg-6">
+                        <label for="email3" class="form-label mt-3">E-mail</label>
+                        <input type="email" class="form-control" id="email3" placeholder="Enter Email">
+                        <span id="emailError3" class="text-danger" style="display: none;">Please enter a valid email.</span>
                     </div>
                 </div>
             </div>
@@ -355,106 +302,22 @@
         <div class="row align-items-end">
             <div class="b-main-filter__main col-lg-10">
                 <div class="row" id="step2Fields">
-                    <!-- Location -->
-                    <div class="b-main-filter__item col-md-4">
-                        <label for="location2" class="form-label mt-3">Location</label>
-                        <select class="form-select" id="location2">
-                            <option value="">Select City</option>
-                            <option value="delhi">Delhi</option>
-                            <option value="mumbai">Mumbai</option>
-                            <option value="hyderabad">Hyderabad</option>
-                            <option value="vadodara">Vadodara</option>
-                            <option value="pune">Pune</option>
-                            <option value="surat">Surat</option>
-                            <option value="ahmedabad">Ahmedabad</option>
-                            <option value="bangalore">Bangalore</option>
-                        </select>
-                        <span id="locationError2" class="text-danger" style="display: none;">Please select a location.</span>
+                    <!-- Name -->
+                    <div class="b-main-filter__item col-lg-6">
+                        <label for="firstName3" class="form-label mt-3">Name</label>
+                        <input type="text" class="form-control" id="firstName3" placeholder="Enter First Name">
+                        <span id="firstNameError3" class="text-danger" style="display: none;">Please enter your first name.</span>
                     </div>
-                    <!-- Caravan Type -->
-                    <div class="b-main-filter__item col-md-4">
-                        <label for="caravanType2" class="form-label mt-3">Caravan Type</label>
-                        <select class="form-select" id="caravanType2">
-                            <option value="">Select Caravan Type</option>
-                            <option value="T_Class_Van">T Class Caravan</option>
-                            <option value="U_Class_Van">U Class Caravan</option>
-                            <option value="M_Class_Van">M Class Caravan</option>
-                            <option value="V_Class_Van">V Class Caravan</option>
-                        </select>
-                        <span id="caravanTypeError2" class="text-danger" style="display: none;">Please select a caravan type.</span>
-                    </div>
-                    <!-- Date of Birth -->
-                    <div class="b-main-filter__item col-md-4">
-                        <label for="dob2" class="form-label mt-3">Date of Birth</label>
-                        <input type="date" class="form-control" id="dob2" placeholder="Enter Date of Birth">
-                        <span id="dobError2" class="text-danger" style="display: none;">Please enter your date of birth.</span>
+                     <!-- Contact Number -->
+                    <div class="b-main-filter__item col-lg-6">
+                        <label for="contactNumber4" class="form-label mt-3">Contact Number</label>
+                        <input type="text" class="form-control" id="contactNumber4" placeholder="Enter Contact Number">
+                        <span id="contactNumberError4" class="text-danger" style="display: none;">Please enter a contact number.</span>
                     </div>
                 </div>
             </div>
             <div class="col-lg-2 d-flex align-items-end mt-4">
                 <button class="btn btn-outline-dark btn-lg w-100 p-1" style="border-radius: 0px;" id="searchStep2Btn">Next</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Step 3: First Name, Last Name, Email -->
-    <div class="tab-pane fade" id="content-step3" style="display: none;">
-        <div class="row align-items-end">
-            <div class="b-main-filter__main col-lg-10">
-                <div class="row" id="step3Fields">
-                    <!-- First Name -->
-                    <div class="b-main-filter__item col-md-4">
-                        <label for="firstName3" class="form-label mt-3">First Name</label>
-                        <input type="text" class="form-control" id="firstName3" placeholder="Enter First Name">
-                        <span id="firstNameError3" class="text-danger" style="display: none;">Please enter your first name.</span>
-                    </div>
-                    <!-- Last Name -->
-                    <div class="b-main-filter__item col-md-4">
-                        <label for="lastName3" class="form-label mt-3">Last Name</label>
-                        <input type="text" class="form-control" id="lastName3" placeholder="Enter Last Name">
-                        <span id="lastNameError3" class="text-danger" style="display: none;">Please enter your last name.</span>
-                    </div>
-                    <!-- Email -->
-                    <div class="b-main-filter__item col-md-4">
-                        <label for="email3" class="form-label mt-3">E-mail</label>
-                        <input type="email" class="form-control" id="email3" placeholder="Enter Email">
-                        <span id="emailError3" class="text-danger" style="display: none;">Please enter a valid email.</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-2 d-flex align-items-end mt-4">
-                <button class="btn btn-outline-dark btn-lg w-100 p-1" style="border-radius: 0px;" id="searchStep3Btn">Next</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Step 4: Contact Number, Start Location, Destination Location and Booking -->
-    <div class="tab-pane fade" id="content-step4" style="display: none;">
-        <div class="row align-items-end">
-            <div class="b-main-filter__main col-lg-10">
-                <div class="row" id="step4Fields">
-                    <!-- Contact Number -->
-                    <div class="b-main-filter__item col-md-4">
-                        <label for="contactNumber4" class="form-label mt-3">Contact Number</label>
-                        <input type="text" class="form-control" id="contactNumber4" placeholder="Enter Contact Number">
-                        <span id="contactNumberError4" class="text-danger" style="display: none;">Please enter a contact number.</span>
-                    </div>
-                    <!-- Start Location -->
-                    <div class="b-main-filter__item col-md-4">
-                        <label for="startLocation4" class="form-label mt-3">Start Location</label>
-                        <input type="text" class="form-control" id="startLocation4" placeholder="Enter Start Location">
-                        <span id="startLocationError4" class="text-danger" style="display: none;">Please enter the start location.</span>
-                    </div>
-                    <!-- Destination Location -->
-                    <div class="b-main-filter__item col-md-4">
-                        <label for="destinationLocation4" class="form-label mt-3">Destination Location</label>
-                        <input type="text" class="form-control" id="destinationLocation4" placeholder="Enter Destination Location">
-                        <span id="destinationLocationError4" class="text-danger" style="display: none;">Please enter the destination location.</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-2 d-flex align-items-end mt-4">
-                <button class="btn btn-dark btn-lg w-100 p-1" style="border-radius: 0px;" id="bookBtn">Book</button>
             </div>
         </div>
     </div>
@@ -528,18 +391,14 @@ function showDynamicPopup(message) {
 
 // this is form show popup end
 
-
-
-    document.getElementById('searchStep1Btn').addEventListener('click', function() {
+document.getElementById('searchStep1Btn').addEventListener('click', function() {
     // Validate Step 1
-    let startDate = document.getElementById('startDate1').value.trim();
-    let endDate = document.getElementById('endDate1').value.trim();
-    let totalPeople = document.getElementById('totalPeople1').value.trim();
+    let caravanType = document.getElementById('caravanType2').value.trim();
+    let email = document.getElementById('email3').value.trim();
 
-    console.log("first tab", startDate, endDate, totalPeople);
+    console.log("Step 1 fields", caravanType, email);
     
-
-    if (!startDate || !endDate || !totalPeople) {
+    if (!caravanType || !email) {
         alert('Please fill in all fields to proceed.');
         return;
     }
@@ -547,89 +406,35 @@ function showDynamicPopup(message) {
     // Show next tab
     document.getElementById('content-step1').classList.remove('show', 'active');
     document.getElementById('content-step2').classList.add('show', 'active');
-    // You can also set display to block for Step 2
     document.getElementById('content-step2').style.display = 'block';
     document.getElementById('content-step1').style.display = 'none';
 });
 
-document.getElementById('searchStep2Btn').addEventListener('click', function() {
-    // Validate Step 2
-    let location = document.getElementById('location2').value.trim();
-    let caravanType = document.getElementById('caravanType2').value.trim();
-    let dob = document.getElementById('dob2').value.trim();
-
-    console.log("2 tab", location, caravanType, dob);
-    
-
-    if (!location || !caravanType || !dob) {
-        alert('Please fill in all fields to proceed.');
-        return;
-    }
-
-    // Show next tab
-    document.getElementById('content-step2').classList.remove('show', 'active');
-    document.getElementById('content-step3').classList.add('show', 'active');
-    document.getElementById('content-step3').style.display = 'block';
-    document.getElementById('content-step2').style.display = 'none';
-});
-
-document.getElementById('searchStep3Btn').addEventListener('click', function() {
-    // Validate Step 3
-    let firstName = document.getElementById('firstName3').value.trim();
-    let lastName = document.getElementById('lastName3').value.trim();
-    let email = document.getElementById('email3').value.trim();
-
-
-    console.log("3 tab", firstName, lastName, email);
-    
-
-    if (!firstName || !lastName || !email) {
-        alert('Please fill in all fields to proceed.');
-        return;
-    }
-
-    // Show next tab
-    document.getElementById('content-step3').classList.remove('show', 'active');
-    document.getElementById('content-step4').classList.add('show', 'active');
-    document.getElementById('content-step4').style.display = 'block';
-    document.getElementById('content-step3').style.display = 'none';
-});
-
 document.getElementById('bookBtn').addEventListener('click', function() {
-    // Validate Step 4
+    // Validate Step 2 (Book Button)
+    let caravanType = document.getElementById('caravanType2').value.trim();
+    let email = document.getElementById('email3').value.trim();
+    let firstName = document.getElementById('firstName3').value.trim();
     let contactNumber = document.getElementById('contactNumber4').value.trim();
-    let startLocation = document.getElementById('startLocation4').value.trim();
-    let destinationLocation = document.getElementById('destinationLocation4').value.trim();
 
-    console.log("4 tab", contactNumber, startLocation, destinationLocation);
-    
+    console.log("Step 2 fields", caravanType, email, firstName, contactNumber);
 
-    if (!contactNumber || !startLocation || !destinationLocation) {
+    if (!caravanType || !email || !firstName || !contactNumber) {
         alert('Please fill in all fields to proceed.');
         return;
     }
 
-    // Gather all form data
+    // Gather the relevant data
     let formData = new FormData();
-formData.append('startDate', document.getElementById('startDate1').value);
-formData.append('endDate', document.getElementById('endDate1').value);
-formData.append('totalPeople', document.getElementById('totalPeople1').value);
-formData.append('city', document.getElementById('location2').value); // Corrected from 'location' to 'city'
-formData.append('caravanType', document.getElementById('caravanType2').value);
-formData.append('dob', document.getElementById('dob2').value);
-formData.append('firstName', document.getElementById('firstName3').value);
-formData.append('lastName', document.getElementById('lastName3').value);
-formData.append('email', document.getElementById('email3').value);
-formData.append('phone', document.getElementById('contactNumber4').value);
-formData.append('startLocation', document.getElementById('startLocation4').value);
-formData.append('destination', document.getElementById('destinationLocation4').value);
-// If additional_Information is part of the form, ensure it's appended as well
-formData.append('additional_Information', document.getElementById('additional_Information')?.value || '');
-    // Create AJAX request
+    formData.append('caravanType', caravanType);
+    formData.append('email', email);
+    formData.append('firstName', firstName);
+    formData.append('contactNumber', contactNumber);
+
+    // Example of sending this data via AJAX
     const xhr = new XMLHttpRequest();
     xhr.open("POST", "from_submit.php", true);
 
-    // Show loading indicator or disable button while sending request
     let submitBtn = document.getElementById('bookBtn');
     let originalText = submitBtn.innerHTML;
     submitBtn.innerHTML = "Sending...";
@@ -641,31 +446,83 @@ formData.append('additional_Information', document.getElementById('additional_In
             console.log("response is", response);
 
             if (response === "Success") {
-                // Show success popup message
-                // alert("Your booking details have been sent successfully!");
                 showDynamicPopup("Thank you! We will get back to you soon.");
-                // Optionally reset the form
                 tabResetForm();
-                // Close the popup after successful submission
-                togglePopup(false);
             } else {
-                // alert("Failed to send booking details. Please try again.");
                 showDynamicPopup("Failed to send booking details. Please try again.");
-
             }
         } else {
-            // alert("There was an error with your request. Please try again.");
             showDynamicPopup("There was an error with your request. Please try again.");
         }
 
-        // Reset the button text and enable it after response
-        submitBtn.innerHTML = originalText;  // Restore original button text
-        submitBtn.disabled = false;  // Enable button again
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
     };
 
     // Send the form data to the PHP script
     xhr.send(formData);
 });
+
+
+
+
+    // Gather all form data
+//     let formData = new FormData();
+// formData.append('startDate', document.getElementById('startDate1').value);
+// formData.append('endDate', document.getElementById('endDate1').value);
+// formData.append('totalPeople', document.getElementById('totalPeople1').value);
+// formData.append('city', document.getElementById('location2').value); // Corrected from 'location' to 'city'
+// formData.append('caravanType', document.getElementById('caravanType2').value);
+// formData.append('dob', document.getElementById('dob2').value);
+// formData.append('firstName', document.getElementById('firstName3').value);
+// formData.append('lastName', document.getElementById('lastName3').value);
+// formData.append('email', document.getElementById('email3').value);
+// formData.append('phone', document.getElementById('contactNumber4').value);
+// formData.append('startLocation', document.getElementById('startLocation4').value);
+// formData.append('destination', document.getElementById('destinationLocation4').value);
+// // If additional_Information is part of the form, ensure it's appended as well
+// formData.append('additional_Information', document.getElementById('additional_Information')?.value || '');
+//     // Create AJAX request
+//     const xhr = new XMLHttpRequest();
+//     xhr.open("POST", "from_submit.php", true);
+
+//     // Show loading indicator or disable button while sending request
+//     let submitBtn = document.getElementById('bookBtn');
+//     let originalText = submitBtn.innerHTML;
+//     submitBtn.innerHTML = "Sending...";
+//     submitBtn.disabled = true;
+
+//     xhr.onload = function () {
+//         if (xhr.status === 200) {
+//             const response = xhr.responseText.trim();
+//             console.log("response is", response);
+
+//             if (response === "Success") {
+//                 // Show success popup message
+//                 // alert("Your booking details have been sent successfully!");
+//                 showDynamicPopup("Thank you! We will get back to you soon.");
+//                 // Optionally reset the form
+//                 tabResetForm();
+//                 // Close the popup after successful submission
+//                 togglePopup(false);
+//             } else {
+//                 // alert("Failed to send booking details. Please try again.");
+//                 showDynamicPopup("Failed to send booking details. Please try again.");
+
+//             }
+//         } else {
+//             // alert("There was an error with your request. Please try again.");
+//             showDynamicPopup("There was an error with your request. Please try again.");
+//         }
+
+//         // Reset the button text and enable it after response
+//         submitBtn.innerHTML = originalText;  // Restore original button text
+//         submitBtn.disabled = false;  // Enable button again
+//     };
+
+//     // Send the form data to the PHP script
+//     xhr.send(formData);
+// });
 
 
 
@@ -719,25 +576,18 @@ function tabResetForm() {
 
 
 </script>
-                        <div class="row">
+                        <div class="row justify-content-center align-items-center">
                             <div class="col-lg-6">
                                 <div class="text-left px-2">
-                                    <h3 style=" color: #30a8d5; font-size: 20px; ">Welcome to Motohom Caravans - Redefining Travel in India </h3>
+                                    <h3 style=" color: #30a8d5; font-size: 20px; ">Welcome to Motohom Caravans – Crafting Your Dream Caravan </h3>
                                     <h2 class="ui-title fw-bold">
-                                       Experience Unique Camper Van Adventures
+                                       Your Journey, Your Style, Your Caravan
                                     </h2>
                                     <div class=" mt-2 ui-content">
                                         <p class="text-justify">
-                                            At Motohom, we bring you the freedom to explore India in unparalleled comfort and style. As pioneers in renting luxury caravans and offering tailored mobility solutions, we provide an immersive travel experience for those seeking adventure, flexibility, and convenience on the road. From scenic road trips to remote getaways, our caravans are designed with all the comforts of home, allowing you to journey with ease and elegance. Discover the true spirit of travel with Motohom – where the road becomes your destination.
-
+                                            Motohom Caravans specializes in manufacturing and customizing caravans that meet your unique needs. From luxurious interiors to state-of-the-art amenities, we transform your travel vision into reality. Whether it’s a vanity van for a celebrity, a mobile office, or a camper van for family getaways, we’ve got you covered.
                                         </p>
-                                        <ul class="arrow-list list-unstyled">
-                                            <li class="d-flex align-items-center my-2"><i class="fa-solid fa-caravan mr-2" style="color: #30a8d5; transform: rotate(8deg); font-size: 18px;"></i>Timeless T-Class: Classic Comfort on the Road.</li>
-                                            <li class="d-flex align-items-center my-2"><i class="fa-solid fa-caravan mr-2" style="color: #30a8d5; transform: rotate(8deg); font-size: 18px;"></i>Ultimate U-Class: Luxurious Adventures Await.</li>
-                                            <li class="d-flex align-items-center my-2"><i class="fa-solid fa-caravan mr-2" style="color: #30a8d5; transform: rotate(8deg); font-size: 18px;"></i> Majestic M-Class : Explore with Premium Style.</li>
-                                            <li class="d-flex align-items-center my-2"><i class="fa-solid fa-caravan mr-2" style="color: #30a8d5; transform: rotate(8deg); font-size: 18px;"></i>Versatile V-Class: Go Anywhere, Anytime.</li>
-                                            
-                                        </ul>
+                                        
                                         
                                         <!-- <p class="sign" style="font-weight: 600; letter-spacing: 0.5px;">CEO, Caravan Rentals.</p> -->
                                     </div>
@@ -1095,56 +945,7 @@ function tabResetForm() {
 
         <main>
     <section class="progress-section">
-        <div class="container" style="width: fit-content;">
-           <div class="row deal-section">
-    <div class="col-lg-4 d-flex justify-content-center align-items-center my-4">
-        <div class="p-2">
-            <img src="images/Motohom Flagship Caravans/T class caravan/t3 Side profile .jpg" class="img-fluid" style="border-radius: 10px;" alt="Luxury_Caravan">
-        </div>
-    </div>
-    <div class="col-lg-8">
-        <div class="deal-right-sectioin p-4">
-            <p class="fs-5">Luxury Caravan Rentals</p>
-            <h2 class="fw-bold">Key Information About Motohom Camper Vans</h1>
-            <div class="info-section mt-3">
-                <div class="row">
-                    <div class="col-6 d-flex info_box align-items-center mb-2">
-                        <i class="bi bi-clock-history" style="font-size: 20px; margin-right: 10px; color: #8c31e7;"></i>
-                        <span><b>Single Day:</b>Offered (18 hours)</span>
-                    </div>
-                    <div class="col-6 d-flex info_box align-items-center mb-2">
-                        <i class="bi bi-clock" style="font-size: 20px; margin-right: 10px; color: #e9ca4f;"></i>
-                        <span><b>Half Day:</b> Provided (Flexible time slots)</span>
-                    </div>
-                    <div class="col-6 d-flex info_box align-items-center mb-2">
-                        <i class="bi bi-snow3" style="font-size: 20px; margin-right: 10px; color: #04d1c7;"></i>
-                        <span><b>Stationary AC:</b> Accessible (₹300/hour)</span>
-                    </div>
-                    <div class="col-6 d-flex info_box align-items-center mb-2">
-                        <i class="bi bi-lightning-charge" style="font-size: 20px; margin-right: 10px; color: #dd5454;"></i>
-                        <span><b>Generator Charges:</b> Applicable (₹500/hour)</span>
-                    </div>
-                    <div class="col-6 d-flex info_box align-items-center mb-2">
-                        <i class="bi bi-exclamation-triangle-fill" style="font-size: 20px; margin-right: 10px; color: rgb(255, 184, 3);"></i>
-                        <span><b>Late Charges:</b> Imposed (₹1000/hour)</span>
-                    </div>
-                    <div class="col-6 d-flex info_box align-items-center mb-2">
-                        <i class="bi bi-piggy-bank" style="font-size: 20px; margin-right: 10px; color: rgb(173, 0, 173);"></i>
-                        <span><b>Deposit:</b> Required (₹10k - ₹50k)</span>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="d-flex align-items-center">
-                <i class="bi bi-whatsapp mr-2" style="color: rgb(0, 237, 0); font-size: 24px;"></i>
-                <p class="mt-3">For Booking and Inquiries: <a href="https://wa.me/9819655509" target="_blank" style="text-decoration: none; color: #fff;">+91 98196 55509 (WhatsApp)</a></p>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
+        <div class="container">
             <!-- Progress Cards Section -->
             <div class="row progress-section-cards">
                 <div class="col-12 col-md-6 col-lg-3">
@@ -1240,40 +1041,7 @@ function tabResetForm() {
         </main>
 
 
-        <main class="tour-banner">
-                <section style="background-color: rgba(0, 0, 0, 0.605);">
-                        <div class="container">
-                                <div class="row">
-                                        <div class="col-lg-10 text-white">
-                                                <div class=" py-5">
-                                                        <p>
-                                                                <img src="https://pro-theme.com/html/nevica/assets/img/decore02.png" class=" img-fluid" alt="image">
-                                                                Get in touch with us, and we’ll respond within 24 hours!
 
-
-                                                        </p>
-
-                                                        <div class=" mt-5">
-                                                                <h3 class="tour-banner-heading">Ready to Embark on Your Next Adventure?  <br><span class=" fs-1" style="font-weight: 700;">LET’S PLAN YOUR NEXT ROAD TRIP!</span></h3>
-                                                                <p style="font-weight: 600; letter-spacing: 2px;">Explore our exclusive caravans and custom packages tailored just for you. <br> Let’s make your next road trip unforgettable!</p>
-                                                        </div>
-                                                        <div class="mt-5">
-                                                                <div class=" fs-6">
-                                                                        <i class="bi bi-telephone-inbound-fill mr-2"></i>
-                                                                        <span>Call Us Today: +91 8369455835 / 9819655509</span>
-                                                                </div>
-                                                                <div class=" fs-6">
-                                                                        <i class="bi bi-envelope-at-fill mr-2"></i>                         
-                                                                       <span> Email: hello@motohom.com</span>
-                                                                </div>
-                                                        </div>
-                                                </div>
-                                        </div>
-                                        
-                                </div>
-                        </div>
-                </section>
-        </main>
 
 
         <main id="gallery">
@@ -1330,98 +1098,46 @@ function tabResetForm() {
         <img src="https://pro-theme.com/html/nevica/assets/img/decore03.png" class="img-fluid" alt="Image">
     </div>
     <form id="indexBookingForm" class="row g-3 mt-3" action="from_submit.php" method="POST">
-        <!-- Location and Caravan Type -->
+    <!-- Name -->
+    <div class="col-md-12">
+        <label for="name" class="form-label">Name</label>
+        <input id="name" class="form-control" type="text" name="name" required placeholder="Enter your full name">
+    </div>
 
-         <!-- Personal Details -->
-        <div class="col-md-6">
-            <label for="firstName" class="form-label">First Name</label>
-            <input id="firstName" class="form-control" type="text" name="firstName" required>
-        </div>
-        <div class="col-md-6">
-            <label for="lastName" class="form-label">Last Name</label>
-            <input id="lastName" class="form-control" type="text" name="lastName" required>
-        </div>
-        <div class="col-md-6">
-            <label for="email" class="form-label">E-mail</label>
-            <input id="email" class="form-control" type="email" name="email" required>
-        </div>
-        <div class="col-md-6">
-            <label for="phone" class="form-label">Contact Number</label>
-            <input id="phone" class="form-control" type="text" name="phone" required>
-        </div>
+    <!-- Email -->
+    <div class="col-md-12">
+        <label for="email" class="form-label">E-mail</label>
+        <input id="email" class="form-control" type="email" name="email" required placeholder="Enter your email">
+    </div>
 
-         <!-- Start Location and Destination -->
-        <div class="col-md-6">
-            <label for="startLocation" class="form-label">Start Location</label>
-            <input id="startLocation" class="form-control" type="text" name="startLocation" required>
-        </div>
-        <div class="col-md-6">
-            <label for="destination" class="form-label">Destination</label>
-            <input id="destination" class="form-control" type="text" name="destination" required>
-        </div>
+    <!-- Phone -->
+    <div class="col-md-12">
+        <label for="phone" class="form-label">Contact Number</label>
+        <input id="phone" class="form-control" type="text" name="phone" required placeholder="Enter your contact number">
+    </div>
 
-                <!-- Location -->
-        <div class="col-md-6">
-            <label for="city" class="form-label">Location</label>
-            <select id="city" class="form-select" name="city" required>
-                <option value="">Select Location</option>
-                <option value="delhi">Delhi</option>
-                <option value="mumbai">Mumbai</option>
-                <option value="hyderabad">Hyderabad</option>
-                <option value="vadodara">Vadodara</option>
-                <option value="pune">Pune</option>
-                <option value="surat">Surat</option>
-                <option value="ahmedabad">Ahmedabad</option>
-                <option value="bangalore">Bangalore</option>
-            </select>
-        </div>
-        <div class="col-md-6">
-            <label for="caravanType" class="form-label">Caravan Type</label>
-            <select id="caravanType" class="form-select" name="caravanType" required>
-                <option value="">Select Caravan Type</option>
-                <option value="T_Class_Van">T Class Caravan</option>
-                <option value="U_Class_Van">U Class Caravan</option>
-                <option value="M_Class_Van">M Class Caravan</option>
-                <option value="V_Class_Van">V Class Caravan</option>
-            </select>
-        </div>
+    <!-- Caravan Type -->
+    <div class="col-md-12">
+        <label for="caravanType" class="form-label">Caravan Type</label>
+        <select id="caravanType" class="form-select" name="caravanType" required>
+            <option value="">Select Caravan Type</option>
+            <option value="T_Class_Van">T Class Caravan</option>
+            <option value="U_Class_Van">U Class Caravan</option>
+            <option value="M_Class_Van">M Class Caravan</option>
+            <option value="V_Class_Van">V Class Caravan</option>
+        </select>
+    </div>
 
+    <!-- Submit Button -->
+    <div class="col-12">
+        <button class="btn btn-outline-dark btn-lg w-100 rounded-0" type="submit">Get Quotation</button>
+    </div>
+</form>
 
-        <!-- Total People and Date of Birth -->
-        <div class="col-md-6">
-            <label for="totalPeople" class="form-label">Total People</label>
-            <input id="totalPeople" class="form-control" type="number" name="totalPeople" required placeholder="Enter total number of people">
-        </div>
-        <div class="col-md-6">
-            <label for="dob" class="form-label">Date of Birth</label>
-            <input id="dob" class="form-control" type="date" name="dob" required>
-        </div>
-
-        <div class="col-md-6">
-    <label for="startDate" class="form-label">Start Date</label>
-    <input id="startDate" class="form-control" type="date" name="startDate" required>
-</div>
-<div class="col-md-6">
-    <label for="endDate" class="form-label">End Date</label>
-    <input id="endDate" class="form-control" type="date" name="endDate" required>
-</div>
-
-
-        <!-- Additional Information -->
-        <div class="col-12">
-            <label for="additional_Information" class="form-label">Additional Information</label>
-            <textarea id="additional_Information" class="form-control" name="additional_Information" rows="4" placeholder="Any additional requirements or notes..."></textarea>
-        </div>
-
-        <!-- Submit Button -->
-        <div class="col-12">
-            <button class="btn btn-outline-dark btn-lg w-100 rounded-0" type="submit">Get Quotation</button>
-        </div>
-    </form>
 </div>
 
                                         <div class="col-lg-6">
-                                                <div class="form-header mt-3 text-center">
+                                                <div class="form-header mt-2 text-center">
                                                         <h2 style="font-size: 40px; font-weight: 700;">Caravan Rental FAQs</h2>
                                                         <p>Find quick answers about booking, amenities, and more. Reach out to us for any additional information!</p>
                                                         <img src="https://pro-theme.com/html/nevica/assets/img/decore03.png" class="img-fluid" alt="img">
@@ -1995,21 +1711,14 @@ function togglePopup(isVisible) {
     }
 }
 
+
+
 // Form Submission Handling for Popup Form
 const popupBookingForm = document.getElementById("bookingForm");
 
 popupBookingForm?.addEventListener("submit", (e) => {
     e.preventDefault();
     sendFormData(popupBookingForm); // Handle form submission for popup form
-});
-
-
-// Form Submission Handling for Index Page Form
-const indexBookingForm = document.getElementById("indexBookingForm");
-
-indexBookingForm?.addEventListener("submit", (e) => {
-    e.preventDefault();
-    sendFormData(indexBookingForm); // Handle form submission for index page form
 });
 
 // Common Function to Send Form Data to PHP (using AJAX)
@@ -2036,17 +1745,12 @@ function sendFormData(form) {
             console.log("response is", response);
 
             if (response === "Success") {
-                // Show success popup message
-                // alert("Your booking details have been sent successfully!");
                 showDynamicPopup("Thank you! We will get back to you soon.");
                 resetForm(form);
-                togglePopup(false);  // Close the popup after successful submission
             } else {
-                // alert("Failed to send booking details. Please try again.");
                 showDynamicPopup("Failed to send booking details. Please try again.");
             }
         } else {
-            // alert("There was an error with your request. Please try again.");
             showDynamicPopup("There was an error with your request. Please try again.");
         }
 

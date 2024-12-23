@@ -180,7 +180,12 @@ i {
 }
 
 .navbar .nav-link {
-    color: #000 !important;
+    color: #663c12 !important;
+}
+
+.bookNowBtn {
+    color: #663c12;
+    border: 1px solid #663c12;
 }
 
 .top-header {
