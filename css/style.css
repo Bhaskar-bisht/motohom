@@ -177,7 +177,7 @@ i {
     }
 
     .tour-banner-heading {
-        font-size: 40px;
+        font-size: 40px !important;
     }
 }
 
