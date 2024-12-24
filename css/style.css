@@ -707,6 +707,59 @@ i {
     /* transform: scale(0.9); Slightly increases the size of the image */
 }
 
+/* customization */
+
+.customization-section {
+    /* background-color: #f8f9fa; Light grey background */
+    margin-top: 100px;
+}
+
+.customization-section .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #343a40; /* Dark grey */
+}
+
+.customization-section .section-description {
+    font-size: 1.1rem;
+    color: #6c757d; /* Muted grey */
+    margin-bottom: 1rem;
+}
+
+.customization-section .card {
+    /* border: 1px solid gray; Remove default border */
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease;
+}
+
+.customization-section .card:hover {
+    transform: translateY(-5px); /* Lift effect */
+    /* box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); Soft shadow */
+}
+
+.customization-section .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #30a8d5; /* Bootstrap primary color */
+}
+
+.customization-section .card-text {
+    font-size: 0.95rem;
+    color: #6c757d; /* Muted grey */
+}
+
+.customization-section .card i {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.customization-section .card:hover i {
+    transform: scale(1.2); /* Hover effect for icons */
+    color: #343a40; /* Change icon color */
+}
+
+/* customization */
+
 /* form */
 /* General form styling */
 .contact-form .form-field {
