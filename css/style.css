@@ -163,10 +163,16 @@ a {
 @media (max-width: 768px) {
     .hero_section_form {
         margin-top: 20px;
+        padding-bottom: 20px; /* Extra padding for bottom space */
     }
 
     .hero_section_form #bookingForm {
         padding: 15px;
+    }
+
+    .hero_section_form {
+        position: relative; /* Ensure proper positioning */
+        overflow-y: auto; /* Enable scrolling if content exceeds screen height */
     }
 }
 
@@ -182,6 +188,7 @@ a {
 
     .hero_section_form {
         width: 100%;
+        padding-bottom: 40px; /* Extra padding to ensure buttons are visible */
     }
 
     .hero_section_form #bookingForm button {
@@ -950,5 +957,5 @@ i {
 .download-btn-container a {
     writing-mode: vertical-rl; /* Make text vertical */
     text-align: center;
-    padding: 15px;
+    padding: 10px;
 }
