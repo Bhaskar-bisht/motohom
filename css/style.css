@@ -69,29 +69,135 @@ a {
     }
 }
 
-/* Carousel styling */
-header #introCarousel,
-header .carousel-inner,
-header .carousel-item,
-header .carousel-item.active {
-    height: 100vh;
-}
+/*  hero section */
 
-header .carousel-item:nth-child(1) {
-    /* background-image: url("https://images.hdqwalls.com/download/camper-van-synthwave-8k-tn-3840x2160.jpg"); */
+/* General Hero Section Styling */
+.hero_section {
     background-image: url("https://images.unsplash.com/photo-1508045214681-31012927cc98?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: bottom;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
 }
 
-header .carousel-item:nth-child(2) {
-    /* background-image: url("https://images.hdqwalls.com/download/picnic-van-beach-minimalism-4k-tp-3840x2160.jpg"); */
-    background-image: url("https://images.unsplash.com/photo-1591091221408-63351f26777a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+.hero_section .container {
+    position: relative;
+    z-index: 1;
 }
+
+.hero_section:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.366); /* Adds a darker overlay */
+    z-index: 0;
+}
+
+/* Highlight Text Styling */
+.highlight-text {
+    font-size: 3.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+/* Responsive Text Styling */
+@media (max-width: 768px) {
+    .highlight-text {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .hero-section-top-text {
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+/* Booking Form Styling */
+.hero_section_form {
+    background-color: rgba(255, 255, 255, 0.178);
+    /* padding: 20px; */
+    border-radius: 8px;
+    color: white;
+    z-index: 1;
+}
+
+/* Form Elements Styling */
+.hero_section_form #bookingForm label {
+    color: white;
+    font-size: 0.9rem;
+}
+
+.hero_section_form #bookingForm .form-control,
+.hero_section_form #bookingForm .form-select {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.hero_section_form #bookingForm .form-control:focus,
+.hero_section_form #bookingForm .form-select:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: #fff;
+    outline: none;
+    color: white;
+}
+
+.hero_section_form #bookingForm button {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero_section_form #bookingForm button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Responsive Form Adjustments */
+@media (max-width: 768px) {
+    .hero_section_form {
+        margin-top: 20px;
+    }
+
+    .hero_section_form #bookingForm {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero_section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero_section .col-lg-8 {
+        text-align: center;
+    }
+
+    .hero_section_form {
+        width: 100%;
+    }
+
+    .hero_section_form #bookingForm button {
+        width: 100%;
+    }
+
+    .col-12.text-center.d-flex {
+        flex-direction: column;
+    }
+
+    .col-12.text-center.d-flex button {
+        margin-bottom: 10px;
+    }
+}
+
+/*  hero section */
 
 header .custom-margin {
     margin-left: 100px;
@@ -220,25 +326,21 @@ i {
 
 /* **************** */
 
-.b-main-filter {
+/* .b-main-filter {
     position: relative;
     padding: 35px 60px 0;
     background-size: cover;
-}
+} */
 
-.b-main-filter .b-main-filter__item {
+/* .b-main-filter .b-main-filter__item {
     padding-left: 3px;
-}
-
-.b-main-filter__label {
-    margin-bottom: 15px;
-    padding-left: 0;
-    font: 600 14px Montserrat;
-    color: #253241;
-    text-align: left;
-}
+} */
 
 /* card carousel */
+
+#about {
+    margin-top: 80px;
+}
 
 .card {
     margin-bottom: 30px;
@@ -361,11 +463,18 @@ i {
     background-color: #f9f9f9;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    flex: 1; /* Ensures all cards take the same height */
 }
 
 .b-advantages:hover {
     transform: translateY(-5px);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+.b-advantages__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1; /* Makes sure content inside stretches appropriately */
 }
 
 .b-advantages__title {
@@ -412,7 +521,20 @@ i {
     /* background-image: url("https://img.freepik.com/free-vector/tourists-are-equipped-with-equipment-carry-bicycles-their-cars-go-scenic-ride-tourist-attractions-flat-vector-illustration-design_1150-56737.jpg?t=st=1734173221~exp=1734176821~hmac=16b30a3d581455939c99a20a953bd680a46d15d1c496e75afd6b6c61d45a8b2e&w=1380"); */
     background-size: cover;
     background-position: center;
+    box-shadow: inset 0 0 0 50vw rgba(0, 0, 0, 0.304);
     margin-top: 60px;
+    z-index: 1;
+}
+
+.section-goods__inner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.873); /* Adjust opacity as needed */
+    z-index: -1; /* Places the overlay behind the content */
 }
 
 .section-goods__list {
@@ -816,4 +938,17 @@ i {
     .deal-right-sectioin .info-section .info_box span {
         text-align: center;
     }
+}
+
+.download-btn-container {
+    position: fixed;
+    right: 0px; /* Adjust distance from the right side */
+    bottom: 40%; /* Adjust distance from the bottom */
+    z-index: 9999; /* Ensure it's on top of other content */
+}
+
+.download-btn-container a {
+    writing-mode: vertical-rl; /* Make text vertical */
+    text-align: center;
+    padding: 15px;
 }

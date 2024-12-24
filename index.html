@@ -66,7 +66,7 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top top-0 transparent-navbar px-5" style="z-index: 2000;">
         <div class="container-fluid">
             <!-- Navbar brand with logo -->
-            <a class="navbar-brand nav-link" target="_blank" href="#" style="width: 100px; height: 100px;" >
+            <a class="navbar-brand nav-link" target="_blank" href="#" style="width: 150px; height: 120px;" >
                 <img src="images/motohom_logo.png" class="img-fluid" alt="motohom_Logo" style="width: 100%; max-height: 100%;"/>
             </a>
 
@@ -128,6 +128,68 @@
         </div>
     </nav>
 
+    <div class="hero_section d-flex align-items-center pt-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Left Side: Text Content -->
+            <div class="col-lg-8 text-white">
+                <h1 class="mb-4 hero-section-top-text">Book Our CamperVan</h1>
+                <h3 class="highlight-text mb-4">Most Reliable <br> Luxury Caravan Rental</h3>
+                <p>Enjoy an unforgettable journey with our premium caravans. Book now for a seamless travel experience!</p>
+                <div class="row">
+                    <div class="col-lg-12 mb-4">
+                    <a href="images/information_PDF/Motohom Caravans Information.pdf" download class="btn btn-outline-light btn-lg w-fit " style="border-radius: 0px;">
+                        Download Our Caravan Guide
+                    </a>
+                </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Booking Form -->
+            <div class="col-lg-4 hero_section_form">
+                <form id="bookingForm" class="row g-2 rounded-3 shadow-sm px-4 py-4" action="from_submit.php" method="POST">
+                    <!-- Name -->
+                    <div class="col-md-12">
+                        <label for="name" class="form-label">Name</label>
+                        <input id="name" class="form-control" type="text" name="name" required>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="col-md-12">
+                        <label for="email" class="form-label">E-mail</label>
+                        <input id="email" class="form-control" type="email" name="email" required>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="col-md-12">
+                        <label for="phone" class="form-label">Contact Number</label>
+                        <input id="phone" class="form-control" type="text" name="phone" required>
+                    </div>
+
+                    <!-- Caravan Type -->
+                    <div class="col-md-12">
+                        <label for="caravanType" class="form-label">Caravan Type</label>
+                        <select id="caravanType" class="form-select" name="caravanType" required>
+                            <option class="text-dark" value="">Select Caravan Type</option>
+                            <option class="text-dark" value="T_Class_Van">T Class Caravan</option>
+                            <option class="text-dark" value="U_Class_Van">U Class Caravan</option>
+                            <option class="text-dark" value="M_Class_Van">M Class Caravan</option>
+                            <option class="text-dark" value="V_Class_Van">V Class Caravan</option>
+                        </select>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="col-md-12 mt-4 gap-2">
+                        <button class="btn btn-outline-light w-50 rounded-0 w-100" type="submit">Book</button>
+                        <!-- <button type="button" class="btn btn-outline-light w-50 rounded-0" id="closeBtn">Close</button> -->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
     <!-- Side Navbar -->
     <div id="sideNav" class="side-nav">
         <button class="close-btn" id="closeNav">&times;</button>
@@ -144,67 +206,6 @@
         </ul>
     </div>
             <!-- Navbar end -->
-
-            <!-- Carousel wrapper -->
-            <div id="introCarousel" class="carousel slide carousel-fade shadow-2-strong" data-bs-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-bs-target="#introCarousel" data-bs-slide-to="0" class="active"></li>
-                    <li data-bs-target="#introCarousel" data-bs-slide-to="1"></li>
-                    <li data-bs-target="#introCarousel" data-bs-slide-to="2"></li>
-                </ol>
-
-                <!-- Inner -->
-                <div class="carousel-inner">
-                    <!-- Single item -->
-                    <div class="carousel-item active d-flex justify-start align-items-center h-100 px-5 ">
-                        <div class="mask custom-margin">
-                            <div class="d-flex h-100">
-                                <div class="text-white">
-                                    <h4 class="mb-3  myheading">Book Our CamperVan</h>
-                                    <h1 class="mb-4">Most Realiable <br> Luxury Caravan Rental</h1>
-                                    <div class="d-flex align-items-center">
-                                        <p class="p-0 mr-2 mt-2"> Explore Now</p>
-                                        <!-- <i class="bi bi-arrow-right"></i> -->
-                                        <i class="fa-solid fa-arrow-down-long"></i>
-                                </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Single item -->
-                    <div class="carousel-item active d-flex justify-start align-items-center h-100 px-5">
-                        <div class="mask custom-margin">
-                            <div class="d-flex h-100">
-                                <div class="text-white">
-                                    <h4 class="mb-3">Book Our CamperVan</h>
-                                    <h1 class="mb-4">Most Realiable <br> Luxury Caravan Rental</h1>
-                                    <div class="d-flex align-items-center">
-                                        <p class="p-0 mr-2 mt-2"> Explore Now</p>
-                                        <!-- <i class="bi bi-arrow-right"></i> -->
-                                        <i class="fa-solid fa-arrow-down-long"></i>
-                                </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Inner -->
-
-                <!-- Controls -->
-                <a class="carousel-control-prev" href="#introCarousel" role="button" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#introCarousel" role="button" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-            <!-- Carousel wrapper -->
         </header>
 
 
@@ -248,15 +249,97 @@
     </div>
 
     <!-- Buttons -->
-    <div class="col-12 text-center d-flex mt-4 gap-2">
+    <div class="col-md-12 text-center d-flex mt-4 gap-2">
         <button class="btn btn-dark w-50 rounded-0" type="submit">Book</button>
         <button type="button" class="btn btn-outline-secondary w-50 rounded-0" id="closeBtn">Close</button>
     </div>
 </form>
 </div>
 
-
         <!--popup form code -->
+
+
+
+        
+<main>
+    <section class="news-section" id="feature">
+        <div class="container">
+            <!-- Section Heading and Intro Text -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-center" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+                        <h2 style="font-size: 40px; font-weight: 700;">Trusted</h2>
+                        <!-- <p class="text-center mt-3">
+                            Stay informed on the latest trends in the caravan and road trip industry. From new vehicles to exciting destinations, we keep you updated with essential news
+                            <br> and insights for your next adventure. Check back regularly for updates!
+                        </p> -->
+                        <img src="https://pro-theme.com/html/nevica/assets/img/decore03.png" class="img-fluid mt-3" alt="image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- News Cards with Video -->
+            <div class="row justify-content-center mt-5" style="margin: auto;">
+                <div class="col-xl-4 col-lg-4 col-md-6 col-12 mt-4">
+                    <div class="card" style="width: 100%;">
+                        <video class="card-img-top img-fluid" controls>
+                            <source src="images/Motohom Flagship Caravans/M class caravan/E class caravan .MP4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="card-body">
+                            <div class="time">
+                                <p> M Class Caravan by | <span style="color: #30a8d5; font-weight: bold;">MotoHom</span></p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6 col-12 mt-4">
+                    <div class="card" style="width: 100%;">
+                        <video class="card-img-top img-fluid" controls>
+                            <source src="images/Motohom Flagship Caravans/T class caravan/Curly Tales Vlog.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="card-body">
+                            <div class="time">
+                                <p>T Class Caravan | by <span style="color: #30a8d5; font-weight: bold;">MotoHom</span></p>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6 col-12 mt-4">
+                    <div class="card" style="width: 100%;">
+                        <video class="card-img-top img-fluid" controls>
+                            <source src="images/Motohom Flagship Caravans/V class caravan/V class caravan .MP4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="card-body">
+                            <div class="time">
+                                <p> V Class Caravan | by <span style="color: #30a8d5; font-weight: bold;">MotoHom</span></p>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Downloadable Guide Button -->
+            <div class="row mt-5">
+                <div class="col-lg-12 text-center">
+                    <a href="images/information_PDF/Motohom Caravans Information.pdf" download class="btn btn-outline-dark btn-lg w-fit " style="border-radius: 0px;">
+                        Download Our Caravan Guide
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+
 
         <main>
             <section id="about">
@@ -265,317 +348,6 @@
                     <div class="container">
 
                         <!-- The first tab -->
-<div class="b-main-filter-content tab-content" id="findTabContent">
-    <!-- Step 1: Start Date, End Date, and Total People -->
-    <div class="tab-pane fade show active" id="content-step1">
-        <div class="row align-items-end">
-            <div class="b-main-filter__main col-lg-10">
-                <div class="row" id="step1Fields">
-                    <!-- TYPE Date -->
-                    <div class="b-main-filter__item col-lg-6">
-                        <label for="caravanType2" class="form-label mt-3">Caravan Type</label>
-                        <select class="form-select" id="caravanType2">
-                            <option value="">Select Caravan Type</option>
-                            <option value="T_Class_Van">T Class Caravan</option>
-                            <option value="U_Class_Van">U Class Caravan</option>
-                            <option value="M_Class_Van">M Class Caravan</option>
-                            <option value="V_Class_Van">V Class Caravan</option>
-                        </select>
-                        <span id="caravanTypeError2" class="text-danger" style="display: none;">Please select a caravan type.</span>
-                    </div>
-                    <!-- email -->
-                    <div class="b-main-filter__item col-lg-6">
-                        <label for="email3" class="form-label mt-3">E-mail</label>
-                        <input type="email" class="form-control" id="email3" placeholder="Enter Email">
-                        <span id="emailError3" class="text-danger" style="display: none;">Please enter a valid email.</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-2 d-flex align-items-end mt-4">
-                <button class="btn btn-outline-dark btn-lg w-100 p-1" style="border-radius: 0px;" id="searchStep1Btn">Next</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Step 2: Location, Caravan Type, and Date of Birth -->
-    <div class="tab-pane fade" id="content-step2" style="display: none;">
-        <div class="row align-items-end">
-            <div class="b-main-filter__main col-lg-10">
-                <div class="row" id="step2Fields">
-                    <!-- Name -->
-                    <div class="b-main-filter__item col-lg-6">
-                        <label for="firstName3" class="form-label mt-3">Name</label>
-                        <input type="text" class="form-control" id="firstName3" placeholder="Enter First Name">
-                        <span id="firstNameError3" class="text-danger" style="display: none;">Please enter your first name.</span>
-                    </div>
-                     <!-- Contact Number -->
-                    <div class="b-main-filter__item col-lg-6">
-                        <label for="contactNumber4" class="form-label mt-3">Contact Number</label>
-                        <input type="text" class="form-control" id="contactNumber4" placeholder="Enter Contact Number">
-                        <span id="contactNumberError4" class="text-danger" style="display: none;">Please enter a contact number.</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-2 d-flex align-items-end mt-4">
-                <button class="btn btn-outline-dark btn-lg w-100 p-1" style="border-radius: 0px;" id="searchStep2Btn">Next</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-
-
-
-// this is form show popup start
-
-// Function to Create and Show Popup
-function showDynamicPopup(message) {
-    // Create popup container
-    const popup = document.createElement("div");
-    popup.style.position = "fixed";
-    popup.style.top = "50%";
-    popup.style.left = "50%";
-    popup.style.transform = "translate(-50%, -50%)";
-    popup.style.width = "300px";
-    popup.style.padding = "20px";
-    popup.style.background = "#fff";
-    popup.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
-    popup.style.borderRadius = "8px";
-    popup.style.textAlign = "center";
-    popup.style.zIndex = "1000";
-    popup.style.opacity = "0";
-    popup.style.transition = "opacity 0.3s ease";
-
-    // Create message text
-    const messageText = document.createElement("p");
-    messageText.textContent = message;
-    messageText.style.marginBottom = "20px";
-    messageText.style.fontSize = "16px";
-    messageText.style.color = "#333";
-
-    // Create close button
-    const closeButton = document.createElement("button");
-    closeButton.textContent = "Close";
-    closeButton.style.padding = "10px 20px";
-    closeButton.style.background = "#4caf50";
-    closeButton.style.color = "#fff";
-    closeButton.style.border = "none";
-    closeButton.style.borderRadius = "4px";
-    closeButton.style.cursor = "pointer";
-
-    closeButton.addEventListener("click", () => {
-        document.body.removeChild(popup); // Remove popup from DOM
-    });
-
-    // Append elements to popup
-    popup.appendChild(messageText);
-    popup.appendChild(closeButton);
-
-    // Append popup to body
-    document.body.appendChild(popup);
-
-    // Add fade-in effect
-    setTimeout(() => {
-        popup.style.opacity = "1";
-    }, 10);
-
-    // Auto close popup after 5 seconds
-    setTimeout(() => {
-        if (document.body.contains(popup)) {
-            document.body.removeChild(popup);
-        }
-    }, 5000);
-}
-
-
-// this is form show popup end
-
-document.getElementById('searchStep1Btn').addEventListener('click', function() {
-    // Validate Step 1
-    let caravanType = document.getElementById('caravanType2').value.trim();
-    let email = document.getElementById('email3').value.trim();
-
-    console.log("Step 1 fields", caravanType, email);
-    
-    if (!caravanType || !email) {
-        alert('Please fill in all fields to proceed.');
-        return;
-    }
-
-    // Show next tab
-    document.getElementById('content-step1').classList.remove('show', 'active');
-    document.getElementById('content-step2').classList.add('show', 'active');
-    document.getElementById('content-step2').style.display = 'block';
-    document.getElementById('content-step1').style.display = 'none';
-});
-
-document.getElementById('bookBtn').addEventListener('click', function() {
-    // Validate Step 2 (Book Button)
-    let caravanType = document.getElementById('caravanType2').value.trim();
-    let email = document.getElementById('email3').value.trim();
-    let firstName = document.getElementById('firstName3').value.trim();
-    let contactNumber = document.getElementById('contactNumber4').value.trim();
-
-    console.log("Step 2 fields", caravanType, email, firstName, contactNumber);
-
-    if (!caravanType || !email || !firstName || !contactNumber) {
-        alert('Please fill in all fields to proceed.');
-        return;
-    }
-
-    // Gather the relevant data
-    let formData = new FormData();
-    formData.append('caravanType', caravanType);
-    formData.append('email', email);
-    formData.append('firstName', firstName);
-    formData.append('contactNumber', contactNumber);
-
-    // Example of sending this data via AJAX
-    const xhr = new XMLHttpRequest();
-    xhr.open("POST", "from_submit.php", true);
-
-    let submitBtn = document.getElementById('bookBtn');
-    let originalText = submitBtn.innerHTML;
-    submitBtn.innerHTML = "Sending...";
-    submitBtn.disabled = true;
-
-    xhr.onload = function () {
-        if (xhr.status === 200) {
-            const response = xhr.responseText.trim();
-            console.log("response is", response);
-
-            if (response === "Success") {
-                showDynamicPopup("Thank you! We will get back to you soon.");
-                tabResetForm();
-            } else {
-                showDynamicPopup("Failed to send booking details. Please try again.");
-            }
-        } else {
-            showDynamicPopup("There was an error with your request. Please try again.");
-        }
-
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
-    };
-
-    // Send the form data to the PHP script
-    xhr.send(formData);
-});
-
-
-
-
-    // Gather all form data
-//     let formData = new FormData();
-// formData.append('startDate', document.getElementById('startDate1').value);
-// formData.append('endDate', document.getElementById('endDate1').value);
-// formData.append('totalPeople', document.getElementById('totalPeople1').value);
-// formData.append('city', document.getElementById('location2').value); // Corrected from 'location' to 'city'
-// formData.append('caravanType', document.getElementById('caravanType2').value);
-// formData.append('dob', document.getElementById('dob2').value);
-// formData.append('firstName', document.getElementById('firstName3').value);
-// formData.append('lastName', document.getElementById('lastName3').value);
-// formData.append('email', document.getElementById('email3').value);
-// formData.append('phone', document.getElementById('contactNumber4').value);
-// formData.append('startLocation', document.getElementById('startLocation4').value);
-// formData.append('destination', document.getElementById('destinationLocation4').value);
-// // If additional_Information is part of the form, ensure it's appended as well
-// formData.append('additional_Information', document.getElementById('additional_Information')?.value || '');
-//     // Create AJAX request
-//     const xhr = new XMLHttpRequest();
-//     xhr.open("POST", "from_submit.php", true);
-
-//     // Show loading indicator or disable button while sending request
-//     let submitBtn = document.getElementById('bookBtn');
-//     let originalText = submitBtn.innerHTML;
-//     submitBtn.innerHTML = "Sending...";
-//     submitBtn.disabled = true;
-
-//     xhr.onload = function () {
-//         if (xhr.status === 200) {
-//             const response = xhr.responseText.trim();
-//             console.log("response is", response);
-
-//             if (response === "Success") {
-//                 // Show success popup message
-//                 // alert("Your booking details have been sent successfully!");
-//                 showDynamicPopup("Thank you! We will get back to you soon.");
-//                 // Optionally reset the form
-//                 tabResetForm();
-//                 // Close the popup after successful submission
-//                 togglePopup(false);
-//             } else {
-//                 // alert("Failed to send booking details. Please try again.");
-//                 showDynamicPopup("Failed to send booking details. Please try again.");
-
-//             }
-//         } else {
-//             // alert("There was an error with your request. Please try again.");
-//             showDynamicPopup("There was an error with your request. Please try again.");
-//         }
-
-//         // Reset the button text and enable it after response
-//         submitBtn.innerHTML = originalText;  // Restore original button text
-//         submitBtn.disabled = false;  // Enable button again
-//     };
-
-//     // Send the form data to the PHP script
-//     xhr.send(formData);
-// });
-
-
-
-
-// reset from 
-
-function tabResetForm() {
-    document.getElementById("bookingForm").reset();
-
-
-
-        // Reset specific fields
-    document.getElementById('startDate1').value = "";
-    document.getElementById('endDate1').value = "";
-    document.getElementById('totalPeople1').value = "";
-
-    // Reset other fields as needed
-    document.getElementById('location2').value = "";
-    document.getElementById('caravanType2').value = "";
-    document.getElementById('dob2').value = "";
-    document.getElementById('firstName3').value = "";
-    document.getElementById('lastName3').value = "";
-    document.getElementById('email3').value = "";
-    document.getElementById('contactNumber4').value = "";
-    document.getElementById('startLocation4').value = "";
-    document.getElementById('destinationLocation4').value = "";
-
-
-    // Optionally reset validation error messages and styles
-    const errorMessages = document.querySelectorAll(".text-danger");
-    errorMessages.forEach((error) => {
-        error.style.display = "none";
-    });
-
-    // Reset any additional UI elements or indicators
-    document.getElementById('content-step1').classList.add('show', 'active');
-    document.getElementById('content-step1').style.display = 'block';
-
-    document.getElementById('content-step2').classList.remove('show', 'active');
-    document.getElementById('content-step2').style.display = 'none';
-
-    document.getElementById('content-step3').classList.remove('show', 'active');
-    document.getElementById('content-step3').style.display = 'none';
-
-    document.getElementById('content-step4').classList.remove('show', 'active');
-    document.getElementById('content-step4').style.display = 'none';
-}
-
-
-// reset from 
-
-
-</script>
                         <div class="row justify-content-center align-items-center">
                             <div class="col-lg-6">
                                 <div class="text-left px-2">
@@ -592,6 +364,13 @@ function tabResetForm() {
                                         <!-- <p class="sign" style="font-weight: 600; letter-spacing: 0.5px;">CEO, Caravan Rentals.</p> -->
                                     </div>
                                 </div>
+                                <div class="row mt-5">
+                <div class="col-lg-12 mb-4">
+                    <a href="images/information_PDF/Motohom Caravans Information.pdf" download class="btn btn-outline-dark btn-lg w-fit " style="border-radius: 0px;">
+                        Download Our Caravan Guide
+                    </a>
+                </div>
+            </div>
                             </div>
                             <div class="col-lg-6 my-auto">
                                 <!-- <div> -->
@@ -686,7 +465,7 @@ function tabResetForm() {
                 <div class="b-advantages__title">Eco-Friendly Options</div>
                 <div class="decore01"></div>
                 <div class="b-advantages__info">
-                    We prioritize sustainability with eco-conscious materials and energy-efficient systems in our caravan designs.
+                   We prioritize sustainability in our caravan designs with eco-friendly materials and efficient systems.
                 </div>
             </div>
         </div>
@@ -732,23 +511,25 @@ function tabResetForm() {
 
         <main>
             <section class="section-goods" id="testimonial">
-                <div class="section-default section-goods__inner bg-dark py-5">
-                    <div class="container py-5">
-                        <div class="row text-center d-flex py-3" style="background-color: rgba(0, 0, 0, 0.615); width: fit-content; margin: auto;">
-                            <h2 class="ui-title text-white ui-title_light fw-bold">Fleet of Luxury Caravan</h2>
+                <div class="section-default section-goods__inner py-5">
+                    <div class="good-inner-box " >
+                        <div class="container py-5">
+                        <div class="row text-center d-flex py-3">
+                            <h2 class="ui-title text-white ui-title_light fw-bold">Travel in Style and Comfort</h2>
                             <div class="row">
                                 <div class="col-md-8 offset-md-2 text-white">
                                     <p>
-                                        Explore our luxury caravans, featuring modern amenities, spacious interiors, and unmatched comfort for an unforgettable travel experience.
+                                        Experience unparalleled luxury and modern amenities with our premium caravans, designed to make every journey memorable and comfortable.
                                     </p>
                                     <img src="https://pro-theme.com/html/nevica/assets/img/decore01.png" alt="caravan_photo" />
                                 </div>
                             </div>
                         </div>
                     </div>
+                    </div>
                 </div>
                 <div class="container" style="margin-top: -30px;">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 justify-content-center">
             <!-- Card 1 -->
             <div class="col-lg-4 mb-4">
                 <div class="card">
@@ -780,7 +561,6 @@ function tabResetForm() {
                     <!-- Card Body -->
                                          <div class="card-body">
     <h5 class="card-title">M class caravan</h5>
-    <p class="card-text">
         <div class="row" style="font-size: 14px;">
             <div class="col-lg-6">
                 <span> <b>Per day rental:</b> Rs.25,000/</span>
@@ -789,7 +569,6 @@ function tabResetForm() {
                 <span> <b>Per km rental:</b> Rs.120/km</span>
             </div>
         </div>
-    </p>
 </div>
                 </div>
             </div>
@@ -891,6 +670,7 @@ function tabResetForm() {
         </div>
                 </div>
             </div>
+
             <!-- Card 3.1 -->
             <div class="col-lg-4 mb-4">
                 <div class="card">
@@ -1091,7 +871,7 @@ function tabResetForm() {
                                             <img src="images/Motohom Flagship Caravans/T class caravan/t3 side profile  2.jpg" alt="caravan_image" class=" img-fluid" style="border-radius: 10px; transform: rotate(-2deg);">
                                         </div>
                                         </div>
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-6 my-auto">
                                                 <div>
                                                         <h2 class="mt-3 fw-bold" >Motohom's Mission: Transforming Travel in India</h2>
                                                         <img src="https://pro-theme.com/html/nevica/assets/img/decore02.png" class=" img-fluid" alt="motohom_caravan">
@@ -1100,6 +880,11 @@ function tabResetForm() {
                                                         </div>
                                                         <!-- <div class="mt-4"><a href="#" class="btn btn-outline-dark btn-lg" style="width: fit-content; border-radius: 0px;">View more</a></div> -->
                                                 </div>
+                                                <div class="col-lg-12 mb-4 p-0">
+                    <a href="images/information_PDF/Motohom Caravans Information.pdf" download class="btn btn-outline-dark btn-lg w-fit " style="border-radius: 0px;">
+                        Download Our Caravan Guide
+                    </a>
+                </div>
                                         </div>
                                         
                                 </div>
@@ -1117,8 +902,9 @@ function tabResetForm() {
                                 <div class="row">
                                         <div class="col-lg-12">
                                                 <div class=" text-center">
-                                                        <h2 class="text-center" style="font-size: 40px; font-weight: 700;">Picture Gallery</h2>
-                                                        <p class=" text-center mt-3">Explore our picture gallery to experience the luxury and comfort of our premium caravans. Each photo highlights stunning interiors and breathtaking landscapes, <br> offering a glimpse into the perfect blend of adventure and relaxation for your next road trip</p>
+                                                        <!-- <h2 class="text-center" style="font-size: 40px; font-weight: 700;">Picture Gallery</h2> -->
+                                                        <h2 class="text-center" style="font-size: 40px; font-weight: 700;">Scenic Journeys</h2>
+                                                        <p class=" text-center mt-3">Explore the luxury of our premium caravans through stunning interiors and breathtaking landscapes. <br> Discover the perfect blend of adventure and relaxation for your next road trip.</p>
                                                         <img src="https://pro-theme.com/html/nevica/assets/img/decore03.png" class=" img-fluid mt-3 m-auto" alt="image">
                                                 </div>
                                         </div>
@@ -1390,93 +1176,16 @@ function tabResetForm() {
     </section>
 </main>
 
-
-
 <main>
-    <section class="news-section" id="feature">
-        <div class="container">
-            <!-- Section Heading and Intro Text -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="text-center" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
-                        <h2 style="font-size: 40px; font-weight: 700;">Feature</h2>
-                        <p class="text-center mt-3">
-                            Stay informed on the latest trends in the caravan and road trip industry. From new vehicles to exciting destinations, we keep you updated with essential news
-                            <br> and insights for your next adventure. Check back regularly for updates!
-                        </p>
-                        <img src="https://pro-theme.com/html/nevica/assets/img/decore03.png" class="img-fluid mt-3" alt="image">
-                    </div>
-                </div>
-            </div>
-
-            <!-- News Cards with Video -->
-            <div class="row justify-content-center mt-5" style="margin: auto;">
-                <div class="col-xl-4 col-lg-4 col-md-6 col-12 mt-4">
-                    <div class="card" style="width: 100%;">
-                        <video class="card-img-top img-fluid" controls>
-                            <source src="images/Motohom Flagship Caravans/M class caravan/E class caravan .MP4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="card-body">
-                            <div class="time">
-                                <p> M Class Caravan by | <span style="color: #30a8d5; font-weight: bold;">MotoHom</span></p>
-                            </div>
-                            <div>
-                                <p class="fs-5" style="font-weight: 600;">Explore the Features of our Luxury Caravans</p>
-                                <p>MotoHom showcases the premium features of their flagship caravans. Watch now to plan your next trip!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-lg-4 col-md-6 col-12 mt-4">
-                    <div class="card" style="width: 100%;">
-                        <video class="card-img-top img-fluid" controls>
-                            <source src="images/Motohom Flagship Caravans/T class caravan/Curly Tales Vlog.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="card-body">
-                            <div class="time">
-                                <p>T Class Caravan | by <span style="color: #30a8d5; font-weight: bold;">MotoHom</span></p>
-                            </div>
-                            <div>
-                                <p class="fs-5" style="font-weight: 600;">Experience Unmatched Comfort</p>
-                                <p>Learn how MotoHom's caravans provide the ultimate comfort for families and solo travelers alike.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-lg-4 col-md-6 col-12 mt-4">
-                    <div class="card" style="width: 100%;">
-                        <video class="card-img-top img-fluid" controls>
-                            <source src="images/Motohom Flagship Caravans/V class caravan/V class caravan .MP4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="card-body">
-                            <div class="time">
-                                <p> V Class Caravan | by <span style="color: #30a8d5; font-weight: bold;">MotoHom</span></p>
-                            </div>
-                            <div>
-                                <p class="fs-5" style="font-weight: 600;">Eco-Friendly Road Trips</p>
-                                <p>Discover our eco-friendly caravans, equipped with solar panels and green technology for sustainable travel.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Downloadable Guide Button -->
-            <div class="row mt-5">
-                <div class="col-lg-12 text-center">
+    <div class="container d-flex align-items-center justify-content-center mt-5">
+        <div class="row">
+            <div class="col-lg-12">
                     <a href="images/information_PDF/Motohom Caravans Information.pdf" download class="btn btn-outline-dark btn-lg w-fit " style="border-radius: 0px;">
                         Download Our Caravan Guide
                     </a>
                 </div>
-            </div>
-
         </div>
-    </section>
+    </div>
 </main>
 
 
@@ -1485,8 +1194,10 @@ function tabResetForm() {
 
 
 
+
+
         <!-- Footer -->
-<footer class=" text-center text-lg-start" style="background-color: #222222; color: white; margin-top: 100px;">
+<footer class=" text-center text-lg-start mt-5" style="background-color: #222222; color: white;">
   <!-- Section: Social media -->
   <section class="d-flex justify-content-center justify-content-lg-between p-4 px-5 border-bottom">
     <!-- Left -->
@@ -1631,6 +1342,12 @@ function tabResetForm() {
 </footer>
 <!-- Footer -->
 
+<div class="download-btn-container">
+    <a href="images/information_PDF/Motohom Caravans Information.pdf" download class="btn btn-dark btn-sm" style="border-radius: 0px;">
+        Download Guide
+    </a>
+</div>
+
 
 
 
@@ -1674,91 +1391,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-            // this js for email
-
+            // Select the "Book Now" buttons (both in navbar and side navbar)
 const bookNowBtns = document.querySelectorAll(".bookNowBtn");
 const popupForm = document.getElementById("popupForm");
 const popupOverlay = document.getElementById("popupOverlay");
 const closeBtn = document.getElementById("closeBtn");
 
-
-
-// this is form show popup start
-
-// Function to Create and Show Popup
-function showDynamicPopup(message) {
-    // Create popup container
-    const popup = document.createElement("div");
-    popup.style.position = "fixed";
-    popup.style.top = "50%";
-    popup.style.left = "50%";
-    popup.style.transform = "translate(-50%, -50%)";
-    popup.style.width = "300px";
-    popup.style.padding = "20px";
-    popup.style.background = "#fff";
-    popup.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
-    popup.style.borderRadius = "8px";
-    popup.style.textAlign = "center";
-    popup.style.zIndex = "1000";
-    popup.style.opacity = "0";
-    popup.style.transition = "opacity 0.3s ease";
-
-    // Create message text
-    const messageText = document.createElement("p");
-    messageText.textContent = message;
-    messageText.style.marginBottom = "20px";
-    messageText.style.fontSize = "16px";
-    messageText.style.color = "#333";
-
-    // Create close button
-    const closeButton = document.createElement("button");
-    closeButton.textContent = "Close";
-    closeButton.style.padding = "10px 20px";
-    closeButton.style.background = "#4caf50";
-    closeButton.style.color = "#fff";
-    closeButton.style.border = "none";
-    closeButton.style.borderRadius = "4px";
-    closeButton.style.cursor = "pointer";
-
-    closeButton.addEventListener("click", () => {
-        document.body.removeChild(popup); // Remove popup from DOM
-    });
-
-    // Append elements to popup
-    popup.appendChild(messageText);
-    popup.appendChild(closeButton);
-
-    // Append popup to body
-    document.body.appendChild(popup);
-
-    // Add fade-in effect
-    setTimeout(() => {
-        popup.style.opacity = "1";
-    }, 10);
-
-    // Auto close popup after 5 seconds
-    setTimeout(() => {
-        if (document.body.contains(popup)) {
-            document.body.removeChild(popup);
-        }
-    }, 5000);
-}
-
-
-// this is form show popup end
-
-
-
-// Show Popup for All Buttons
+// Show Popup for All "Book Now" buttons (navbar and side navbar)
 bookNowBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
-        togglePopup(true);
-        sideNav.style.width = "0"
+        togglePopup(true); // Open the popup form
+        // Optional: Close the side navbar if it is open
+        if (document.getElementById("sideNav").style.width === "250px") {
+            document.getElementById("sideNav").style.width = "0"; // Close side navbar
+        }
     });
 });
 
-// Close Popup
+// Close the Popup
 closeBtn.addEventListener("click", () => {
     togglePopup(false);
 });
@@ -1778,19 +1428,30 @@ function togglePopup(isVisible) {
     }
 }
 
+// Handle form submission for both forms (popup and normal form)
+const bookingForm = document.getElementById("bookingForm");
+const indexBookingForm = document.getElementById("indexBookingForm");
 
+// Attach form submit event listeners
+if (bookingForm) {
+    bookingForm.addEventListener("submit", (e) => {
+        e.preventDefault(); // Prevent the default form submission
+        sendFormData(bookingForm); // Handle form submission for popup form
+    });
+}
 
-// Form Submission Handling for Popup Form
-const popupBookingForm = document.getElementById("bookingForm");
+if (indexBookingForm) {
+    indexBookingForm.addEventListener("submit", (e) => {
+        e.preventDefault(); // Prevent the default form submission
+        sendFormData(indexBookingForm); // Handle form submission for normal form
+    });
+}
 
-popupBookingForm?.addEventListener("submit", (e) => {
-    e.preventDefault();
-    sendFormData(popupBookingForm); // Handle form submission for popup form
-});
-
-// Common Function to Send Form Data to PHP (using AJAX)
+// Function to send form data to PHP using AJAX
 function sendFormData(form) {
     const formData = new FormData(form);
+
+    console.log("formData is ", formData);
 
     // Debug: Log the form data to check if it's being correctly gathered
     formData.forEach((value, key) => {
@@ -1813,7 +1474,7 @@ function sendFormData(form) {
 
             if (response === "Success") {
                 showDynamicPopup("Thank you! We will get back to you soon.");
-                resetForm(form);
+                resetForm(form); // Reset the form after successful submission
             } else {
                 showDynamicPopup("Failed to send booking details. Please try again.");
             }
@@ -1829,9 +1490,61 @@ function sendFormData(form) {
     xhr.send(formData);  // Send the form data to the PHP script
 }
 
-// Function to Reset Form
+// Function to reset the form after successful submission
 function resetForm(form) {
     form.reset();
+}
+
+// Function to show dynamic popup messages
+function showDynamicPopup(message) {
+    const popup = document.createElement("div");
+    popup.style.position = "fixed";
+    popup.style.top = "50%";
+    popup.style.left = "50%";
+    popup.style.transform = "translate(-50%, -50%)";
+    popup.style.width = "300px";
+    popup.style.padding = "20px";
+    popup.style.background = "#fff";
+    popup.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
+    popup.style.borderRadius = "8px";
+    popup.style.textAlign = "center";
+    popup.style.zIndex = "1000";
+    popup.style.opacity = "0";
+    popup.style.transition = "opacity 0.3s ease";
+
+    const messageText = document.createElement("p");
+    messageText.textContent = message;
+    messageText.style.marginBottom = "20px";
+    messageText.style.fontSize = "16px";
+    messageText.style.color = "#333";
+
+    const closeButton = document.createElement("button");
+    closeButton.textContent = "Close";
+    closeButton.style.padding = "10px 20px";
+    closeButton.style.background = "#4caf50";
+    closeButton.style.color = "#fff";
+    closeButton.style.border = "none";
+    closeButton.style.borderRadius = "4px";
+    closeButton.style.cursor = "pointer";
+
+    closeButton.addEventListener("click", () => {
+        document.body.removeChild(popup); // Remove popup from DOM
+    });
+
+    popup.appendChild(messageText);
+    popup.appendChild(closeButton);
+
+    document.body.appendChild(popup);
+
+    setTimeout(() => {
+        popup.style.opacity = "1";
+    }, 10);
+
+    setTimeout(() => {
+        if (document.body.contains(popup)) {
+            document.body.removeChild(popup);
+        }
+    }, 5000);
 }
 
 
