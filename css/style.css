@@ -6,6 +6,10 @@
     font-family: "Century Gothic", sans-serif;
 }
 
+body {
+    /* background-color: #f1f3fb; */
+}
+
 a {
     text-decoration: none;
 }
@@ -825,142 +829,128 @@ i {
 /* customization */
 
 /* form */
-/* General form styling */
-.contact-form .form-field {
-    position: relative;
-    margin: 30px 0;
+
+#form-section input {
+    appearance: none;
+    border-radius: 0;
 }
 
-/* Styling for input fields */
-.contact-form .input-text {
-    display: block;
+#form-section .card {
+    /* margin: 2rem auto; */
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 36px;
-    padding: 5px;
-    border: none;
-    border-bottom: 2px solid #5c5a5a;
-    font-size: 18px;
-    line-height: 26px;
-    font-weight: 400;
-    color: #333;
-    background: transparent;
-    transition: border-color 0.3s ease;
+    background-color: #fff;
+    border-radius: 10px;
+    /* box-shadow: 0 10px 20px 0 rgba(#999, 0.25); */
+    padding: 0.75rem;
 }
 
-/* Focus effect for input fields */
-.contact-form .input-text:focus {
-    outline: none;
-    border-color: #007bff; /* Focus border color */
-}
-
-/* Label styling */
-.contact-form .label {
-    position: absolute;
-    left: 15px;
-    bottom: 10px;
-    font-size: 18px;
-    line-height: 26px;
-    font-weight: 400;
-    color: #222;
-    cursor: text;
-    transition: transform 0.2s ease-in-out, color 0.3s ease;
-}
-
-/* Label transition when input is focused or has content */
-.contact-form .input-text:focus + .label,
-.contact-form .input-text.not-empty + .label {
-    transform: translateY(-24px);
-    color: #007bff; /* Change label color on focus */
-}
-
-/* Focused input field label transition */
-.contact-form .input-text:focus + .label {
-    transform: translateY(-24px);
-}
-
-/* Styling for textarea */
-.contact-form textarea.input-text {
-    min-height: 120px; /* Set a minimum height for the textarea */
-    padding: 10px;
-    border: 2px solid #5c5a5a;
-    border-radius: 5px;
-    resize: vertical; /* Allow vertical resize */
-    transition: border-color 0.3s ease;
-}
-
-.contact-form textarea.input-text:focus {
-    border-color: #007bff; /* Change border color on focus */
-}
-
-/* Button styling */
-.contact-form .btn {
-    display: inline-block;
-    width: 100%;
-    padding: 12px;
-    font-size: 18px;
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact-form .btn:hover {
-    background-color: #0056b3; /* Darken the button color on hover */
-}
-
-/* Responsive adjustments */
-@media (max-width: 767px) {
-    .contact-form .form-field {
-        margin: 15px 0;
-    }
-
-    .contact-form .input-text,
-    .contact-form .btn {
-        font-size: 16px;
-    }
-
-    .contact-form .label {
-        font-size: 16px;
-    }
-}
-.message-popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    padding: 20px;
-    background: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+#form-section .card-image {
     border-radius: 8px;
-    text-align: center;
-    display: none; /* Hide popup by default */
-    z-index: 1000;
-    opacity: 0; /* Make it invisible initially */
-    transition: opacity 0.3s ease; /* Smooth transition */
+    overflow: hidden;
+    padding-bottom: 45%; /* Reduce padding to make the image smaller */
+    background-image: url("https://img1.wallspic.com/crops/4/4/0/7/27044/27044-camping-van-vacation-cloud-sand-3840x2160.jpg");
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 50vw rgba(0, 0, 0, 0.21);
+    background-size: cover;
+    background-position: center; /* Center the image for better view */
+    position: relative;
 }
 
-.message-popup.active {
-    display: block; /* Show popup when active */
-    opacity: 1; /* Make it fully visible */
-}
-
-.message-content button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #4caf50;
+#form-section .card-heading {
+    position: absolute;
+    left: 5%;
+    top: 15%;
+    right: 10%;
+    font-size: 1.75rem;
+    font-weight: 700;
     color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    display: inline-block; /* Ensure the button displays properly */
+    line-height: 1.222;
 }
 
-.message-content button:hover {
-    background: #45a049;
+#form-section .card-heading small {
+    display: block;
+    font-size: 0.75em;
+    font-weight: 400;
+    margin-top: 0.25em;
+}
+
+#form-section .card-form {
+    padding: 2rem 1rem 0;
+}
+
+#form-section .input {
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    padding-top: 1.5rem;
+}
+
+#form-section .input + .input {
+    margin-top: 1.5rem;
+}
+
+#form-section .input-label {
+    color: #454a4e;
+    /* position: absolute; */
+    /* top: 1.5rem; */
+    transition: 0.25s ease;
+}
+
+#form-section .input-field {
+    border: 0;
+    z-index: 1;
+    background-color: transparent;
+    border-bottom: 2px solid #eee;
+    font: inherit;
+    font-size: 1.125rem;
+    padding: 0.25rem 0;
+    width: 100%;
+}
+
+#form-section .action {
+    margin-top: 2rem;
+}
+/* 
+#form-section .action-button {
+    font: inherit;
+    font-size: 1.25rem;
+    padding: 1em;
+    width: 100%;
+    font-weight: 500;
+    background-color: #6658d3;
+    border-radius: 6px;
+    color: #fff;
+    border: 0;
+} */
+
+#form-section .card-info {
+    padding: 1rem 1rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #8597a3;
+}
+
+#form-section .card-info a {
+    display: block;
+    color: #6658d3;
+    text-decoration: none;
+}
+
+@media (max-width: 767px) {
+    #form-section .card {
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    #form-section .card-image {
+        padding-bottom: 75%;
+    }
+
+    #form-section .card-heading {
+        font-size: 1.5rem;
+    }
 }
 
 /* form */
@@ -972,7 +962,7 @@ i {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
-    margin-top: 80px;
+    margin-top: 50px;
     padding: 30px 0;
 }
 

@@ -268,7 +268,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="text-center" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
-                        <h2 style="font-size: 40px; font-weight: 700;">Trusted</h2>
+                        <h2 style="font-size: 35px; font-weight: 700;">Trusted By</h2>
                         <!-- <p class="text-center mt-3">
                             Stay informed on the latest trends in the caravan and road trip industry. From new vehicles to exciting destinations, we keep you updated with essential news
                             <br> and insights for your next adventure. Check back regularly for updates!
@@ -401,7 +401,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class=" text-center">
-                                                        <h2 class="text-center" style="font-size: 40px; font-weight: 700;">Why Choose Motohom for Your Custom Caravan</h2>
+                                                        <h2 class="text-center" style="font-size: 35px; font-weight: 700;">Why Choose Motohom for Your Custom Caravan</h2>
                                                         <!-- <p class=" text-center mt-3">Explore our picture gallery to experience the luxury and comfort of our premium caravans. Each photo highlights stunning interiors and breathtaking landscapes, <br> offering a glimpse into the perfect blend of adventure and relaxation for your next road trip</p> -->
                                                         <img src="https://pro-theme.com/html/nevica/assets/img/decore03.png" class=" img-fluid mt-3 m-auto" alt="image">
                                                 </div>
@@ -785,7 +785,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class=" text-center">
-                                                        <h2 class="text-center" style="font-size: 40px; font-weight: 700;">Our Manufacturing Process</h2>
+                                                        <h2 class="text-center" style="font-size: 35px; font-weight: 700;">Our Manufacturing Process</h2>
                                                         <!-- <p class=" text-center mt-3">Explore our picture gallery to experience the luxury and comfort of our premium caravans. Each photo highlights stunning interiors and breathtaking landscapes, <br> offering a glimpse into the perfect blend of adventure and relaxation for your next road trip</p> -->
                                                         <img src="https://pro-theme.com/html/nevica/assets/img/decore03.png" class=" img-fluid mt-3 m-auto" alt="image">
                                                 </div>
@@ -935,7 +935,7 @@
                                         <div class="col-lg-12">
                                                 <div class=" text-center">
                                                         <!-- <h2 class="text-center" style="font-size: 40px; font-weight: 700;">Picture Gallery</h2> -->
-                                                        <h2 class="text-center" style="font-size: 40px; font-weight: 700;">Scenic Journeys</h2>
+                                                        <h2 class="text-center" style="font-size: 35px; font-weight: 700;">Scenic Journeys</h2>
                                                         <p class=" text-center mt-3">Explore the luxury of our premium caravans through stunning interiors and breathtaking landscapes. <br> Discover the perfect blend of adventure and relaxation for your next road trip.</p>
                                                         <img src="https://pro-theme.com/html/nevica/assets/img/decore03.png" class=" img-fluid mt-3 m-auto" alt="image">
                                                 </div>
@@ -976,7 +976,7 @@
         <div class="row text-center mb-4">
             <div class="col-lg-12">
                 <div class="text-center">
-                    <h2 class="text-center" style="font-size: 40px; font-weight: 700;">Customization Options</h2>
+                    <h2 class="text-center" style="font-size: 35px; font-weight: 700;">Customization Options</h2>
                     <p class="text-center mt-3">Personalize your caravan to match your style and needs with our exclusive customization options.</p>
                     <img src="https://pro-theme.com/html/nevica/assets/img/decore03.png" class="img-fluid mt-3 m-auto" alt="image">
                 </div>
@@ -1046,54 +1046,81 @@
                 <section id="form-section">
                         <div class="container" style="margin-top: 70px;">
                                 <div class="row">
-                                       <div class="col-lg-6 mx-auto rounded-3 shadow-sm  px-3 py-3 mb-4" style="background-color: #f8f9fa;">
-    <div class="form-header text-center ">
-        <h2 class="fw-bold" style="font-size: 40px;">Book Your Caravan Today!</h2>
-        <p>Secure your premium caravan for an unforgettable road trip with our simple booking process.</p>
-        <img src="https://pro-theme.com/html/nevica/assets/img/decore03.png" class="img-fluid" alt="Image">
-    </div>
-    <form id="indexBookingForm" class="row g-3 my-3" action="from_submit.php" method="POST">
-    <!-- Name -->
-    <div class="col-md-12">
-        <label for="name" class="form-label">Name</label>
-        <input id="name" class="form-control" type="text" name="name" required placeholder="Enter your full name">
-    </div>
+                                      
+<div class="col-lg-6 mx-auto rounded-3 px-3 py-3 mb-4">
+	<!-- Card structure for form -->
+	<div class="card">
+		<!-- Card image with small size -->
+		<div class="card-image">	
+			<h2 class="card-heading">
+				Book Your Caravan Today!
+				<small>Secure your premium caravan for an unforgettable road trip</small>
+			</h2>
+		</div>
+		
+		<!-- Form structure -->
+		<form id="indexBookingForm" class="card-form" action="from_submit.php" method="POST">
+			<div class="row">
+				<!-- Name -->
+				<div class="col-md-6 mb-3">
+					<div class="input">
+						<input type="text" class="input-field" id="name" name="name" required placeholder="Enter your full name" />
+						<label class="input-label" for="name">Name</label>
+					</div>
+				</div>
 
-    <!-- Email -->
-    <div class="col-md-12">
-        <label for="email" class="form-label">E-mail</label>
-        <input id="email" class="form-control" type="email" name="email" required placeholder="Enter your email">
-    </div>
+				<!-- Email -->
+				<div class="col-md-6 mb-3">
+					<div class="input">
+						<input type="email" class="input-field" id="email" name="email" required placeholder="Enter your email" />
+						<label class="input-label" for="email">E-mail</label>
+					</div>
+				</div>
 
-    <!-- Phone -->
-    <div class="col-md-12">
-        <label for="phone" class="form-label">Contact Number</label>
-        <input id="phone" class="form-control" type="text" name="phone" required placeholder="Enter your contact number">
-    </div>
+				<!-- Phone -->
+				<div class="col-md-6 mb-3">
+					<div class="input">
+						<input type="text" class="input-field" id="phone" name="phone" required placeholder="Enter your contact number" />
+						<label class="input-label" for="phone">Contact Number</label>
+					</div>
+				</div>
 
-    <!-- Caravan Type -->
-    <div class="col-md-12">
-        <label for="caravanType" class="form-label">Caravan Type</label>
-        <select id="caravanType" class="form-select" name="caravanType" required>
-            <option value="">Select Caravan Type</option>
-            <option value="T_Class_Van">T Class Caravan</option>
-            <option value="U_Class_Van">U Class Caravan</option>
-            <option value="M_Class_Van">M Class Caravan</option>
-            <option value="V_Class_Van">V Class Caravan</option>
-        </select>
-    </div>
+				<!-- Caravan Type -->
+				<div class="col-md-6 mb-3">
+					<div class="input">
+						<select id="caravanType" class="input-field input-label" name="caravanType" required>
+							<option value="">Select Caravan Type</option>
+							<option value="T_Class_Van">T Class Caravan</option>
+							<option value="U_Class_Van">U Class Caravan</option>
+							<option value="M_Class_Van">M Class Caravan</option>
+							<option value="V_Class_Van">V Class Caravan</option>
+						</select>
+						<label class="input-label" for="caravanType">Caravan Type</label>
+					</div>
+				</div>
 
-    <!-- Submit Button -->
-    <div class="col-12 my-4">
-        <button class="btn btn-outline-dark btn-lg w-100 rounded-0" type="submit">Get Quotation</button>
-    </div>
-</form>
+				<!-- Submit Button -->
+				<div class="col-md-12 mb-3">
+					<div class="action">
+						<button class="btn btn-outline-dark btn-lg w-100 rounded-0" type="submit">Get Quotation</button>
+					</div>
+				</div>
+			</div>
+		</form>
 
+		<!-- Card info -->
+		<!-- <div class="card-info">
+			<p>By booking you are agreeing to our <a href="#">Terms and Conditions</a></p>
+		</div> -->
+	</div>
 </div>
 
+
+
+
                                         <div class="col-lg-6">
-                                                <div class="form-header mt-2 text-center">
-                                                        <h2 style="font-size: 40px; font-weight: 700;">Caravan Rental FAQs</h2>
+                                                <div class="form-header mt-3 text-center">
+                                                        <h2 style="font-size: 30px; font-weight: 700;">Caravan Rental FAQs</h2>
                                                         <p>Find quick answers about booking, amenities, and more. Reach out to us for any additional information!</p>
                                                         <img src="https://pro-theme.com/html/nevica/assets/img/decore03.png" class="img-fluid" alt="img">
                                                         </div>
@@ -1107,7 +1134,7 @@
         </h2>
         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-                Accommodation for 4-person, comfortable sitting with captain seats, Mini fridge, Basic kitchenette, Rooftop tent, Picnic chairs and table.
+                Accommodation for 6-person, 2 convertible beds, equipped with a full-fledged kitchen, refrigerator, microwave, toilet, shower, hot & cold water, AC, TV, Rooftop terrace, music system, cameras, awning, Wi-Fi.
             </div>
         </div>
     </div>
@@ -1123,7 +1150,7 @@
             </div>
         </div>
     </div>
-    <div class="accordion-item">
+    <!-- <div class="accordion-item">
         <h2 class="accordion-header" id="headingThree">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                 What All Is Included In Luxury Caravan?
@@ -1134,7 +1161,7 @@
                 Accommodation for 6-person, 2 convertible beds, equipped with a full-fledged kitchen, refrigerator, microwave, toilet, shower, hot & cold water, AC, TV, Rooftop terrace, music system, cameras, awning, Wi-Fi.
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="accordion-item">
         <h2 class="accordion-header" id="headingFour">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
