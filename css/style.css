@@ -284,10 +284,10 @@ i {
     color: #663c12 !important;
 }
 
-.bookNowBtn {
+/* .bookNowBtn {
     color: #663c12;
     border: 1px solid #663c12;
-}
+} */
 
 .top-header {
     background-color: #663c12;
@@ -318,6 +318,38 @@ i {
 .section-advantages {
     margin-top: 80px;
 }
+
+.lightbox .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background-color: #fff;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+}
+
+/* this css from the pop window for open images */
+
+.modal-dialog-centered {
+    width: 50%;
+}
+
+@media (max-width: 500px) {
+    #imageModal .modal-dialog {
+        /* max-width: 100%;
+        margin: 10px; */
+        width: 100%;
+        margin: auto;
+    }
+    #imageModal .btn-close {
+        font-size: 1.5rem;
+    }
+}
+
+/* this css from the pop window for open images */
 
 /* **************** */
 
@@ -485,7 +517,7 @@ i {
     font-size: 16px;
     line-height: 1.6;
     text-align: center;
-    color: #333;
+    color: #4a2c2a;
 }
 
 .advantages-icon {
@@ -809,21 +841,22 @@ i {
 .customization-section .card-title {
     font-size: 1.25rem;
     font-weight: bold;
-    color: #30a8d5; /* Bootstrap primary color */
+    color: #4a2c2a; /* Bootstrap primary color */
 }
 
 .customization-section .card-text {
     font-size: 0.95rem;
-    color: #6c757d; /* Muted grey */
+    color: #4a2c2a; /* Muted grey */
 }
 
 .customization-section .card i {
+    color: #4a2c2a;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .customization-section .card:hover i {
     transform: scale(1.2); /* Hover effect for icons */
-    color: #343a40; /* Change icon color */
+    color: #432623; /* Change icon color */
 }
 
 /* customization */
@@ -1039,14 +1072,19 @@ i {
 }
 
 .download-btn-container {
+    background-color: #663c12;
     position: fixed;
     right: 0px; /* Adjust distance from the right side */
-    bottom: 40%; /* Adjust distance from the bottom */
-    z-index: 9999; /* Ensure it's on top of other content */
+    bottom: 34%; /* Adjust distance from the bottom */
+    z-index: 999; /* Ensure it's on top of other content */
 }
 
 .download-btn-container a {
+    color: #fff;
     writing-mode: vertical-rl; /* Make text vertical */
     text-align: center;
     padding: 10px;
+}
+.download-btn-container a:hover {
+    color: #fff;
 }

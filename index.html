@@ -18,6 +18,9 @@
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
                 <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script> -->
                  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+                 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 
 
 
@@ -25,8 +28,8 @@
         <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
-        <!--Main Navigation-->
-        <header>
+        <!--Top Header-->
+         <header>
             <div class=" top-header py-3" style="padding: 0px 65px;">
             <div class="container-fluid">
                 <div class="row ">    
@@ -58,12 +61,14 @@
                 </div>
             </div>
         </div>
-    </div>
+            </div>
     </header>
+        <!--Top Header-->
+       
 
 
 
-            <!-- Navbar -->
+        <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top top-0 transparent-navbar px-5 py-0" style="z-index: 2000;">
         <div class="container-fluid">
             <!-- Navbar brand with logo -->
@@ -124,10 +129,33 @@
                             </li>
                         </ul>
 
-                        <a href="#" class="btn btn-outline-dark bookNowBtn " style="width: fit-content; border-radius: 0px;">Book now</a>
+                        <a href="#" class="btn btn-outline-light bookNowBtn " style="width: fit-content; border-radius: 0px; color: #663c12; border: 1px solid #663c12">Book now</a>
                     </div>
         </div>
     </nav>
+
+    <!-- Navbar -->
+
+
+        <!-- Side Navbar -->
+    <div id="sideNav" class="side-nav">
+        <button class="close-btn" id="closeNav">&times;</button>
+        <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about" >About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="#trusted">Trusted</a></li>
+            <li class="nav-item"><a class="nav-link" href="#testimonial">Testimonial</a></li>
+            <li class="nav-item"><a class="nav-link" href="#form-section">Contact Us</a></li>
+            <li class="nav-item ml-2 mt-2"><a href="#" class="btn btn-outline-light bookNowBtn" style="width: fit-content; border-radius: 0px; border-radius: 0px; color: #663c12; border: 1px solid #663c12"">Book now</a></li>
+            
+
+        </ul>
+    </div>
+    <!-- Side Navbar -->
+
+
+    <!-- Hero section -->
 
     <div class="hero_section d-flex align-items-center pt-5">
     <div class="container">
@@ -151,19 +179,19 @@
                 <form id="bookingForm" class="row g-2 rounded-3 shadow-sm px-4 py-4" action="from_submit.php" method="POST">
                     <!-- Name -->
                     <div class="col-md-12">
-                        <label for="name" class="form-label">Name</label>
+                        <label for="name" class="form-label">Full Name</label>
                         <input id="name" class="form-control" type="text" name="name" required>
                     </div>
 
                     <!-- Email -->
                     <div class="col-md-12">
-                        <label for="email" class="form-label">E-mail</label>
+                        <label for="email" class="form-label">Mail</label>
                         <input id="email" class="form-control" type="email" name="email" required>
                     </div>
 
                     <!-- Phone -->
                     <div class="col-md-12">
-                        <label for="phone" class="form-label">Contact Number</label>
+                        <label for="phone" class="form-label">Phone</label>
                         <input id="phone" class="form-control" type="text" name="phone" required>
                     </div>
 
@@ -188,32 +216,14 @@
             </div>
         </div>
     </div>
-</div>
-
-
-    <!-- Side Navbar -->
-    <div id="sideNav" class="side-nav">
-        <button class="close-btn" id="closeNav">&times;</button>
-        <ul class="nav flex-column">
-            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#about" >About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-            <li class="nav-item"><a class="nav-link" href="#trusted">Trusted</a></li>
-            <li class="nav-item"><a class="nav-link" href="#testimonial">Testimonial</a></li>
-            <li class="nav-item"><a class="nav-link" href="#form-section">Contact Us</a></li>
-            <li class="nav-item ml-2 mt-2"><a href="#" class="btn btn-outline-dark bookNowBtn" style="width: fit-content; border-radius: 0px;">Book now</a></li>
-            
-
-        </ul>
     </div>
-            <!-- Navbar end -->
-        
+
+    <!-- Hero section -->        
 
 
         <!-- popup form code -->
-
-<div class="popup-overlay" id="popupOverlay"></div>
-<div class="popup container" id="popupForm" style="max-width: 600px;">
+            <div class="popup-overlay" id="popupOverlay"></div>
+            <div class="popup container" id="popupForm" style="max-width: 600px;">
     <div class="text-center mb-4">
         <h4 class="fw-bold">Book Your CamperVan</h4>
         <p>Fill out the form below to book your CamperVan.</p>
@@ -255,14 +265,14 @@
         <button type="button" class="btn btn-outline-secondary w-50 rounded-0" id="closeBtn">Close</button>
     </div>
 </form>
-</div>
-
+            </div>
         <!--popup form code -->
 
 
 
-        
-<main>
+       <!-- Video Section -->
+
+       <main>
     <section class="news-section" id="trusted">
         <div class="container">
             <!-- Section Heading and Intro Text -->
@@ -270,10 +280,6 @@
                 <div class="col-lg-12">
                     <div class="text-center" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
                         <h2 style="font-size: 35px; font-weight: 700;">Trusted By</h2>
-                        <!-- <p class="text-center mt-3">
-                            Stay informed on the latest trends in the caravan and road trip industry. From new vehicles to exciting destinations, we keep you updated with essential news
-                            <br> and insights for your next adventure. Check back regularly for updates!
-                        </p> -->
                         <img src="https://pro-theme.com/html/nevica/assets/img/decore03.png" class="img-fluid mt-3" alt="image">
                     </div>
                 </div>
@@ -338,16 +344,18 @@
 
         </div>
     </section>
-</main>
+        </main>
+
+       <!-- Video Section -->
 
 
+       <!-- About Sectioin -->
 
-        <main>
+       <main>
             <section id="about">
                 <div class="b-about">
                     <div class="ui-decor ui-decor_down"></div>
                     <div class="container">
-
                         <!-- The first tab -->
                         <div class="row justify-content-center align-items-center">
                             <div class="col-lg-6">
@@ -381,13 +389,7 @@
                                     class="img-fluid"
                                     style="border-radius: 10px; transform: rotate(2deg);"
                                 />
-                                    <!-- <img
-                                    src="https://images.unsplash.com/photo-1513350949-6bd4ab6ff7f8?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                    alt="Vanity van for celebrity with sleeping beds and luxury facilities"
-                                    class="img-fluid"
-                                    style="border-radius: 10px; transform: rotate(2deg);"
-                                /> -->
-                                <!-- </div> -->
+                                    
                             </div>
                         </div>
                     </div>
@@ -395,14 +397,20 @@
             </section>
         </main>
 
+       <!-- About Sectioin -->
+
+        
+
+        <!-- Why Chooes -->
+
         <main>
-    <section>
+            <section>
         <div class="section-advantages">
            <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class=" text-center">
-                                                        <h2 class="text-center" style="font-size: 35px; font-weight: 700;">Why Choose Motohom for Your Custom Caravan</h2>
+                                                        <h2 class="text-center" style="font-size: 35px; font-weight: 700;">Why Motohom for Caravans</h2>
                                                         <!-- <p class=" text-center mt-3">Explore our picture gallery to experience the luxury and comfort of our premium caravans. Each photo highlights stunning interiors and breathtaking landscapes, <br> offering a glimpse into the perfect blend of adventure and relaxation for your next road trip</p> -->
                                                         <img src="https://pro-theme.com/html/nevica/assets/img/decore03.png" class=" img-fluid mt-3 m-auto" alt="image">
                                                 </div>
@@ -412,7 +420,7 @@
     <!-- Advantage 1 -->
     <div class="col-lg-4 col-md-6 col-12 mb-3">
         <div class="b-advantages">
-            <div class="ic advantages-icon text-secondary">
+            <div class="ic advantages-icon">
                 <i class="bi bi-gear-fill" style="font-size: 50px;"></i>
             </div>
             <div class="b-advantages__main">
@@ -427,7 +435,7 @@
     <!-- Advantage 2 -->
     <div class="col-lg-4 col-md-6 col-12 mb-3">
         <div class="b-advantages">
-            <div class="ic advantages-icon text-secondary">
+            <div class="ic advantages-icon">
                 <i class="bi bi-person-check-fill" style="font-size: 50px;"></i>
             </div>
             <div class="b-advantages__main">
@@ -442,7 +450,7 @@
     <!-- Advantage 3 -->
     <div class="col-lg-4 col-md-6 col-12 mb-3">
         <div class="b-advantages">
-            <div class="ic advantages-icon text-secondary">
+            <div class="ic advantages-icon">
                 <i class="bi bi-house-door" style="font-size: 50px;"></i>
             </div>
             <div class="b-advantages__main">
@@ -459,7 +467,7 @@
     <!-- Advantage 4 -->
     <div class="col-lg-4 col-md-6 col-12 mb-3">
         <div class="b-advantages">
-            <div class="ic advantages-icon text-secondary">
+            <div class="ic advantages-icon">
                 <i class="bi bi-recycle" style="font-size: 50px;"></i>
             </div>
             <div class="b-advantages__main">
@@ -474,7 +482,7 @@
     <!-- Advantage 5 -->
     <div class="col-lg-4 col-md-6 col-12 mb-3">
         <div class="b-advantages">
-            <div class="ic advantages-icon text-secondary">
+            <div class="ic advantages-icon">
                 <i class="bi bi-clock-fill" style="font-size: 50px;"></i>
             </div>
             <div class="b-advantages__main">
@@ -489,7 +497,7 @@
     <!-- Advantage 6 -->
     <div class="col-lg-4 col-md-6 col-12 mb-3">
         <div class="b-advantages">
-            <div class="ic advantages-icon text-secondary">
+            <div class="ic advantages-icon">
                 <i class="bi bi-headset" style="font-size: 50px;"></i>
             </div>
             <div class="b-advantages__main">
@@ -507,8 +515,12 @@
 
         </div>
     </section>
-</main>
+        </main>
 
+        <!-- Why Chooes -->
+
+
+        <!-- Testmonial Or Travel in Style -->
 
         <main>
             <section class="section-goods" id="testimonial">
@@ -780,8 +792,12 @@
             </section>
         </main>
 
+        <!-- Testmonial Or Travel in Style -->
+
+        <!-- Manufacturing Section -->
+        
         <main>
-    <section class="progress-section mt-4">
+            <section class="progress-section mt-4">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -847,52 +863,14 @@
 </div>
     </div>
 </div>
-
-
-
-
-
-
-            <!-- Additional Details -->
-            <!-- <div class="row progress-section-cards mt-5">
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="progress-section-card1 py-5">
-                        <div class="cr-counters__icon"> <i class="bi bi-currency-rupee progress-icon-1"></i> </div>
-                        <div class="cr-counters__numbers js-chart mt-2 fs-5">Late Charges</div>
-                        <div class="cr-counters__description fs-6 text-center mt-2">₹1000/hour up to 3 hours</div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="progress-section-card2 py-5">
-                        <div class="cr-counters__icon"> <i class="bi bi-car-front progress-icon-1"></i> </div>
-                        <div class="cr-counters__numbers js-chart mt-2 fs-5">Garage to Garage</div>
-                        <div class="cr-counters__description fs-6 text-center mt-2">Pricing includes travel from garage</div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="progress-section-card3 py-5">
-                        <div class="cr-counters__icon"> <i class="bi bi-geo-alt progress-icon-1"></i> </div>
-                        <div class="cr-counters__numbers js-chart mt-2 fs-5">Parking</div>
-                        <div class="cr-counters__description fs-6 text-center mt-2">As per availability</div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="progress-section-card4 py-5">
-                        <div class="cr-counters__icon"> <i class="bi bi-piggy-bank progress-icon-1"></i> </div>
-                        <div class="cr-counters__numbers js-chart mt-2 fs-5">Deposit</div>
-                        <div class="cr-counters__description fs-6 text-center mt-2">₹10k - ₹50k based on the trip</div>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </section>
-</main>
+        </main>
+
+        <!-- Manufacturing Section -->
 
 
-
-
-
-
+        <!-- Mission Section -->
 
         <main>
                 <section>
@@ -924,53 +902,68 @@
                 </section>
         </main>
 
+        <!-- Mission Section -->
 
-
-
-
+        <!-- Gallery Section -->
 
         <main id="gallery">
-                <section class="gallery-section">
-                        <div class="container-fluid">
-                                <div class="row">
-                                        <div class="col-lg-12">
-                                                <div class=" text-center">
-                                                        <!-- <h2 class="text-center" style="font-size: 40px; font-weight: 700;">Picture Gallery</h2> -->
-                                                        <h2 class="text-center" style="font-size: 35px; font-weight: 700;">Scenic Journeys</h2>
-                                                        <p class=" text-center mt-3">Explore the luxury of our premium caravans through stunning interiors and breathtaking landscapes. <br> Discover the perfect blend of adventure and relaxation for your next road trip.</p>
-                                                        <img src="https://pro-theme.com/html/nevica/assets/img/decore03.png" class=" img-fluid mt-3 m-auto" alt="image">
-                                                </div>
-                                        </div>
-                                </div>
-                                            <div class="ui-gallery mt-4">
-				<div class="row">
-    <a href="images/Motohom Flagship Caravans/Urbania Caravan/U2 caravan/u_.JPG" data-toggle="lightbox" data-gallery="gallery" class="col-md-4 mt-3">
-      <img src="images/Motohom Flagship Caravans/Urbania Caravan/U2 caravan/u_.JPG" class="img-fluid rounded picture_gallary_img">
-    </a>
-    <a href="images/Motohom Flagship Caravans/Urbania Caravan/U2 caravan/DSC00008.JPG" data-toggle="lightbox" data-gallery="gallery" class="col-md-4 mt-3">
-      <img src="images/Motohom Flagship Caravans/Urbania Caravan/U2 caravan/DSC00008.JPG" class="img-fluid rounded picture_gallary_img">
-    </a>
-    <a href="images/Motohom Flagship Caravans/T class caravan/t3 Side profile .jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4 mt-3">
-      <img src="images/Motohom Flagship Caravans/T class caravan/t3 Side profile .jpg" class="img-fluid rounded picture_gallary_img">
-    </a>
-  </div>
-  <div class="row">
-    <a href="images/Motohom Flagship Caravans/T class caravan/t3 side profile  2.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4 mt-3">
-      <img src="images/Motohom Flagship Caravans/T class caravan/t3 side profile  2.jpg" class="img-fluid rounded picture_gallary_img">
-    </a>
-    <a href="images/Motohom Flagship Caravans/T class caravan/T3 Exterior .jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4 mt-3">
-      <img src="images/Motohom Flagship Caravans/T class caravan/T3 Exterior .jpg" class="img-fluid rounded picture_gallary_img">
-    </a>
-    <a href="images/Motohom Flagship Caravans/Urbania Caravan/U2 caravan/u2.JPG" data-toggle="lightbox" data-gallery="gallery" class="col-md-4 mt-3">
-      <img src="images/Motohom Flagship Caravans/Urbania Caravan/U2 caravan/u2.JPG" class="img-fluid rounded picture_gallary_img">
-    </a>
-  </div>
-			</div>
+    <section class="gallery-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-center">
+                        <h2 class="text-center" style="font-size: 35px; font-weight: 700;">Scenic Journeys</h2>
+                        <p class="text-center mt-3">Explore the luxury of our premium caravans through stunning interiors and breathtaking landscapes. <br> Discover the perfect blend of adventure and relaxation for your next road trip.</p>
+                        <img src="https://pro-theme.com/html/nevica/assets/img/decore03.png" class="img-fluid mt-3 m-auto" alt="image">
+                    </div>
+                </div>
+            </div>
+            <div class="ui-gallery mt-4">
+                <div class="row">
+                    <a href="#" data-src="images/Motohom Flagship Caravans/Urbania Caravan/U2 caravan/u_.JPG" class="col-md-4 mt-3 gallery-item">
+                        <img src="images/Motohom Flagship Caravans/Urbania Caravan/U2 caravan/u_.JPG" class="img-fluid rounded picture_gallary_img">
+                    </a>
+                    <a href="#" data-src="images/Motohom Flagship Caravans/Urbania Caravan/U2 caravan/DSC00008.JPG" class="col-md-4 mt-3 gallery-item">
+                        <img src="images/Motohom Flagship Caravans/Urbania Caravan/U2 caravan/DSC00008.JPG" class="img-fluid rounded picture_gallary_img">
+                    </a>
+                    <a href="#" data-src="images/Motohom Flagship Caravans/T class caravan/t3 Side profile .jpg" class="col-md-4 mt-3 gallery-item">
+                        <img src="images/Motohom Flagship Caravans/T class caravan/t3 Side profile .jpg" class="img-fluid rounded picture_gallary_img">
+                    </a>
+                </div>
+                <div class="row">
+                    <a href="#" data-src="images/Motohom Flagship Caravans/T class caravan/t3 side profile  2.jpg" class="col-md-4 mt-3 gallery-item">
+                        <img src="images/Motohom Flagship Caravans/T class caravan/t3 side profile  2.jpg" class="img-fluid rounded picture_gallary_img">
+                    </a>
+                    <a href="#" data-src="images/Motohom Flagship Caravans/T class caravan/T3 Exterior .jpg" class="col-md-4 mt-3 gallery-item">
+                        <img src="images/Motohom Flagship Caravans/T class caravan/T3 Exterior .jpg" class="img-fluid rounded picture_gallary_img">
+                    </a>
+                    <a href="#" data-src="images/Motohom Flagship Caravans/Urbania Caravan/U2 caravan/u2.JPG" class="col-md-4 mt-3 gallery-item">
+                        <img src="images/Motohom Flagship Caravans/Urbania Caravan/U2 caravan/u2.JPG" class="img-fluid rounded picture_gallary_img">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                        </div>
-                </section>
-        </main>
+    <!-- Modal Popup -->
+    <div id="imageModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered p-0" role="document">
+        <div class="modal-content">
+            <div class="modal-body position-relative">
+                <button type="button" class="btn-close position-absolute" style="top: 10px; right: 10px; font-size: 1.5rem; z-index: 1050;" data-bs-dismiss="modal" aria-label="Close">
+                    <!-- <i class="fas fa-times"></i> -->
+                </button>
+                <img id="modalImage" src="" class="img-fluid" alt="Popup Image">
+            </div>
+        </div>
+    </div>
+</div>
+</main>
 
+        <!-- Gallery Section -->
+
+
+        <!-- Customization Section -->
 
         <section class="customization-section py-2">
     <div class="container">
@@ -988,7 +981,7 @@
             <div class="col-lg-3 col-md-6">
                 <div class="card h-100">
                     <div class="card-body text-center">
-                        <i class="fas fa-couch fa-3x mb-3 text-primary"></i> <!-- FontAwesome Icon -->
+                        <i class="fas fa-couch fa-3x mb-3"></i> <!-- FontAwesome Icon -->
                         <h5 class="card-title">Luxury Interiors</h5>
                         <p class="card-text">
                             Choose from premium upholstery, wood finishes, and lighting designs.
@@ -1001,7 +994,7 @@
             <div class="col-lg-3 col-md-6">
                 <div class="card h-100">
                     <div class="card-body text-center">
-                        <i class="fas fa-tools fa-3x mb-3 text-success"></i> <!-- FontAwesome Icon -->
+                        <i class="fas fa-tools fa-3x mb-3"></i> <!-- FontAwesome Icon -->
                         <h5 class="card-title">Advanced Features</h5>
                         <p class="card-text">
                             Add kitchenettes, washrooms, air conditioning, and entertainment systems.
@@ -1014,7 +1007,7 @@
             <div class="col-lg-3 col-md-6">
                 <div class="card h-100">
                     <div class="card-body text-center">
-                        <i class="fas fa-satellite-dish fa-3x mb-3 text-info"></i> <!-- FontAwesome Icon -->
+                        <i class="fas fa-satellite-dish fa-3x mb-3"></i> <!-- FontAwesome Icon -->
                         <h5 class="card-title">Technology Integration</h5>
                         <p class="card-text">
                             GPS navigation, smart control systems, and solar panels.
@@ -1027,7 +1020,7 @@
             <div class="col-lg-3 col-md-6">
                 <div class="card h-100">
                     <div class="card-body text-center">
-                        <i class="fas fa-paint-brush fa-3x mb-3 text-danger"></i> <!-- FontAwesome Icon -->
+                        <i class="fas fa-paint-brush fa-3x mb-3"></i> <!-- FontAwesome Icon -->
                         <h5 class="card-title">Personalized Touches</h5>
                         <p class="card-text">
                             Add your brand’s logo or family crest to make your caravan truly yours.
@@ -1037,191 +1030,12 @@
             </div>
         </div>
     </div>
-</section>
+        </section>
+
+        <!-- Customization Section -->
 
 
-
-
-
-        <main>
-                <section id="form-section">
-                        <div class="container" style="margin-top: 70px;">
-                                <div class="row">
-                                      
-<div class="col-lg-6 mx-auto rounded-3 px-3 py-3 mb-4">
-	<!-- Card structure for form -->
-	<div class="card">
-		<!-- Card image with small size -->
-		<div class="card-image">	
-			<h2 class="card-heading">
-				Book Your Caravan Today!
-				<small>Secure your premium caravan for an unforgettable road trip</small>
-			</h2>
-		</div>
-		
-		<!-- Form structure -->
-		<form id="indexBookingForm" class="card-form" action="from_submit.php" method="POST">
-			<div class="row">
-				<!-- Name -->
-				<div class="col-md-6 mb-3">
-					<div class="input">
-						<input type="text" class="input-field" id="name" name="name" required placeholder="Enter your full name" />
-						<label class="input-label" for="name">Name</label>
-					</div>
-				</div>
-
-				<!-- Email -->
-				<div class="col-md-6 mb-3">
-					<div class="input">
-						<input type="email" class="input-field" id="email" name="email" required placeholder="Enter your email" />
-						<label class="input-label" for="email">E-mail</label>
-					</div>
-				</div>
-
-				<!-- Phone -->
-				<div class="col-md-6 mb-3">
-					<div class="input">
-						<input type="text" class="input-field" id="phone" name="phone" required placeholder="Enter your contact number" />
-						<label class="input-label" for="phone">Contact Number</label>
-					</div>
-				</div>
-
-				<!-- Caravan Type -->
-				<div class="col-md-6 mb-3">
-					<div class="input">
-						<select id="caravanType" class="input-field input-label" name="caravanType" required>
-							<option value="">Select Caravan Type</option>
-							<option value="T_Class_Van">T Class Caravan</option>
-							<option value="U_Class_Van">U Class Caravan</option>
-							<option value="M_Class_Van">M Class Caravan</option>
-							<option value="V_Class_Van">V Class Caravan</option>
-						</select>
-						<label class="input-label" for="caravanType">Caravan Type</label>
-					</div>
-				</div>
-
-				<!-- Submit Button -->
-				<div class="col-md-12 mb-3">
-					<div class="action">
-						<button class="btn btn-outline-dark btn-lg w-100 rounded-0" type="submit">Get Quotation</button>
-					</div>
-				</div>
-			</div>
-		</form>
-
-		<!-- Card info -->
-		<!-- <div class="card-info">
-			<p>By booking you are agreeing to our <a href="#">Terms and Conditions</a></p>
-		</div> -->
-	</div>
-</div>
-
-
-
-
-                                        <div class="col-lg-6">
-                                                <div class="form-header mt-3 text-center">
-                                                        <h2 style="font-size: 30px; font-weight: 700;">Caravan Rental FAQs</h2>
-                                                        <p class="d-flex text-justity">Find quick answers about booking, amenities, and more. Reach out to us for any additional information!</p>
-                                                        <img src="https://pro-theme.com/html/nevica/assets/img/decore03.png" class="img-fluid" alt="img">
-                                                        </div>
-                                                        <div class="mt-4">
-                                                                <div class="accordion" id="accordionExample">
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                What All Is Included In Campervan?
-            </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                Accommodation for 6-person, 2 convertible beds, equipped with a full-fledged kitchen, refrigerator, microwave, toilet, shower, hot & cold water, AC, TV, Rooftop terrace, music system, cameras, awning, Wi-Fi.
-            </div>
-        </div>
-    </div>
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Do You Have Self-Driven Campervan?
-            </button>
-        </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                Yes, we do have self-driven campervans. It is the customer's responsibility to inspect the vehicle and report/record damages at the time of taking the delivery of the car. Any complaints later on will not be entertained.
-            </div>
-        </div>
-    </div>
-    <!-- <div class="accordion-item">
-        <h2 class="accordion-header" id="headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                What All Is Included In Luxury Caravan?
-            </button>
-        </h2>
-        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                Accommodation for 6-person, 2 convertible beds, equipped with a full-fledged kitchen, refrigerator, microwave, toilet, shower, hot & cold water, AC, TV, Rooftop terrace, music system, cameras, awning, Wi-Fi.
-            </div>
-        </div>
-    </div> -->
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="headingFour">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                Where Can We Take Those Vehicles?
-            </button>
-        </h2>
-        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                You can take this vehicle all around India (PAN INDIA). We do provide exotic and scenic locations in Maharashtra like Malshej Ghat, Bhandardara, Kalra (Lonavala), Grape Park (Nashik), Ganpatipule & Shirdi.
-            </div>
-        </div>
-    </div>
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="headingFive">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                What is the minimum rental duration for a campervan or caravan?
-            </button>
-        </h2>
-        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                The minimum rental duration is 2 days for both campervans and luxury caravans. Longer rentals come with additional discounts.
-            </div>
-        </div>
-    </div>
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="headingSix">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                Are there any age restrictions for renting a campervan?
-            </button>
-        </h2>
-        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                Yes, the minimum age for renting a campervan or caravan is 21 years old. Drivers must hold a valid driving license for at least 2 years.
-            </div>
-        </div>
-    </div>
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="headingSeven">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                Do you provide insurance with the rental?
-            </button>
-        </h2>
-        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                Yes, all our vehicles come with basic insurance coverage. However, we recommend additional coverage for peace of mind, which can be arranged at the time of booking.
-            </div>
-        </div>
-    </div>
-</div>
-
-                                                        </div>
-                                                
-                                        </div>
-                                </div>
-                                
-                        </div>
-                </section>
-        </main>
-
+        <!-- People Review Or What People Say -->
 
         <main>
     <section class="what-people-say">
@@ -1304,9 +1118,178 @@
 
         </div>
     </section>
-</main>
+        </main>
 
-<main>
+        <!-- People Review Or What People Say -->
+
+
+        
+        <!-- Contact From OR FAQ's -->
+
+        <main>
+                <section id="form-section">
+                        <div class="container" style="margin-top: 70px;">
+                                <div class="row">
+                                      
+<div class="col-lg-6 mx-auto rounded-3 px-3 py-3 mb-4">
+	<!-- Card structure for form -->
+	<div class="card">
+		<!-- Card image with small size -->
+		<div class="card-image">	
+			<h2 class="card-heading">
+				Book Your Caravan Today!
+				<small>Secure your premium caravan for an unforgettable road trip</small>
+			</h2>
+		</div>
+		
+		<!-- Form structure -->
+		<form id="indexBookingForm" class="card-form" action="from_submit.php" method="POST">
+			<div class="row">
+				<!-- Name -->
+				<div class="col-md-6 mb-3">
+					<div class="input">
+						<input type="text" class="input-field px-2" id="name" name="name" required />
+						<label class="input-label" for="name">Full Name</label>
+					</div>
+				</div>
+
+				<!-- Email -->
+				<div class="col-md-6 mb-3">
+					<div class="input">
+						<input type="email" class="input-field px-2" id="email" name="email" required />
+						<label class="input-label" for="email">Mail</label>
+					</div>
+				</div>
+
+				<!-- Phone -->
+				<div class="col-md-6 mb-3">
+					<div class="input">
+						<input type="text" class="input-field px-2" id="phone" name="phone" required />
+						<label class="input-label" for="phone">Phone</label>
+					</div>
+				</div>
+
+				<!-- Caravan Type -->
+				<div class="col-md-6 mb-3">
+					<div class="input">
+						<select id="caravanType" class="input-field input-label" name="caravanType" required>
+							<option value=""></option>
+							<option value="T_Class_Van">T Class Caravan</option>
+							<option value="U_Class_Van">U Class Caravan</option>
+							<option value="M_Class_Van">M Class Caravan</option>
+							<option value="V_Class_Van">V Class Caravan</option>
+						</select>
+						<label class="input-label" for="caravanType">Caravan Type</label>
+					</div>
+				</div>
+
+				<!-- Submit Button -->
+				<div class="col-md-12 mb-3">
+					<div class="action">
+						<button class="btn btn-outline-dark btn-lg w-100 rounded-0" type="submit">Get Quotation</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+                                            <div class="col-lg-6">
+                                                <div class="form-header mt-3 text-center">
+                                                        <h2 style="font-size: 30px; font-weight: 700;">Caravan Rental FAQs</h2>
+                                                        <p class="d-flex text-justity">Find quick answers about booking, amenities, and more. Reach out to us for any additional information!</p>
+                                                        <img src="https://pro-theme.com/html/nevica/assets/img/decore03.png" class="img-fluid" alt="img">
+                                                        </div>
+                                                        <div class="mt-4">
+                                                                <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                What All Is Included In Campervan?
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                Accommodation for 6-person, 2 convertible beds, equipped with a full-fledged kitchen, refrigerator, microwave, toilet, shower, hot & cold water, AC, TV, Rooftop terrace, music system, cameras, awning, Wi-Fi.
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Do You Have Self-Driven Campervan?
+            </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                Yes, we do have self-driven campervans. It is the customer's responsibility to inspect the vehicle and report/record damages at the time of taking the delivery of the car. Any complaints later on will not be entertained.
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Where Can We Take Those Vehicles?
+            </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                You can take this vehicle all around India (PAN INDIA). We do provide exotic and scenic locations in Maharashtra like Malshej Ghat, Bhandardara, Kalra (Lonavala), Grape Park (Nashik), Ganpatipule & Shirdi.
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                What is the minimum rental duration for a campervan or caravan?
+            </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                The minimum rental duration is 2 days for both campervans and luxury caravans. Longer rentals come with additional discounts.
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSix">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                Are there any age restrictions for renting a campervan?
+            </button>
+        </h2>
+        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                Yes, the minimum age for renting a campervan or caravan is 21 years old. Drivers must hold a valid driving license for at least 2 years.
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSeven">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                Do you provide insurance with the rental?
+            </button>
+        </h2>
+        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                Yes, all our vehicles come with basic insurance coverage. However, we recommend additional coverage for peace of mind, which can be arranged at the time of booking.
+            </div>
+        </div>
+    </div>
+</div>
+
+                                                        </div>
+                                                
+                                        </div>
+                                </div>
+                                
+                        </div>
+                </section>
+        </main>
+
+        <!-- Contact From OR FAQ's -->
+
+
+        <!-- Download Our Caravan Guide Button Bottom -->
+
+         <main>
     <div class="container d-flex align-items-center justify-content-center my-5">
         <div class="row">
             <div class="col-lg-12">
@@ -1316,18 +1299,14 @@
                 </div>
         </div>
     </div>
-</main>
+        </main>
+
+        <!-- Download Our Caravan Guide Button Bottom -->
 
 
+        <!-- Footer Section -->
 
-
-
-
-
-
-
-        <!-- Footer -->
-<footer class=" text-center text-lg-start mt-5" style="background-color: #222222; color: white;">
+        <footer class=" text-center text-lg-start mt-5" style="background-color: #222222; color: white;">
   <!-- Section: Social media -->
   <section class="d-flex justify-content-center justify-content-lg-between p-4 px-5 border-bottom">
     <!-- Left -->
@@ -1366,8 +1345,8 @@
         <!-- Grid column -->
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4" >
           <!-- Content -->
-          <a href="#" class="navbar-brand" style="width: 150px; height: 150px;">
-            <img src="images/motohom_logo.png" class="img-fluid" style="width: 100%; max-height: 100%;" alt="img-logo">
+          <a href="#" class="navbar-brand my-3">
+            <img src="images/motohom_white_logo.png" class="img-fluid" style="width: 100%; max-height: 100%;" alt="img-logo">
           </a>
           <p>
             Planning your journey in and around India? Travel like a boss with our selection of campers
@@ -1383,22 +1362,19 @@
 
           </h6>
           <p>
-            <a href="#!" class="text-reset">Rent CamperVan In India</a>
+            <a href="#!" class="text-reset bookNowBtn">Rent CamperVan In India</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Camper van rental in India</a>
+            <a href="#!" class="text-reset bookNowBtn">Luxury Camper van rental</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Luxury Camper van rental</a>
+            <a href="#!" class="text-reset bookNowBtn">Motorhomes in India</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Motorhomes in India</a>
+            <a href="#!" class="text-reset bookNowBtn">Terms and Conditions</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Terms and Conditions</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Privacy policy</a>
+            <a href="#!" class="text-reset bookNowBtn">Privacy policy</a>
           </p>
         </div>
         <!-- Grid column -->
@@ -1410,19 +1386,19 @@
             About Nevica
           </h6>
           <p>
-            <a href="#!" class="text-reset">Rent Motorhomes in India</a>
+            <a href="#!" class="text-reset bookNowBtn">Rent Motorhomes in India</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Campervan for Holidays</a>
+            <a href="#!" class="text-reset bookNowBtn">Campervan for Holidays</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Motorhomes for Holidays</a>
+            <a href="#!" class="text-reset bookNowBtn">Motorhomes for Holidays</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Book Motorhomes in India</a>
+            <a href="#!" class="text-reset bookNowBtn">Book Motorhomes in India</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Rent Luxury Motorhomes</a>
+            <a href="#!" class="text-reset bookNowBtn">Rent Luxury Motorhomes</a>
           </p>
         </div>
         <!-- Grid column -->
@@ -1464,19 +1440,25 @@
 
   <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2024 Copyright:
-    <a class="text-reset fw-bold" href="https://motohom.co.in/">Motohom.co.in</a>
-     All rights reserved.
+    © 2024 Copyright
+    All rights reserved |
+    Powered By: 
+    <a class="text-reset fw-bold" target="_blank" href="https://www.digitalmarketinng.com/"> Oh! Puhleeez</a>
   </div>
   <!-- Copyright -->
-</footer>
-<!-- Footer -->
+        </footer>
 
-<div class="download-btn-container">
-    <a href="images/information_PDF/Motohom Caravans Information.pdf" download class="btn btn-dark btn-sm" style="border-radius: 0px;">
-        Download Guide
-    </a>
-</div>
+        <!-- Footer Section -->
+
+        <!-- Side Download Button -->
+
+        <div class="download-btn-container">
+            <a href="images/information_PDF/Motohom Caravans Information.pdf" download class="btn btn-md" style="border-radius: 0px;">
+                Download Our Caravan Guide
+            </a>
+        </div>
+
+        <!-- Side Download Button -->
 
 
 
@@ -1490,6 +1472,31 @@
     </body>
 
             <script>
+
+
+// this is for open image in a popup
+
+document.addEventListener('DOMContentLoaded', function () {
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', function (e) {
+                e.preventDefault();
+                const imgSrc = this.getAttribute('data-src');
+                modalImage.setAttribute('src', imgSrc);
+                $(modal).modal('show');
+            });
+        });
+
+        $(modal).on('hidden.bs.modal', function () {
+            modalImage.setAttribute('src', '');
+        });
+    });
+// this is for open image in a popup
+
+
             const sideNav = document.getElementById("sideNav");
 document.addEventListener("DOMContentLoaded", () => {
     const toggleButton = document.getElementById("toggleButton");
@@ -1628,7 +1635,7 @@ function showDynamicPopup(message) {
     popup.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
     popup.style.borderRadius = "8px";
     popup.style.textAlign = "center";
-    popup.style.zIndex = "1000";
+    popup.style.zIndex = "99999999999";
     popup.style.opacity = "0";
     popup.style.transition = "opacity 0.3s ease";
 
