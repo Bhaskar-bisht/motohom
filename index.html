@@ -1465,109 +1465,99 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
 
+            // email send form the php code
 
-            // Select the "Book Now" buttons (both in navbar and side navbar)
+// Select all "Book Now" buttons and forms
 const bookNowBtns = document.querySelectorAll(".bookNowBtn");
 const popupForm = document.getElementById("popupForm");
 const popupOverlay = document.getElementById("popupOverlay");
 const closeBtn = document.getElementById("closeBtn");
 
-// Show Popup for All "Book Now" buttons (navbar and side navbar)
+// Show Popup for All "Book Now" buttons
 bookNowBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
-        togglePopup(true); // Open the popup form
-        // Optional: Close the side navbar if it is open
-        if (document.getElementById("sideNav").style.width === "250px") {
+        togglePopup(true);
+        if (document.getElementById("sideNav")?.style.width === "250px") {
             document.getElementById("sideNav").style.width = "0"; // Close side navbar
         }
     });
 });
 
 // Close the Popup
-closeBtn.addEventListener("click", () => {
-    togglePopup(false);
-});
-
-popupOverlay.addEventListener("click", () => {
-    togglePopup(false);
-});
+closeBtn?.addEventListener("click", () => togglePopup(false));
+popupOverlay?.addEventListener("click", () => togglePopup(false));
 
 // Function to Toggle Popup Visibility
 function togglePopup(isVisible) {
     if (isVisible) {
-        popupForm.classList.add("active");
-        popupOverlay.classList.add("active");
+        popupForm?.classList.add("active");
+        popupOverlay?.classList.add("active");
     } else {
-        popupForm.classList.remove("active");
-        popupOverlay.classList.remove("active");
+        popupForm?.classList.remove("active");
+        popupOverlay?.classList.remove("active");
     }
 }
 
-// Handle form submission for both forms (popup and normal form)
-const bookingForm = document.getElementById("bookingForm");
-const indexBookingForm = document.getElementById("indexBookingForm");
+// Select all forms
+const forms = document.querySelectorAll("form");
 
-// Attach form submit event listeners
-if (bookingForm) {
-    bookingForm.addEventListener("submit", (e) => {
+// Attach submit event listener to all forms
+forms.forEach((form) => {
+    form.addEventListener("submit", (e) => {
         e.preventDefault(); // Prevent the default form submission
-        sendFormData(bookingForm); // Handle form submission for popup form
+        sendFormData(form); // Handle form submission
     });
-}
-
-if (indexBookingForm) {
-    indexBookingForm.addEventListener("submit", (e) => {
-        e.preventDefault(); // Prevent the default form submission
-        sendFormData(indexBookingForm); // Handle form submission for normal form
-    });
-}
+});
 
 // Function to send form data to PHP using AJAX
 function sendFormData(form) {
     const formData = new FormData(form);
-
-    console.log("formData is ", formData);
 
     // Debug: Log the form data to check if it's being correctly gathered
     formData.forEach((value, key) => {
         console.log(`Form Data - ${key}: ${value}`);
     });
 
-    // Show "Please wait..." message
+    // Show "Please wait..." message and disable the button
     const submitBtn = form.querySelector('button[type="submit"]');
-    const originalText = submitBtn.innerHTML; // Save original button text
-    submitBtn.innerHTML = "Please wait..."; // Change button text to "Please wait..."
-    submitBtn.disabled = true;  // Disable button to prevent multiple submissions
+    const originalText = submitBtn.innerHTML;
+    submitBtn.innerHTML = "Please wait...";
+    submitBtn.disabled = true;
 
     // Create an AJAX request to send data to the PHP backend
     const xhr = new XMLHttpRequest();
     xhr.open("POST", "from_submit.php", true);
     xhr.onload = function () {
-        if (xhr.status === 200) {
-            const response = xhr.responseText.trim();
-            console.log("response is", response);
+        const response = JSON.parse(xhr.responseText.trim());
+        console.log("Response:", response);
+        console.log("Status:", xhr.status);
 
-            if (response === "Success") {
+        if (xhr.status === 200) {
+            if (response.status === "success") {
+                // Success - Show Success Popup
                 showDynamicPopup("Thank you! We will get back to you soon.");
-                resetForm(form); // Reset the form after successful submission
+                form.reset(); // Reset the form after successful submission
             } else {
+                // Failure - Show Failure Popup
                 showDynamicPopup("Failed to send booking details. Please try again.");
             }
         } else {
+            // General Error - Show Error Popup
             showDynamicPopup("There was an error with your request. Please try again.");
         }
 
         // Reset the button text and enable it after response
-        submitBtn.innerHTML = originalText;  // Restore original button text
-        submitBtn.disabled = false;  // Enable button again
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
     };
 
-    xhr.send(formData);  // Send the form data to the PHP script
-}
+    xhr.onerror = function () {
+        showDynamicPopup("An unexpected error occurred. Please try again later.");
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+    };
 
-// Function to reset the form after successful submission
-function resetForm(form) {
-    form.reset();
+    xhr.send(formData); // Send the form data to the PHP script
 }
 
 // Function to show dynamic popup messages
@@ -1603,7 +1593,7 @@ function showDynamicPopup(message) {
     closeButton.style.cursor = "pointer";
 
     closeButton.addEventListener("click", () => {
-        document.body.removeChild(popup); // Remove popup from DOM
+        document.body.removeChild(popup);
     });
 
     popup.appendChild(messageText);
@@ -1611,10 +1601,7 @@ function showDynamicPopup(message) {
 
     document.body.appendChild(popup);
 
-    setTimeout(() => {
-        popup.style.opacity = "1";
-    }, 10);
-
+    setTimeout(() => (popup.style.opacity = "1"), 10);
     setTimeout(() => {
         if (document.body.contains(popup)) {
             document.body.removeChild(popup);
@@ -1623,6 +1610,9 @@ function showDynamicPopup(message) {
 }
 
 
+
+
+            // email send form the php code
 
 
 

@@ -1,50 +1,62 @@
 <?php
+// Include PHPMailer files
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+require 'PHPMailer/src/Exception.php';
+
+// Use PHPMailer classes
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'phpMailer/src/PHPMailer.php';
-require 'phpMailer/src/Exception.php';
-require 'phpMailer/src/SMTP.php';
+// Database connection (example)
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "motohom_newuser";
+$conn = new mysqli($servername, $username, $password, $database, 3307);
 
-// Enable error reporting for debugging purposes
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+// Check the database connection
+if ($conn->connect_error) {
+    echo json_encode(["status" => "error", "message" => "Connection failed: " . $conn->connect_error]);
+    exit;
+}
+
+// Sanitize and collect form data
+$name = htmlspecialchars($_POST['name']);
+$email = htmlspecialchars($_POST['email']);
+$phone = htmlspecialchars($_POST['phone']);
+$caravanType = htmlspecialchars($_POST['caravanType']);
+
+// Insert data into the database
+$stmt = $conn->prepare("INSERT INTO BookingData (name, email, phone, caravan_type) VALUES (?, ?, ?, ?)");
+$stmt->bind_param("ssss", $name, $email, $phone, $caravanType);
+if ($stmt->execute()) {
+    $dataSaved = true;
+} else {
+    $dataSaved = false;
+    echo json_encode(["status" => "error", "message" => "Error saving data: " . $stmt->error]);
+    exit;
+}
 
 // Initialize PHPMailer
 $mail = new PHPMailer(true);
-
 try {
-    // SMTP setup
+    // SMTP configuration
     $mail->isSMTP();
-    $mail->Host       = 'smtp.gmail.com';  // SMTP server (Gmail example)
+    $mail->Host       = 'smtp.gmail.com';  // SMTP server
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'bantu8120@gmail.com';  // Your email address
-    $mail->Password   = 'jjoixpijvcbvmupa';  // Your email password (or app password)
+    $mail->Username   = 'bantu8120@gmail.com';  // Your email
+    $mail->Password   = 'jjoixpijvcbvmupa';     // Your email password or app password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->Port       = 587;  // SMTP port
+    $mail->Port       = 587;
 
-    // Sanitize and collect form data
-    $firstName = htmlspecialchars($_POST['firstName']);
-    $lastName = htmlspecialchars($_POST['lastName']);
-    $email = htmlspecialchars($_POST['email']);
-    $phone = htmlspecialchars($_POST['phone']);
-    $city = htmlspecialchars($_POST['city']);
-    $startLocation = htmlspecialchars($_POST['startLocation']);
-    $destination = htmlspecialchars($_POST['destination']);
-    $startDate = htmlspecialchars($_POST['startDate']);
-    $endDate = htmlspecialchars($_POST['endDate']);
-    $caravanType = htmlspecialchars($_POST['caravanType']);
-    $totalPeople = htmlspecialchars($_POST['totalPeople']);
-    $dob = htmlspecialchars($_POST['dob']);
-    $additional_Information = htmlspecialchars($_POST['additional_Information']);
+    // Sender and recipient details
+    $mail->setFrom('bantu8120@gmail.com', 'bhaskar');
+    $mail->addAddress('sometime068@gmail.com', 'Admin'); // Admin email
 
-    // Set email details
-    $mail->setFrom('bantu8120@gmail.com', 'Bhaskar');  // Your email
-    $mail->addAddress('sometime068@gmail.com', 'Admin');  // Admin email
-
-    // Email subject and body
+    // Email content
     $mail->isHTML(true);
-    $mail->Subject = 'New Booking Inquiry from: ' . $firstName . ' ' . $lastName;
+    $mail->Subject = 'New Booking Inquiry from: ' . $name;
     $mail->Body    = "
         <html>
         <head>
@@ -52,30 +64,35 @@ try {
         </head>
         <body>
             <h2>New Booking Inquiry</h2>
-            <p><strong>First Name:</strong> $firstName</p>
-            <p><strong>Last Name:</strong> $lastName</p>
+            <p><strong>Name:</strong> $name</p>
             <p><strong>Email:</strong> $email</p>
             <p><strong>Phone:</strong> $phone</p>
-            <p><strong>Location:</strong> $city</p>
-            <p><strong>Start Location:</strong> $startLocation</p>
-            <p><strong>Destination:</strong> $destination</p>
-            <p><strong>Start Date:</strong> $startDate</p>
-            <p><strong>End Date:</strong> $endDate</p>
             <p><strong>Caravan Type:</strong> $caravanType</p>
-            <p><strong>Total People:</strong> $totalPeople</p>
-            <p><strong>Date of Birth:</strong> $dob</p>
-            <p><strong>additional_Information:</strong> $additional_Information</p>
         </body>
         </html>
     ";
 
     // Send the email
     if ($mail->send()) {
-        echo 'Success';  // Email sent successfully
+        $emailSent = true;
     } else {
-        echo 'Error: Unable to send email. Please try again later.';
+        $emailSent = false;
+        echo json_encode(["status" => "error", "message" => "Unable to send email."]);
+        exit;
     }
+
 } catch (Exception $e) {
-    echo "Mailer Error: " . $mail->ErrorInfo;  // Error handling
+    echo json_encode(["status" => "error", "message" => "Mailer Error: " . $mail->ErrorInfo]);
+    exit;
+}
+
+// Close the database connection
+$conn->close();
+
+// Return response based on success or failure
+if ($dataSaved && $emailSent) {
+    echo json_encode(["status" => "success", "message" => "Data saved and email sent successfully."]);
+} else {
+    echo json_encode(["status" => "error", "message" => "There was an issue with the process."]);
 }
 ?>
