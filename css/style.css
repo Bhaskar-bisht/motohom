@@ -70,23 +70,16 @@ a {
 }
 
 /*  hero section */
-
-/* General Hero Section Styling */
+/* Hero Section */
 .hero_section {
     background-image: url("https://images.unsplash.com/photo-1508045214681-31012927cc98?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 100vh; /* Full viewport height */
     display: flex;
     align-items: center;
     position: relative;
-    overflow: hidden;
-}
-
-.hero_section .container {
-    position: relative;
-    z-index: 1;
 }
 
 .hero_section:before {
@@ -96,43 +89,33 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.366); /* Adds a darker overlay */
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
     z-index: 0;
 }
 
-/* Highlight Text Styling */
-.highlight-text {
-    font-size: 3.5rem;
+.hero_section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero_section .highlight-text {
+    font-size: 2.5rem;
     font-weight: bold;
     line-height: 1.2;
 }
 
-/* Responsive Text Styling */
-@media (max-width: 768px) {
-    .highlight-text {
-        font-size: 2.2rem;
-        text-align: center;
-    }
-
-    .hero-section-top-text {
-        font-size: 2rem;
-        text-align: center;
-    }
-}
-
 /* Booking Form Styling */
 .hero_section_form {
-    background-color: rgba(255, 255, 255, 0.178);
-    /* padding: 20px; */
+    background-color: rgba(255, 255, 255, 0.15);
     border-radius: 8px;
     color: white;
+    padding: 20px;
     z-index: 1;
 }
 
-/* Form Elements Styling */
 .hero_section_form #bookingForm label {
     color: white;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .hero_section_form #bookingForm .form-control,
@@ -145,13 +128,17 @@ a {
 .hero_section_form #bookingForm .form-control:focus,
 .hero_section_form #bookingForm .form-select:focus {
     background-color: rgba(255, 255, 255, 0.3);
-    border-color: #fff;
+    border-color: white;
     outline: none;
     color: white;
 }
 
 .hero_section_form #bookingForm button {
-    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    width: 100%;
+    transition: all 0.3s ease;
 }
 
 .hero_section_form #bookingForm button:hover {
@@ -159,48 +146,45 @@ a {
     color: black;
 }
 
-/* Responsive Form Adjustments */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .hero_section_form {
-        margin-top: 20px;
-        padding-bottom: 20px; /* Extra padding for bottom space */
+    .hero_section {
+        height: auto; /* Adjust height for smaller screens */
+        padding: 20px 10px;
+        flex-direction: column;
     }
 
-    .hero_section_form #bookingForm {
+    .hero_section .highlight-text {
+        font-size: 1.8rem; /* Reduce font size */
+        text-align: center;
+    }
+
+    .hero_section_form {
+        margin-top: 20px;
+        width: 100%;
         padding: 15px;
     }
 
-    .hero_section_form {
-        position: relative; /* Ensure proper positioning */
-        overflow-y: auto; /* Enable scrolling if content exceeds screen height */
+    .hero_section_form #bookingForm button {
+        width: 100%; /* Full width button for mobile */
+    }
+
+    .hero_section .text-white {
+        text-align: center;
     }
 }
 
 @media (max-width: 576px) {
-    .hero_section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero_section .col-lg-8 {
-        text-align: center;
+    .hero_section .highlight-text {
+        font-size: 1.5rem; /* Further reduce font size for small screens */
     }
 
     .hero_section_form {
-        width: 100%;
-        padding-bottom: 40px; /* Extra padding to ensure buttons are visible */
+        padding: 10px;
     }
 
     .hero_section_form #bookingForm button {
-        width: 100%;
-    }
-
-    .col-12.text-center.d-flex {
-        flex-direction: column;
-    }
-
-    .col-12.text-center.d-flex button {
-        margin-bottom: 10px;
+        margin-top: 10px;
     }
 }
 
