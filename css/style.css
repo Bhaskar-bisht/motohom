@@ -1088,3 +1088,11 @@ i {
 .download-btn-container a:hover {
     color: #fff;
 }
+
+.downloadBtn:hover {
+    color: #fff;
+}
+
+.downloadBtnHero:hover {
+    color: #000;
+}
