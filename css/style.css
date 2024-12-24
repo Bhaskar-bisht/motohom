@@ -461,6 +461,7 @@ i {
     transform: translateY(-5px);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
+
 .b-advantages__main {
     display: flex;
     flex-direction: column;
@@ -487,6 +488,12 @@ i {
     font-size: 50px;
     color: #4a2c2a;
     margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.b-advantages:hover .advantages-icon {
+    transform: scale(1.2); /* Zooms the icon to 120% of its original size */
+    transition: transform 0.3s ease; /* Ensures smooth scaling transition */
 }
 
 .decore01 {
@@ -606,6 +613,8 @@ i {
 .progress-section {
     /* margin-top: 20px; */
     background-image: url("https://pro-theme.com/html/nevica/assets/img/bgmap.png");
+    background-repeat: no-repeat;
+    background-position: center;
     /* background-image: url("https://pro-theme.com/html/nevica/assets/img/bgmap.png") no-repeat; */
 }
 
@@ -621,7 +630,8 @@ i {
     color: white;
     align-items: center;
     border-radius: 5px;
-    margin-top: -40px;
+    margin-bottom: 10px;
+    /* margin-top: -40px; */
 }
 
 .progress-icon-1 {
@@ -636,7 +646,8 @@ i {
     color: white;
     align-items: center;
     border-radius: 5px;
-    margin-top: 10px;
+    margin-bottom: 10px;
+    /* margin-top: 10px; */
 }
 .progress-section-card3 {
     background-color: #0ecdc2;
@@ -646,7 +657,9 @@ i {
     color: white;
     align-items: center;
     border-radius: 5px;
-    margin-top: -40px;
+    margin-bottom: 10px;
+
+    /* margin-top: -40px; */
 }
 .progress-section-card4 {
     background-color: #dd5454;
@@ -656,14 +669,63 @@ i {
     color: white;
     align-items: center;
     border-radius: 5px;
-    margin-top: 10px;
+    margin-bottom: 10px;
+
+    /* margin-top: 10px; */
+}
+.progress-section-card5 {
+    background-color: #007bffec;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+    /* margin-top: 10px; */
 }
 
-@media (max-width: 500px) {
+/* Common styles for all cards */
+.progress-section-card1,
+.progress-section-card2,
+.progress-section-card3,
+.progress-section-card4,
+.progress-section-card5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and box-shadow */
+}
+
+/* Hover effect for all cards (move the card up) */
+.progress-section-card1:hover,
+.progress-section-card2:hover,
+.progress-section-card3:hover,
+.progress-section-card4:hover,
+.progress-section-card5:hover {
+    transform: translateY(-8px); /* Lift the card slightly */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Add soft shadow */
+}
+
+/* Hover effect for icons inside the cards (scale the icon) */
+.progress-section-card1:hover .cr-counters__icon i,
+.progress-section-card2:hover .cr-counters__icon i,
+.progress-section-card3:hover .cr-counters__icon i,
+.progress-section-card4:hover .cr-counters__icon i,
+.progress-section-card5:hover .cr-counters__icon i {
+    transform: scale(1.5); /* Increase icon size */
+    /* font-size: 60px; */
+}
+
+/* @media (max-width: 500px) {
     .progress-section-card3 {
         margin-top: 10px;
     }
-}
+} */
 
 /* ********************card slider */
 
@@ -731,6 +793,8 @@ i {
     border-radius: 8px;
     background-color: #f9f9f9;
     transition: transform 0.3s ease;
+    /* background-color: ; */
+    padding: 10px 0;
 }
 
 .customization-section .card:hover {
