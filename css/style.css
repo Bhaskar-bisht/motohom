@@ -1096,7 +1096,7 @@ i {
 }
 
 .downloadBtn:hover {
-    color: #fff;
+    color: #fff !important;
 }
 
 .downloadBtnHero a:hover {
