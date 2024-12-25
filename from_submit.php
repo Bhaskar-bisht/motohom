@@ -28,7 +28,7 @@ $phone = htmlspecialchars($_POST['phone']);
 $caravanType = htmlspecialchars($_POST['caravanType']);
 
 // Insert data into the database
-$stmt = $conn->prepare("INSERT INTO BookingData (name, email, phone, caravan_type) VALUES (?, ?, ?, ?)");
+$stmt = $conn->prepare("INSERT INTO bookingdata (name, email, phone, caravan_type) VALUES (?, ?, ?, ?)");
 $stmt->bind_param("ssss", $name, $email, $phone, $caravanType);
 if ($stmt->execute()) {
     $dataSaved = true;
