@@ -29,6 +29,23 @@ a {
     background-color: #f8f9fa; /* Light background for toggle */
 }
 
+/* navbar book button */
+
+.navbar_book_btn {
+    width: fit-content;
+    border-radius: 0px;
+    color: #663c12;
+    border: 1px solid #663c12;
+}
+
+.navbar_book_btn:hover {
+    background-color: #663c12;
+    border: 1px solid #663c12;
+    color: #fff;
+}
+
+/* navbar book button */
+
 .side-nav {
     height: 100%;
     width: 0;
