@@ -1093,8 +1093,8 @@ i {
     color: #fff;
 }
 
-.downloadBtnHero:hover {
-    color: #000;
+.downloadBtnHero a:hover {
+    color: #000 !important;
 }
 
 @media (max-width: 770px) {
