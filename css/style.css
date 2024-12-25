@@ -198,7 +198,7 @@ header .custom-margin {
     margin-left: 100px;
 }
 
-/* this is form code for book button */
+/* this is the popup form code for book button */
 
 .popup {
     display: none;
@@ -240,7 +240,46 @@ header .custom-margin {
     display: block;
 }
 
-/* this is form code for book button */
+/* this is the pop form code for book button */
+
+/* this is the download guide pop from  */
+
+.download-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    max-height: 600px;
+    overflow: auto;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    background-color: rgb(253, 253, 253);
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 99999999;
+    border-radius: 8px;
+}
+
+.download-popup.active {
+    display: block;
+}
+
+.download-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+.download-popup-overlay.active {
+    display: block;
+}
+
+/* this is the download guide pop from  */
 
 @media (max-width: 500px) {
     header .custom-margin {
@@ -252,9 +291,9 @@ header .custom-margin {
         width: 350px;
     }
 
-    /* .progress-section-card2 {
-        margin-top: 10px !important;
-    } */
+    .download-popup {
+        width: 350px;
+    }
 }
 
 /* Height for devices larger than 576px */

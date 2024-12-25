@@ -56,21 +56,35 @@ try {
 
     // Email content
     $mail->isHTML(true);
-    $mail->Subject = 'New Booking Inquiry from: ' . $name;
-    $mail->Body    = "
-        <html>
-        <head>
-            <title>New Booking Inquiry</title>
-        </head>
-        <body>
-            <h2>New Booking Inquiry</h2>
-            <p><strong>Name:</strong> $name</p>
-            <p><strong>Email:</strong> $email</p>
-            <p><strong>Phone:</strong> $phone</p>
-            <p><strong>Caravan Type:</strong> $caravanType</p>
-        </body>
-        </html>
-    ";
+$mail->Subject = 'New Booking Inquiry from: ' . $name;
+$mail->Body = "
+    <html>
+    <head>
+        <title>New Booking Inquiry</title>
+    </head>
+    <body>
+        <h2 style=\"color: green;\">New Booking Inquiry</h2>
+        <table style=\"width: 100%; border-collapse: collapse; font-family: Arial, sans-serif;\">
+            <tr style=\"background-color: #f2f2f2;\">
+                <td style=\"padding: 10px; border: 1px solid #ddd; font-weight: bold;\">Name</td>
+                <td style=\"padding: 10px; border: 1px solid #ddd;\">$name</td>
+            </tr>
+            <tr>
+                <td style=\"padding: 10px; border: 1px solid #ddd; font-weight: bold;\">Email</td>
+                <td style=\"padding: 10px; border: 1px solid #ddd;\">$email</td>
+            </tr>
+            <tr style=\"background-color: #f2f2f2;\">
+                <td style=\"padding: 10px; border: 1px solid #ddd; font-weight: bold;\">Phone</td>
+                <td style=\"padding: 10px; border: 1px solid #ddd;\">$phone</td>
+            </tr>
+            <tr>
+                <td style=\"padding: 10px; border: 1px solid #ddd; font-weight: bold;\">Caravan Type</td>
+                <td style=\"padding: 10px; border: 1px solid #ddd;\">$caravanType</td>
+            </tr>
+        </table>
+    </body>
+    </html>
+";
 
     // Send the email
     if ($mail->send()) {

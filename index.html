@@ -164,7 +164,7 @@
                 <p>Enjoy an unforgettable journey with our premium caravans. Book now for a seamless travel experience!</p>
                 <div class="row">
                     <div class="col-lg-12 mb-4 downloadBtnHero">
-                    <a class="btn btn-outline-light btn-lg w-fit bookNowBtn " style="border-radius: 0px;">
+                    <a class="btn btn-outline-light btn-lg w-fit downloadGuideBtn " style="border-radius: 0px;">
                         Download Our Caravan Guide
                     </a>
                 </div>
@@ -173,7 +173,7 @@
 
             <!-- Right Side: Booking Form -->
             <div class="col-lg-4 hero_section_form">
-                <form id="bookingForm" class="row g-2 rounded-3 shadow-sm px-4 py-4" action="from_submit.php" method="POST">
+                <form id="bookingForm" class="row g-2 rounded-3 shadow-sm px-4 py-4 booking_form" action="from_submit.php" method="POST">
                     <!-- Name -->
                     <div class="col-md-12">
                         <label for="hero_name" class="form-label">Full Name</label>
@@ -227,7 +227,7 @@
         <h4 class="fw-bold">Book Your CamperVan</h4>
         <p>Fill out the form below to book your CamperVan.</p>
     </div>
-    <form id="bookingForm" class="row g-2 border rounded-3 shadow-sm px-3 py-3 mt-2" action="from_submit.php" method="POST">
+    <form id="bookingForm" class="row g-2 border rounded-3 shadow-sm px-3 py-3 mt-2 booking_form" action="from_submit.php" method="POST">
     <!-- Name -->
     <div class="col-md-12">
         <label for="name" class="form-label">Full Name</label>
@@ -261,11 +261,63 @@
     <!-- Buttons -->
     <div class="col-md-12 text-center d-flex mt-4 gap-2">
         <button class="btn btn-dark w-100 rounded-0" type="submit">Book Now</button>
-        <a href="images/information_PDF/Motohom Caravans Information.pdf" download class="btn btn-outline-dark w-100 d-block rounded-0" >Download Guide</a>
+        <!-- <a href="images/information_PDF/Motohom Caravans Information.pdf" download class="btn btn-outline-dark w-100 d-block rounded-0" >Download Guide</a> -->
     </div>
 </form>
             </div>
         <!--popup form code -->
+
+
+        <!-- popup download pdf code -->
+
+
+            <div class="download-popup-overlay" id="downloadPopupOverlay"></div>
+            <div class="download-popup container" id="downloadPopupForm" style="max-width: 600px;">
+    <i class="fa fa-times" id="downloadCloseIcon" style="position: absolute; top: 10px; right: 15px; font-size: 2rem; cursor: pointer;"></i>
+    <div class="text-center mb-4">
+        <h4 class="fw-bold">Download Guide</h4>
+        <p>Fill out the form below to download the guide.</p>
+    </div>
+    <form id="downloadForm" class="row g-2 border rounded-3 shadow-sm px-3 py-3 mt-2" action="save_download_data.php" method="POST">
+        <!-- Name -->
+        <div class="col-md-12">
+            <label for="downloadName" class="form-label">Full Name</label>
+            <input id="downloadName" class="form-control" type="text" name="name" required>
+        </div>
+
+        <!-- Email -->
+        <div class="col-md-12">
+            <label for="downloadEmail" class="form-label">Mail</label>
+            <input id="downloadEmail" class="form-control" type="email" name="email" required>
+        </div>
+
+        <!-- Phone -->
+        <div class="col-md-12">
+            <label for="downloadPhone" class="form-label">Phone</label>
+            <input id="downloadPhone" class="form-control" type="text" name="phone" required>
+        </div>
+
+        <!-- Caravan Type -->
+        <div class="col-md-12">
+            <label for="downloadCaravanType" class="form-label">Caravan Type</label>
+            <select id="downloadCaravanType" class="form-select" name="caravanType" required>
+                <option value="">Select Caravan Type</option>
+                <option value="T_Class_Van">T Class Caravan</option>
+                <option value="U_Class_Van">U Class Caravan</option>
+                <option value="M_Class_Van">M Class Caravan</option>
+                <option value="V_Class_Van">V Class Caravan</option>
+            </select>
+        </div>
+
+        <!-- Buttons -->
+        <div class="col-md-12 text-center d-flex mt-4 gap-2">
+            <button class="btn btn-dark w-100 rounded-0" type="submit">Download Now</button>
+        </div>
+    </form>
+            </div>
+
+
+        <!-- popup download pdf code -->
 
 
 
@@ -335,7 +387,7 @@
             <!-- Downloadable Guide Button -->
             <div class="row mt-5">
                 <div class="col-lg-12 text-center downloadBtn">
-                    <a class="btn btn-outline-dark btn-lg w-fit bookNowBtn" style="border-radius: 0px;">
+                    <a class="btn btn-outline-dark btn-lg w-fit downloadGuideBtn" style="border-radius: 0px;">
                         Download Our Caravan Guide
                     </a>
                 </div>
@@ -374,7 +426,7 @@
                                 </div>
                                 <div class="row mt-5">
                 <div class="col-lg-12 mb-4 downloadBtn">
-                    <a class="btn btn-outline-dark btn-lg w-fit bookNowBtn" style="border-radius: 0px;">
+                    <a class="btn btn-outline-dark btn-lg w-fit downloadGuideBtn" style="border-radius: 0px;">
                         Download Our Caravan Guide
                     </a>
                 </div>
@@ -890,7 +942,7 @@
                                                         <!-- <div class="mt-4"><a href="#" class="btn btn-outline-dark btn-lg" style="width: fit-content; border-radius: 0px;">View more</a></div> -->
                                                 </div>
                                                 <div class="col-lg-12 mb-3 p-0 downloadBtn">
-                    <a class="btn btn-outline-dark btn-lg w-fit bookNowBtn" style="border-radius: 0px;">
+                    <a class="btn btn-outline-dark btn-lg w-fit downloadGuideBtn" style="border-radius: 0px;">
                         Download Our Caravan Guide
                     </a>
                 </div>
@@ -1143,7 +1195,7 @@
 		</div>
 		
 		<!-- Form structure -->
-		<form id="indexBookingForm" class="card-form" action="from_submit.php" method="POST">
+		<form id="indexBookingForm" class="card-form booking_form" action="from_submit.php" method="POST">
 			<div class="row">
 				<!-- Name -->
 				<div class="col-md-6 mb-3">
@@ -1292,8 +1344,8 @@
          <main>
     <div class="container d-flex align-items-center justify-content-center my-5">
         <div class="row">
-            <div class="col-lg-12 downloadBtn">
-                    <a class="btn btn-outline-dark btn-lg w-fit bookNowBtn " style="border-radius: 0px;">
+            <div class="col-lg-12 downloadBtn ">
+                    <a class="btn btn-outline-dark btn-lg w-fit downloadGuideBtn" style="border-radius: 0px;">
                         Download Our Caravan Guide
                     </a>
                 </div>
@@ -1453,7 +1505,7 @@
         <!-- Side Download Button -->
 
         <div class="download-btn-container">
-            <a class="btn btn-md bookNowBtn" style="border-radius: 0px; color: #fff;">
+            <a class="btn btn-md downloadGuideBtn" style="border-radius: 0px; color: #fff;">
                 Download Our Caravan Guide
             </a>
         </div>
@@ -1509,7 +1561,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
             // Add scroll event listener
-            window.addEventListener("scroll", function () {
+    window.addEventListener("scroll", function () {
                 const navbar = document.querySelector(".navbar");
                 if (window.scrollY > 50) {
                     navbar.classList.add("scrolled");
@@ -1528,14 +1580,27 @@ const popupOverlay = document.getElementById("popupOverlay");
 const closeBtn = document.getElementById("closeIcon");
 
 // Show Popup for All "Book Now" buttons
+// bookNowBtns.forEach((btn) => {
+//     btn.addEventListener("click", () => {
+//         togglePopup(true);
+//         if (document.getElementById("sideNav")?.style.width === "250px") {
+//             document.getElementById("sideNav").style.width = "0"; // Close side navbar
+//         }
+//     });
+// });
+
+// Show Popup for All "Book Now" buttons
 bookNowBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
-        togglePopup(true);
+        closeAllPopups(); // Close other popups
+        togglePopup(true); // Open the "Book Now" popup
         if (document.getElementById("sideNav")?.style.width === "250px") {
             document.getElementById("sideNav").style.width = "0"; // Close side navbar
         }
     });
 });
+
+
 
 // Close the Popup
 closeBtn?.addEventListener("click", () => togglePopup(false));
@@ -1553,7 +1618,7 @@ function togglePopup(isVisible) {
 }
 
 // Select all forms
-const forms = document.querySelectorAll("form");
+const forms = document.querySelectorAll(".booking_form");
 
 // Attach submit event listener to all forms
 forms.forEach((form) => {
@@ -1589,7 +1654,7 @@ function sendFormData(form) {
         if (xhr.status === 200) {
             if (response.status === "success") {
                 // Success - Show Success Popup
-                showDynamicPopup("Thank you! We will get back to you soon.");
+                showDynamicPopup("Thank you! We will get back to you soon.", "success");
                 form.reset(); // Reset the form after successful submission
             } else {
                 // Failure - Show Failure Popup
@@ -1615,58 +1680,164 @@ function sendFormData(form) {
 }
 
 // Function to show dynamic popup messages
-function showDynamicPopup(message) {
+
+   // email send form the php code
+
+
+
+//    this code for show and hide the Download guide popup
+
+
+// Select Download Guide buttons and popup elements
+const downloadBtns = document.querySelectorAll(".downloadGuideBtn");
+const downloadPopupForm = document.getElementById("downloadPopupForm");
+const downloadPopupOverlay = document.getElementById("downloadPopupOverlay");
+const downloadCloseBtn = document.getElementById("downloadCloseIcon");
+
+// Show Popup for All Download Guide buttons
+downloadBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        closeAllPopups(); // Close other popups
+        toggleDownloadPopup(true); // Open the "Download Guide" popup
+    });
+});
+
+// Close all popups function
+function closeAllPopups() {
+    popupForm?.classList.remove("active");
+    popupOverlay?.classList.remove("active");
+
+    downloadPopupForm?.classList.remove("active");
+    downloadPopupOverlay?.classList.remove("active");
+}
+
+// Close the popup
+downloadCloseBtn?.addEventListener("click", () => toggleDownloadPopup(false));
+downloadPopupOverlay?.addEventListener("click", () => toggleDownloadPopup(false));
+
+// Function to toggle popup visibility
+function toggleDownloadPopup(isVisible) {
+    if (isVisible) {
+        downloadPopupForm?.classList.add("active");
+        downloadPopupOverlay?.classList.add("active");
+    } else {
+        downloadPopupForm?.classList.remove("active");
+        downloadPopupOverlay?.classList.remove("active");
+    }
+}
+
+// Handle form submission
+document.getElementById("downloadForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const form = e.target;
+
+    // Change the button text
+    const submitButton = form.querySelector("button[type='submit']");
+    const originalButtonText = submitButton.textContent;
+
+    submitButton.textContent = "Downloading...";
+    submitButton.disabled = true;
+
+    const formData = new FormData(form);
+
+    // Show "Please wait" popup
+    const waitPopup = document.createElement("div");
+    waitPopup.style.position = "fixed";
+    waitPopup.style.top = "50%";
+    waitPopup.style.left = "50%";
+    waitPopup.style.transform = "translate(-50%, -50%)";
+    waitPopup.style.padding = "20px";
+    waitPopup.style.background = "#fff";
+    waitPopup.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
+    waitPopup.style.borderRadius = "8px";
+    waitPopup.style.textAlign = "center";
+    waitPopup.style.zIndex = "99999999";
+    waitPopup.textContent = "Please wait, your PDF is downloading...";
+    document.body.appendChild(waitPopup);
+
+    // AJAX request to save data and trigger download
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", form.action, true);
+    xhr.onload = function () {
+        try {
+            const response = JSON.parse(xhr.responseText.trim());
+
+            // Remove wait popup
+            document.body.removeChild(waitPopup);
+
+            if (xhr.status === 200 && response.status === "success") {
+                // Trigger PDF download
+                const link = document.createElement("a");
+                link.href = response.pdfUrl;
+                link.download = "Caravan_Guide.pdf";
+                link.click();
+
+                // Show success popup
+                showDynamicPopup("Your download is starting now!", "success");
+                form.reset(); // Reset the form fields
+            } else {
+                // Show error popup
+                showDynamicPopup(
+                    response.message || "Failed to process your request. Please try again.",
+                    "error"
+                );
+            }
+        } catch (err) {
+            // Show error popup for invalid response
+            showDynamicPopup("Invalid server response. Please try again later.", "error");
+            console.error("Error parsing response:", err);
+        }
+
+        // Reset button text and enable it
+        submitButton.textContent = originalButtonText;
+        submitButton.disabled = false;
+    };
+
+    xhr.onerror = function () {
+        showDynamicPopup("An unexpected error occurred. Please try again later.", "error");
+        document.body.removeChild(waitPopup);
+
+        // Reset button text and enable it
+        submitButton.textContent = originalButtonText;
+        submitButton.disabled = false;
+    };
+
+    xhr.send(formData);
+});
+
+// Function to show dynamic popup messages
+function showDynamicPopup(message, type) {
     const popup = document.createElement("div");
     popup.style.position = "fixed";
     popup.style.top = "50%";
     popup.style.left = "50%";
     popup.style.transform = "translate(-50%, -50%)";
-    popup.style.width = "300px";
-    popup.style.padding = "20px";
-    popup.style.background = "#fff";
+    popup.style.width = "350px";
+    popup.style.padding = "30px";
+    popup.style.background = type === "success" ? "#4caf50" : "#f44336"; // Green for success, Red for error
+    popup.style.color = "#fff";
     popup.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
     popup.style.borderRadius = "8px";
     popup.style.textAlign = "center";
-    popup.style.zIndex = "99999999999";
-    popup.style.opacity = "0";
-    popup.style.transition = "opacity 0.3s ease";
+    popup.style.zIndex = "99999999";
+    popup.textContent = message;
 
-    const messageText = document.createElement("p");
-    messageText.textContent = message;
-    messageText.style.marginBottom = "20px";
-    messageText.style.fontSize = "16px";
-    messageText.style.color = "#333";
 
-    const closeButton = document.createElement("button");
-    closeButton.textContent = "Close";
-    closeButton.style.padding = "10px 20px";
-    closeButton.style.background = "#4caf50";
-    closeButton.style.color = "#fff";
-    closeButton.style.border = "none";
-    closeButton.style.borderRadius = "4px";
-    closeButton.style.cursor = "pointer";
+    
 
-    closeButton.addEventListener("click", () => {
-        document.body.removeChild(popup);
-    });
-
-    popup.appendChild(messageText);
-    popup.appendChild(closeButton);
 
     document.body.appendChild(popup);
 
-    setTimeout(() => (popup.style.opacity = "1"), 10);
     setTimeout(() => {
         if (document.body.contains(popup)) {
             document.body.removeChild(popup);
         }
-    }, 5000);
+    }, 5000); // Auto-hide after 5 seconds
 }
 
 
 
-
-            // email send form the php code
+//    this code for show and hide the Download guide button
 
 
 
