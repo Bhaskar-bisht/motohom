@@ -283,11 +283,11 @@ header .custom-margin {
 
 @media (max-width: 600px) {
     .popup {
-        width: 350px;
+        width: 320px;
     }
 
     .download-popup {
-        width: 350px;
+        width: 320px;
     }
 }
 
