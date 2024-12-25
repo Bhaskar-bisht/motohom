@@ -221,9 +221,11 @@
     <!-- Hero section -->        
 
 
+    <!-- <button type="button" class="btn btn-outline-secondary w-50 rounded-0" id="closeBtn">Close</button> -->
         <!-- popup form code -->
             <div class="popup-overlay" id="popupOverlay"></div>
             <div class="popup container" id="popupForm" style="max-width: 600px;">
+                <i class="fa fa-times" id="closeIcon" style="position: absolute; top: 10px; right: 15px; font-size: 2rem; cursor: pointer;"></i>
     <div class="text-center mb-4">
         <h4 class="fw-bold">Book Your CamperVan</h4>
         <p>Fill out the form below to book your CamperVan.</p>
@@ -1525,7 +1527,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const bookNowBtns = document.querySelectorAll(".bookNowBtn");
 const popupForm = document.getElementById("popupForm");
 const popupOverlay = document.getElementById("popupOverlay");
-const closeBtn = document.getElementById("closeBtn");
+const closeBtn = document.getElementById("closeIcon");
 
 // Show Popup for All "Book Now" buttons
 bookNowBtns.forEach((btn) => {
