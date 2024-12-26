@@ -28,11 +28,11 @@
     <body>
         <!--Top Header-->
          <header>
-            <div class=" top-header py-3" style="padding: 0px 65px;">
+            <div class=" top-header py-3" style="padding: 0px 60px;">
             <div class="container-fluid">
                 <div class="row ">    
                 <!-- Left side (Phone & Email) -->
-                <div class="col-lg-8 col-md-6 col-12 mb-3 mb-md-0 topbar-content">
+                <div class="col-lg-8 col-md-6 col-12 mb-3 px-0 mb-md-0 topbar-content">
                     <div class="top-bar d-flex flex-wrap align-items-center">
                         <div class="d-flex align-items-center me-3">
                             <i class="bi bi-telephone-forward-fill me-2"></i>
@@ -318,7 +318,6 @@
 
 
         <!-- popup download pdf code -->
-
 
 
        <!-- Video Section -->
@@ -957,8 +956,8 @@ Enjoy spacious layouts with modern amenities, including kitchens, toilets, and s
         <!-- Gallery Section -->
 
         <main id="gallery">
-    <section class="gallery-section">
-        <div class="container-fluid">
+        <section class="gallery-section">
+            <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="text-center">
@@ -1527,24 +1526,77 @@ Enjoy spacious layouts with modern amenities, including kitchens, toilets, and s
 
 // this is for open image in a popup
 
+
+
 document.addEventListener('DOMContentLoaded', function () {
-        const galleryItems = document.querySelectorAll('.gallery-item');
-        const modal = document.getElementById('imageModal');
-        const modalImage = document.getElementById('modalImage');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
 
-        galleryItems.forEach(item => {
-            item.addEventListener('click', function (e) {
-                e.preventDefault();
-                const imgSrc = this.getAttribute('data-src');
-                modalImage.setAttribute('src', imgSrc);
-                $(modal).modal('show');
-            });
-        });
+    let scale = 1;
+    let originX = 0;
+    let originY = 0;
+    let isDragging = false;
+    let startX = 0;
+    let startY = 0;
 
-        $(modal).on('hidden.bs.modal', function () {
-            modalImage.setAttribute('src', '');
+    galleryItems.forEach(item => {
+        item.addEventListener('click', function (e) {
+            e.preventDefault();
+            const imgSrc = this.getAttribute('data-src');
+            modalImage.setAttribute('src', imgSrc);
+            scale = 1; // Reset scale on opening modal
+            modalImage.style.transform = `scale(${scale})`;
+            originX = 0;
+            originY = 0;
+            $(modal).modal('show');
         });
     });
+
+    modalImage.addEventListener('wheel', function (e) {
+        e.preventDefault();
+        const zoomFactor = 0.1;
+        scale += e.deltaY > 0 ? -zoomFactor : zoomFactor;
+        scale = Math.min(Math.max(1, scale), 3); // Limit zoom level between 1 and 3
+        modalImage.style.transform = `scale(${scale}) translate(${originX}px, ${originY}px)`;
+    });
+
+    modalImage.addEventListener('mousedown', function (e) {
+        isDragging = true;
+        startX = e.clientX;
+        startY = e.clientY;
+        modalImage.style.cursor = "grabbing";
+    });
+
+    document.addEventListener('mousemove', function (e) {
+        if (!isDragging) return;
+
+        const deltaX = (e.clientX - startX) / scale;
+        const deltaY = (e.clientY - startY) / scale;
+        originX += deltaX;
+        originY += deltaY;
+
+        startX = e.clientX;
+        startY = e.clientY;
+
+        modalImage.style.transform = `scale(${scale}) translate(${originX}px, ${originY}px)`;
+    });
+
+    document.addEventListener('mouseup', function () {
+        isDragging = false;
+        modalImage.style.cursor = "grab";
+    });
+
+    $(modal).on('hidden.bs.modal', function () {
+        modalImage.setAttribute('src', '');
+        scale = 1;
+        originX = 0;
+        originY = 0;
+        modalImage.style.transform = 'scale(1)';
+    });
+});
+
+
 // this is for open image in a popup
 
 

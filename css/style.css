@@ -801,7 +801,7 @@ i {
 
 /* ********************card slider */
 
-.tour-banner {
+/* .tour-banner {
     background-image: url("https://images.pexels.com/photos/28639031/pexels-photo-28639031/free-photo-of-nighttime-camping-scene-with-campfire-and-van.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     background-repeat: no-repeat;
     background-size: cover;
@@ -822,7 +822,7 @@ i {
 .tour-right-box .play-icon {
     font-size: 40px;
     color: white;
-}
+} */
 
 .gallery-section {
     margin-top: 80px;
@@ -839,6 +839,17 @@ i {
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* हल्का शैडो */
 
     /* transform: scale(0.9); Slightly increases the size of the image */
+}
+
+.modal-body {
+    overflow: hidden;
+    max-width: 100%;
+    position: relative;
+}
+
+#modalImage {
+    cursor: grab; /* Cursor style for drag */
+    transition: transform 0.3s ease; /* Smooth transition for zoom */
 }
 
 /* customization */
